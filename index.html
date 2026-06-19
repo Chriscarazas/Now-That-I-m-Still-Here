@@ -268,15 +268,20 @@
     .pod-count-label{font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute);}
     .pod-list{display:flex;flex-direction:column;gap:0;}
     .pod-year-label{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--amber);padding:1.5rem 0 0.75rem;border-bottom:1px solid var(--border);margin-bottom:0;}
-    .pod-row{display:grid;grid-template-columns:1fr auto;gap:0.5rem 1.5rem;align-items:center;padding:1rem 1rem;border-bottom:1px solid var(--border-s);border-radius:8px;text-decoration:none;transition:background 0.2s,transform 0.15s;cursor:pointer;}
+    .pod-row{display:grid;grid-template-columns:1fr auto;gap:0.5rem 1.5rem;align-items:center;padding:1rem 1rem;border-bottom:1px solid var(--border-s);border-radius:8px;transition:background 0.2s,transform 0.15s;}
     .pod-row:hover{background:rgba(212,152,56,0.05);transform:translateX(4px);}
     .pod-row-meta{grid-column:1;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
     .pod-row-show{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);}
     .pod-row-date{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--mute);letter-spacing:0.04em;}
     .pod-row-title{grid-column:1;font-family:'Lora',serif;font-size:0.9375rem;color:var(--smoke);line-height:1.4;}
-    .pod-row-links{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;gap:0.3rem;align-items:flex-end;}
-    .pod-chip{font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.06em;color:var(--mute);border:1px solid var(--border);border-radius:4px;padding:0.2rem 0.5rem;white-space:nowrap;}
-    @media(max-width:700px){.pod-row{grid-template-columns:1fr;} .pod-row-links{grid-column:1;grid-row:auto;flex-direction:row;flex-wrap:wrap;} }
+    .pod-title-link{color:inherit;text-decoration:none;transition:color 0.2s;}
+    .pod-title-link:hover,.pod-title-link:focus-visible{color:var(--amber);outline:none;}
+    .pod-row-links{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;gap:0.35rem;align-items:flex-end;}
+    .pod-chip{font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:500;letter-spacing:0.06em;border:1px solid var(--border);border-radius:4px;padding:0.25rem 0.55rem;white-space:nowrap;}
+    .pod-chip-link{display:inline-flex;align-items:center;justify-content:center;color:var(--amber);border-color:rgba(212,152,56,0.42);text-decoration:none;transition:background 0.2s,border-color 0.2s,color 0.2s,transform 0.2s;}
+    .pod-chip-link:hover,.pod-chip-link:focus-visible{background:var(--amber);border-color:var(--amber);color:var(--midnight);transform:translateY(-1px);outline:none;}
+    .pod-chip-meta{color:var(--mute);opacity:0.85;}
+    @media(max-width:700px){.pod-row{grid-template-columns:1fr;} .pod-row-links{grid-column:1;grid-row:auto;flex-direction:row;flex-wrap:wrap;align-items:center;} }
     .shadow-dispatches{margin-top:1.5rem;}
     .shadow-dispatch-label{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber);margin-bottom:0.75rem;}
     .dispatch-links{display:flex;flex-direction:column;gap:0.4rem;}
@@ -867,7 +872,7 @@
   <hr class="rule">
 
   <!-- PODCASTS -->
-  <section class="pod-section" id="podcasts">
+    <section class="pod-section" id="podcasts">
     <div class="pod-inner">
       <div class="pod-header">
         <p class="t-label reveal" style="margin-bottom:1rem;">Listen</p>
@@ -875,158 +880,165 @@
         <p class="reveal d2">Conversations about survival, neurodivergent identity, psychological abuse, and what it looks like to rebuild from the inside out.</p>
       </div>
       <div class="pod-count-banner reveal d1">
-        <span class="pod-count-num">32</span>
-        <span class="pod-count-label">Appearances &nbsp;&middot;&nbsp; Podcasts &amp; Substack Live &nbsp;&middot;&nbsp; Oct 2025 to Present</span>
+        <span class="pod-count-num">23</span>
+        <span class="pod-count-label">Appearances &nbsp;&middot;&nbsp; 17 Podcasts &amp; 6 Substack Live Conversations &nbsp;&middot;&nbsp; Dec 2025 to Present</span>
       </div>
 
       <div class="pod-list">
 
         <div class="pod-year-label">2026</div>
 
-        <a class="pod-row reveal" href="#" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">More Than Sex and Secrets</span><span class="pod-row-date">Jun 12, 2026</span></div>
-          <div class="pod-row-title">The World WOULD NOT Be a Better Place Without You</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple Podcasts</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://podcasts.apple.com/us/podcast/the-world-would-not-be-a-better-place-without-you/id1549801872?i=1000772428857" target="_blank" rel="noopener noreferrer" aria-label="Listen to The World WOULD NOT Be a Better Place Without You on Apple Podcasts">The World WOULD NOT Be a Better Place Without You</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/the-world-would-not-be-a-better-place-without-you/id1549801872?i=1000772428857" target="_blank" rel="noopener noreferrer" aria-label="Listen to The World WOULD NOT Be a Better Place Without You on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://open.spotify.com/show/" target="_blank">
+        <article class="pod-row reveal d1">
           <div class="pod-row-meta"><span class="pod-row-show">Autism Resource Podcast</span><span class="pod-row-date">May 18, 2026</span></div>
-          <div class="pod-row-title">Late Diagnosis, Masking, and Survival in a Neurotypical World</div>
-          <div class="pod-row-links"><span class="pod-chip">Spotify</span><span class="pod-chip">Apple Podcasts</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/6aexB9EqNlY5H6vQoTSFn4" target="_blank" rel="noopener noreferrer" aria-label="Listen to Late Diagnosis, Masking, and Survival in a Neurotypical World on Spotify">Late Diagnosis, Masking, and Survival in a Neurotypical World</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/6aexB9EqNlY5H6vQoTSFn4" target="_blank" rel="noopener noreferrer" aria-label="Listen to Late Diagnosis, Masking, and Survival in a Neurotypical World on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/late-diagnosis-masking-and-survival-in-a/id1566225919?i=1000768473720" target="_blank" rel="noopener noreferrer" aria-label="Listen to Late Diagnosis, Masking, and Survival in a Neurotypical World on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://open.spotify.com/show/" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">Surviving-ISH Podcast</span><span class="pod-row-date">Mar 26, 2026</span></div>
-          <div class="pod-row-title">Diagnosed, Abused for It, Started Over, Then Lost Her</div>
-          <div class="pod-row-links"><span class="pod-chip">Spotify</span><span class="pod-chip">~1 hr</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/1ueb1ECj5DXxYBep1RUBeF" target="_blank" rel="noopener noreferrer" aria-label="Listen to Diagnosed, Abused for It, Started Over, Then Lost Her and His Job on Spotify">Diagnosed, Abused for It, Started Over, Then Lost Her and His Job</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/1ueb1ECj5DXxYBep1RUBeF" target="_blank" rel="noopener noreferrer" aria-label="Listen to Diagnosed, Abused for It, Started Over, Then Lost Her and His Job on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://www.youtube.com/watch?v=61Dt12Y5ZtI" target="_blank" rel="noopener noreferrer" aria-label="Listen to Diagnosed, Abused for It, Started Over, Then Lost Her and His Job on YouTube">YouTube</a><span class="pod-chip pod-chip-meta">~1 hr</span></div>
+        </article>
 
-        <a class="pod-row reveal" href="https://autismweekly.podbean.com/" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">Autism Weekly &nbsp;&middot;&nbsp; Ep 228</span><span class="pod-row-date">Mar 20, 2026</span></div>
-          <div class="pod-row-title">Reclaiming Identity: Christopher Carazas on Autism, Resilience, and Inclusion</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple</span><span class="pod-chip">Spotify</span><span class="pod-chip">YouTube</span></div>
-        </a>
+        <article class="pod-row reveal d1">
+          <div class="pod-row-meta"><span class="pod-row-show">Autism Weekly · Ep 228</span><span class="pod-row-date">Mar 20, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/6rTDO9yatWNqYCxk7dCEkt" target="_blank" rel="noopener noreferrer" aria-label="Listen to Reclaiming Identity: Christopher Carazas on Autism, Resilience, and Inclusion on Spotify">Reclaiming Identity: Christopher Carazas on Autism, Resilience, and Inclusion</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/6rTDO9yatWNqYCxk7dCEkt" target="_blank" rel="noopener noreferrer" aria-label="Listen to Reclaiming Identity: Christopher Carazas on Autism, Resilience, and Inclusion on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/reclaiming-identity-christopher-carazas-on-autism-resilience/id1534519251?i=1000756359701" target="_blank" rel="noopener noreferrer" aria-label="Listen to Reclaiming Identity: Christopher Carazas on Autism, Resilience, and Inclusion on Apple Podcasts">Apple Podcasts</a><a class="pod-chip pod-chip-link" href="https://www.youtube.com/watch?v=4lcdW5gFdqE" target="_blank" rel="noopener noreferrer" aria-label="Listen to Reclaiming Identity: Christopher Carazas on Autism, Resilience, and Inclusion on YouTube">YouTube</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://jodiestevensshow.podbean.com/" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">Genuine Life with Jodie Stevens &nbsp;&middot;&nbsp; Ep 186</span><span class="pod-row-date">Mar 6, 2026</span></div>
-          <div class="pod-row-title">Surviving Psychological Abuse and Finding Your Way Out</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple Podcasts</span></div>
-        </a>
+        <article class="pod-row reveal">
+          <div class="pod-row-meta"><span class="pod-row-show">Genuine Life with Jodie Stevens · Ep 186</span><span class="pod-row-date">Mar 6, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://jodiestevensshow.podbean.com/e/surviving-psychological-abuse-and-finding-your-way-out-ep-186/" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving Psychological Abuse and Finding Your Way Out on Podbean">Surviving Psychological Abuse and Finding Your Way Out</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://jodiestevensshow.podbean.com/e/surviving-psychological-abuse-and-finding-your-way-out-ep-186/" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving Psychological Abuse and Finding Your Way Out on Podbean">Podbean</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/surviving-psychological-abuse-and-finding-your-way/id1547210993?i=1000753498387" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving Psychological Abuse and Finding Your Way Out on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://open.spotify.com/show/" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">Riffin' About Life with Brian R. King</span><span class="pod-row-date">Mar 5, 2026</span></div>
-          <div class="pod-row-title">Now That I'm Still Here: Autism, Abuse, Survival, and Healing</div>
-          <div class="pod-row-links"><span class="pod-chip">Spotify</span></div>
-        </a>
+        <article class="pod-row reveal d1">
+          <div class="pod-row-meta"><span class="pod-row-show">Riffin&#x27; About Life with Brian R. King</span><span class="pod-row-date">Mar 5, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/3IrVcJStYItIsv9hcukuSq" target="_blank" rel="noopener noreferrer" aria-label="Listen to Now That I&#x27;m Still Here: Autism, Abuse, Survival, and Healing on Spotify">Now That I&#x27;m Still Here: Autism, Abuse, Survival, and Healing</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/3IrVcJStYItIsv9hcukuSq" target="_blank" rel="noopener noreferrer" aria-label="Listen to Now That I&#x27;m Still Here: Autism, Abuse, Survival, and Healing on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/now-that-im-still-here-autism-abuse-survival-and/id1831817320?i=1000753373106" target="_blank" rel="noopener noreferrer" aria-label="Listen to Now That I&#x27;m Still Here: Autism, Abuse, Survival, and Healing on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
 
-        <a class="pod-row reveal" href="https://podcasts.apple.com/us/podcast/lindas-corner-inspiration-for-a-better-life/id1491240501" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">Linda's Corner</span><span class="pod-row-date">Mar 3, 2026</span></div>
-          <div class="pod-row-title">Invisible Scars: Surviving, Healing, and Finding Your Voice</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple</span><span class="pod-chip">Spotify</span><span class="pod-chip">YouTube</span><span class="pod-chip">Amazon Music</span></div>
-        </a>
+        <article class="pod-row reveal">
+          <div class="pod-row-meta"><span class="pod-row-show">Linda&#x27;s Corner</span><span class="pod-row-date">Mar 3, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/0S3UZqgeVpN0L7owRrQR02" target="_blank" rel="noopener noreferrer" aria-label="Listen to Invisible Scars: Surviving, Healing, and Finding Your Voice on Spotify">Invisible Scars: Surviving, Healing, and Finding Your Voice</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/0S3UZqgeVpN0L7owRrQR02" target="_blank" rel="noopener noreferrer" aria-label="Listen to Invisible Scars: Surviving, Healing, and Finding Your Voice on Spotify">Spotify</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="#" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">The Devon Taylor Podcast &nbsp;&middot;&nbsp; Ep 72</span><span class="pod-row-date">Feb 24, 2026</span></div>
-          <div class="pod-row-title">The Healing Power of Writing with Chris Carazas</div>
-          <div class="pod-row-links"><span class="pod-chip">Spotify</span><span class="pod-chip">YouTube</span><span class="pod-chip">Apple</span><span class="pod-chip">~73 min</span></div>
-        </a>
+        <article class="pod-row reveal d1">
+          <div class="pod-row-meta"><span class="pod-row-show">The Devon Taylor Podcast · Ep 72</span><span class="pod-row-date">Feb 24, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/0uuymVUsOdIHUyqeMpqbG9" target="_blank" rel="noopener noreferrer" aria-label="Listen to The Healing Power of Writing with Chris Carazas on Spotify">The Healing Power of Writing with Chris Carazas</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/0uuymVUsOdIHUyqeMpqbG9" target="_blank" rel="noopener noreferrer" aria-label="Listen to The Healing Power of Writing with Chris Carazas on Spotify">Spotify</a><span class="pod-chip pod-chip-meta">~73 min</span></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://www.spreaker.com/podcast/wake-up-with-marci--6517737" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">Wake Up with Marci &nbsp;&middot;&nbsp; CBS / iHeartRadio / Hulu</span><span class="pod-row-date">Feb 19, 2026</span></div>
-          <div class="pod-row-title">Healing Complex Trauma and Grief: Living with Autism and Overcoming Psychological Abuse</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple</span><span class="pod-chip">Spotify</span><span class="pod-chip">YouTube</span></div>
-        </a>
+        <article class="pod-row reveal">
+          <div class="pod-row-meta"><span class="pod-row-show">Wake Up with Marci · CBS / iHeartRadio / Hulu</span><span class="pod-row-date">Feb 19, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/2whSHKo3IUyF2Sll3rGzZt" target="_blank" rel="noopener noreferrer" aria-label="Listen to Healing Complex Trauma and Grief: Living with Autism and Overcoming Psychological Abuse on Spotify">Healing Complex Trauma and Grief: Living with Autism and Overcoming Psychological Abuse</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/2whSHKo3IUyF2Sll3rGzZt" target="_blank" rel="noopener noreferrer" aria-label="Listen to Healing Complex Trauma and Grief: Living with Autism and Overcoming Psychological Abuse on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://www.youtube.com/watch?v=gBn7nCgK0Ns" target="_blank" rel="noopener noreferrer" aria-label="Listen to Healing Complex Trauma and Grief: Living with Autism and Overcoming Psychological Abuse on YouTube">YouTube</a></div>
+        </article>
 
-        <a class="pod-row reveal" href="#" target="_blank">
+        <article class="pod-row reveal d1">
           <div class="pod-row-meta"><span class="pod-row-show">Birdie xo: Healing, Helping and Inspiration</span><span class="pod-row-date">Feb 17, 2026</span></div>
-          <div class="pod-row-title">Now That I'm Still Here: Autism, Healing, and the Courage to Keep Going</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple Podcasts</span><span class="pod-chip">~88 min</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/6DFLWQL3ZcDPaV9pGzYBkS" target="_blank" rel="noopener noreferrer" aria-label="Listen to Now That I&#x27;m Still Here: Autism, Healing, and the Courage to Keep Going on Spotify">Now That I&#x27;m Still Here: Autism, Healing, and the Courage to Keep Going</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/6DFLWQL3ZcDPaV9pGzYBkS" target="_blank" rel="noopener noreferrer" aria-label="Listen to Now That I&#x27;m Still Here: Autism, Healing, and the Courage to Keep Going on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/now-that-im-still-here-with-chris-carazas-a-story/id1788574415?i=1000750081718" target="_blank" rel="noopener noreferrer" aria-label="Listen to Now That I&#x27;m Still Here: Autism, Healing, and the Courage to Keep Going on Apple Podcasts">Apple Podcasts</a><span class="pod-chip pod-chip-meta">~88 min</span></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="#" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">On the Spectrum Empowerment Stories</span><span class="pod-row-date">Feb 5, 2026</span></div>
-          <div class="pod-row-title">When Love Sees the Person, Not the Label</div>
-          <div class="pod-row-links"><span class="pod-chip">Spotify</span><span class="pod-chip">Apple</span><span class="pod-chip">Amazon Music</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/4ZHwNUOY4lujRrbAg1rzOx" target="_blank" rel="noopener noreferrer" aria-label="Listen to When Love Sees the Person, Not the Label on Spotify">When Love Sees the Person, Not the Label</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/4ZHwNUOY4lujRrbAg1rzOx" target="_blank" rel="noopener noreferrer" aria-label="Listen to When Love Sees the Person, Not the Label on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/when-love-sees-the-person-not-the-label/id1727444314?i=1000748427348" target="_blank" rel="noopener noreferrer" aria-label="Listen to When Love Sees the Person, Not the Label on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="#" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">State of Mind Mental Health Podcast &nbsp;&middot;&nbsp; Ep 97</span><span class="pod-row-date">Feb 2, 2026</span></div>
-          <div class="pod-row-title">Late Autism Diagnosis at 35, Masking, and Rebuilding a Life After Trauma</div>
-          <div class="pod-row-links"><span class="pod-chip">Amazon Music</span><span class="pod-chip">YouTube</span></div>
-        </a>
+        <article class="pod-row reveal d1">
+          <div class="pod-row-meta"><span class="pod-row-show">State of Mind Mental Health Podcast · Ep 97</span><span class="pod-row-date">Feb 2, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/2aPaLOJd9yKpLvohz9FUBB" target="_blank" rel="noopener noreferrer" aria-label="Listen to Late Autism Diagnosis at 35, Masking, and Rebuilding a Life After Trauma on Spotify">Late Autism Diagnosis at 35, Masking, and Rebuilding a Life After Trauma</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/2aPaLOJd9yKpLvohz9FUBB" target="_blank" rel="noopener noreferrer" aria-label="Listen to Late Autism Diagnosis at 35, Masking, and Rebuilding a Life After Trauma on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/97-late-autism-diagnosis-at-35-masking-and-rebuilding/id1444000432?i=1000751638481" target="_blank" rel="noopener noreferrer" aria-label="Listen to Late Autism Diagnosis at 35, Masking, and Rebuilding a Life After Trauma on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
 
-        <a class="pod-row reveal" href="#" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">Autism Stories &nbsp;&middot;&nbsp; Ep 442</span><span class="pod-row-date">Feb 2, 2026</span></div>
-          <div class="pod-row-title">Autism Stories: Chris Carazas</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple Podcasts</span></div>
-        </a>
+        <article class="pod-row reveal">
+          <div class="pod-row-meta"><span class="pod-row-show">Autism Stories · Ep 442</span><span class="pod-row-date">Feb 2, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://podcasts.apple.com/us/podcast/autism-stories-chris-carazas/id1441912570?i=1000747699776" target="_blank" rel="noopener noreferrer" aria-label="Listen to Autism Stories: Chris Carazas on Apple Podcasts">Autism Stories: Chris Carazas</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/autism-stories-chris-carazas/id1441912570?i=1000747699776" target="_blank" rel="noopener noreferrer" aria-label="Listen to Autism Stories: Chris Carazas on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="#" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">MindShift Power Podcast &nbsp;&middot;&nbsp; Ep 120</span><span class="pod-row-date">Jan 27, 2026</span></div>
-          <div class="pod-row-title">Why Do I Hate Hugs? And Other Signs You Might Be Autistic</div>
-          <div class="pod-row-links"><span class="pod-chip">Amazon Music</span><span class="pod-chip">YouTube</span></div>
-        </a>
+        <article class="pod-row reveal d1">
+          <div class="pod-row-meta"><span class="pod-row-show">MindShift Power Podcast · Ep 120</span><span class="pod-row-date">Jan 27, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://www.fatimabey.com/120" target="_blank" rel="noopener noreferrer" aria-label="Listen to Why Do I Hate Hugs? And Other Signs You Might Be Autistic on Episode Page">Why Do I Hate Hugs? And Other Signs You Might Be Autistic</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://www.fatimabey.com/120" target="_blank" rel="noopener noreferrer" aria-label="Listen to Why Do I Hate Hugs? And Other Signs You Might Be Autistic on Episode Page">Episode Page</a><a class="pod-chip pod-chip-link" href="https://www.youtube.com/watch?v=llbkCCdqbpk" target="_blank" rel="noopener noreferrer" aria-label="Listen to Why Do I Hate Hugs? And Other Signs You Might Be Autistic on YouTube">YouTube</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="#" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">The Healing Odyssey</span><span class="pod-row-date">Jan 21, 2026</span></div>
-          <div class="pod-row-title">Surviving the Shadows: Why Did This Happen FOR Me?</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple Podcasts</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://podcasts.apple.com/us/podcast/surviving-the-shadows-why-did-this-happen-for-me/id1782130199?i=1000745982127" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving the Shadows: Why Did This Happen FOR Me? on Apple Podcasts">Surviving the Shadows: Why Did This Happen FOR Me?</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/surviving-the-shadows-why-did-this-happen-for-me/id1782130199?i=1000745982127" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving the Shadows: Why Did This Happen FOR Me? on Apple Podcasts">Apple Podcasts</a><a class="pod-chip pod-chip-link" href="https://the-healing-odyssey.alitu.com/episode/537ba3a4-f841-4205-96b0-2db2d93c7043" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving the Shadows: Why Did This Happen FOR Me? on Episode Page">Episode Page</a></div>
+        </article>
 
-        <a class="pod-row reveal" href="#" target="_blank">
-          <div class="pod-row-meta"><span class="pod-row-show">Finding Hope on the Spectrum &nbsp;&middot;&nbsp; Ep 41</span><span class="pod-row-date">Jan 19, 2026</span></div>
-          <div class="pod-row-title">Unmasking to Survive: Burnout, Healing, and Reclaiming Self</div>
-          <div class="pod-row-links"><span class="pod-chip">Apple Podcasts</span></div>
-        </a>
+        <article class="pod-row reveal d1">
+          <div class="pod-row-meta"><span class="pod-row-show">Finding Hope on the Spectrum · Ep 41</span><span class="pod-row-date">Jan 19, 2026</span></div>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://open.spotify.com/episode/0SjsXjuKJeYc8NNvg5dNdm" target="_blank" rel="noopener noreferrer" aria-label="Listen to Unmasking to Survive: Burnout, Healing, and Reclaiming Self on Spotify">Unmasking to Survive: Burnout, Healing, and Reclaiming Self</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/0SjsXjuKJeYc8NNvg5dNdm" target="_blank" rel="noopener noreferrer" aria-label="Listen to Unmasking to Survive: Burnout, Healing, and Reclaiming Self on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/unmasking-to-survive-burnout-healing-and-reclaiming/id1806348567?i=1000745752353" target="_blank" rel="noopener noreferrer" aria-label="Listen to Unmasking to Survive: Burnout, Healing, and Reclaiming Self on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
+
+
 
         <div class="pod-year-label">2025</div>
 
-        <a class="pod-row reveal d1" href="https://shows.acast.com/how-to-find-our-soul-purpose/episodes/im-still-here-a-story-with-chris-carazas-growing-up-with-neu" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">How to Find Our Soul Purpose with Caroline Carey</span><span class="pod-row-date">Dec 12, 2025</span></div>
-          <div class="pod-row-title">"...I'm Still Here": A Story with Chris Carazas, Growing Up with Neurodiversity</div>
-          <div class="pod-row-links"><span class="pod-chip">Spotify</span><span class="pod-chip">Acast</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://shows.acast.com/how-to-find-our-soul-purpose/episodes/im-still-here-a-story-with-chris-carazas-growing-up-with-neu" target="_blank" rel="noopener noreferrer" aria-label="Listen to &quot;...I&#x27;m Still Here&quot;: A Story with Chris Carazas, Growing Up with Neurodiversity on Acast">&quot;...I&#x27;m Still Here&quot;: A Story with Chris Carazas, Growing Up with Neurodiversity</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://shows.acast.com/how-to-find-our-soul-purpose/episodes/im-still-here-a-story-with-chris-carazas-growing-up-with-neu" target="_blank" rel="noopener noreferrer" aria-label="Listen to &quot;...I&#x27;m Still Here&quot;: A Story with Chris Carazas, Growing Up with Neurodiversity on Acast">Acast</a><a class="pod-chip pod-chip-link" href="https://open.spotify.com/episode/1bt1q6v6hOhJLL7O8aIfTK" target="_blank" rel="noopener noreferrer" aria-label="Listen to &quot;...I&#x27;m Still Here&quot;: A Story with Chris Carazas, Growing Up with Neurodiversity on Spotify">Spotify</a><a class="pod-chip pod-chip-link" href="https://podcasts.apple.com/us/podcast/im-still-here-a-story-with-chris-carazas-growing/id1652178790?i=1000741039450" target="_blank" rel="noopener noreferrer" aria-label="Listen to &quot;...I&#x27;m Still Here&quot;: A Story with Chris Carazas, Growing Up with Neurodiversity on Apple Podcasts">Apple Podcasts</a></div>
+        </article>
+
 
 
         <div class="pod-year-label">Substack Live (2026)</div>
 
-        <a class="pod-row reveal" href="https://ccarazas.substack.com/p/a-pediatric-oncologist-and-a-memoirist" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">With William Slayton</span><span class="pod-row-date">Jun 10, 2026</span></div>
-          <div class="pod-row-title">A Pediatric Oncologist and a Memoirist Walk Into a Substack Live</div>
-          <div class="pod-row-links"><span class="pod-chip">Substack</span><span class="pod-chip">YouTube</span><span class="pod-chip">1:10:01</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://ccarazas.substack.com/p/a-pediatric-oncologist-and-a-memoirist" target="_blank" rel="noopener noreferrer" aria-label="Listen to A Pediatric Oncologist and a Memoirist Walk Into a Substack Live on Substack">A Pediatric Oncologist and a Memoirist Walk Into a Substack Live</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://ccarazas.substack.com/p/a-pediatric-oncologist-and-a-memoirist" target="_blank" rel="noopener noreferrer" aria-label="Listen to A Pediatric Oncologist and a Memoirist Walk Into a Substack Live on Substack">Substack</a><span class="pod-chip pod-chip-meta">1:10:01</span></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://ccarazas.substack.com/p/live-with-christopher-carazas-2e6" target="_blank">
+        <article class="pod-row reveal d1">
           <div class="pod-row-meta"><span class="pod-row-show">With Lynn J. Broderick</span><span class="pod-row-date">Jun 10, 2026</span></div>
-          <div class="pod-row-title">Live with Christopher Carazas</div>
-          <div class="pod-row-links"><span class="pod-chip">Substack</span><span class="pod-chip">1:25:10</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://ccarazas.substack.com/p/live-with-christopher-carazas-2e6" target="_blank" rel="noopener noreferrer" aria-label="Listen to Live with Christopher Carazas on Substack">Live with Christopher Carazas</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://ccarazas.substack.com/p/live-with-christopher-carazas-2e6" target="_blank" rel="noopener noreferrer" aria-label="Listen to Live with Christopher Carazas on Substack">Substack</a><span class="pod-chip pod-chip-meta">1:25:10</span></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://ccarazas.substack.com/p/when-brains-differ-navigating-connection" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">With Haide Wall Giesbrecht &amp; Neurodivergent, Not Broken</span><span class="pod-row-date">May 9, 2026</span></div>
-          <div class="pod-row-title">When Brains Differ: Navigating Connection Together</div>
-          <div class="pod-row-links"><span class="pod-chip">Substack</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://ccarazas.substack.com/p/when-brains-differ-navigating-connection" target="_blank" rel="noopener noreferrer" aria-label="Listen to When Brains Differ: Navigating Connection Together on Substack">When Brains Differ: Navigating Connection Together</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://ccarazas.substack.com/p/when-brains-differ-navigating-connection" target="_blank" rel="noopener noreferrer" aria-label="Listen to When Brains Differ: Navigating Connection Together on Substack">Substack</a></div>
+        </article>
 
-        <a class="pod-row reveal" href="https://ccarazas.substack.com/p/office-hours-from-the-ruins-writing" target="_blank">
+        <article class="pod-row reveal d1">
           <div class="pod-row-meta"><span class="pod-row-show">Solo Workshop</span><span class="pod-row-date">May 2, 2026</span></div>
-          <div class="pod-row-title">Office Hours from the Ruins: Writing the Hard Thing Without Turning It Into a Therapy Dump</div>
-          <div class="pod-row-links"><span class="pod-chip">Substack</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://ccarazas.substack.com/p/office-hours-from-the-ruins-writing" target="_blank" rel="noopener noreferrer" aria-label="Listen to Office Hours from the Ruins: Writing the Hard Thing Without Turning It Into a Therapy Dump on Substack">Office Hours from the Ruins: Writing the Hard Thing Without Turning It Into a Therapy Dump</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://ccarazas.substack.com/p/office-hours-from-the-ruins-writing" target="_blank" rel="noopener noreferrer" aria-label="Listen to Office Hours from the Ruins: Writing the Hard Thing Without Turning It Into a Therapy Dump on Substack">Substack</a></div>
+        </article>
 
-        <a class="pod-row reveal d1" href="https://ccarazas.substack.com/p/a-conversation-on-finding-friendships" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">With The Therapist Who Came Undone</span><span class="pod-row-date">Apr 30, 2026</span></div>
-          <div class="pod-row-title">A Conversation on Finding Friendships</div>
-          <div class="pod-row-links"><span class="pod-chip">Substack</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://ccarazas.substack.com/p/a-conversation-on-finding-friendships" target="_blank" rel="noopener noreferrer" aria-label="Listen to A Conversation on Finding Friendships on Substack">A Conversation on Finding Friendships</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://ccarazas.substack.com/p/a-conversation-on-finding-friendships" target="_blank" rel="noopener noreferrer" aria-label="Listen to A Conversation on Finding Friendships on Substack">Substack</a></div>
+        </article>
+
+
 
         <div class="pod-year-label">Substack Live (2025)</div>
 
-        <a class="pod-row reveal" href="https://ccarazas.substack.com/p/surviving-griefs-firsts" target="_blank">
+        <article class="pod-row reveal">
           <div class="pod-row-meta"><span class="pod-row-show">With Jason MacKenzie &amp; Lynn J. Broderick</span><span class="pod-row-date">Dec 17, 2025</span></div>
-          <div class="pod-row-title">Surviving Grief's Firsts</div>
-          <div class="pod-row-links"><span class="pod-chip">Substack</span></div>
-        </a>
+          <div class="pod-row-title"><a class="pod-title-link" href="https://ccarazas.substack.com/p/surviving-griefs-firsts" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving Grief&#x27;s Firsts on Substack">Surviving Grief&#x27;s Firsts</a></div>
+          <div class="pod-row-links"><a class="pod-chip pod-chip-link" href="https://ccarazas.substack.com/p/surviving-griefs-firsts" target="_blank" rel="noopener noreferrer" aria-label="Listen to Surviving Grief&#x27;s Firsts on Substack">Substack</a></div>
+        </article>
+
+
 
       </div>
 
