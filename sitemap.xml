@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url><loc>https://www.chriscarazas.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority>
-<image:image><image:loc>https://www.chriscarazas.com/now-that-im-still-here-memoir-cover-christopher-carazas.jpg</image:loc></image:image>
-<image:image><image:loc>https://www.chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg</image:loc></image:image>
-<image:image><image:loc>https://www.chriscarazas.com/shadow-german-shepherd-christopher-carazas.jpg</image:loc></image:image>
-<image:image><image:loc>https://www.chriscarazas.com/christopher-carazas-and-katie.jpg</image:loc></image:image>
-</url>
-<url><loc>https://www.chriscarazas.com/book/</loc><changefreq>monthly</changefreq><priority>0.8</priority>
-</url>
-<url><loc>https://www.chriscarazas.com/writing/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
-</url>
-<url><loc>https://www.chriscarazas.com/gazette/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
-</url>
-<url><loc>https://www.chriscarazas.com/impact/</loc><changefreq>monthly</changefreq><priority>0.8</priority>
-</url>
-<url><loc>https://www.chriscarazas.com/podcasts/</loc><changefreq>weekly</changefreq><priority>0.8</priority>
-</url>
-<url><loc>https://www.chriscarazas.com/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://www.chriscarazas.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image><image:loc>https://www.chriscarazas.com/now-that-im-still-here-memoir-cover-christopher-carazas.jpg</image:loc><image:title>Now That I’m Still Here memoir cover</image:title></image:image>
+    <image:image><image:loc>https://www.chriscarazas.com/christopher-carazas-shadow-author-portrait.jpg</image:loc><image:title>Christopher Carazas and Shadow</image:title></image:image>
+  </url>
 </urlset>
