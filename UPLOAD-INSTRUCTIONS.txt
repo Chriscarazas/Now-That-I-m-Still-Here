@@ -1,1 +1,0 @@
-Upload every file in this folder to the root of the GitHub Pages repository. Replace the prior index.html and image files. Keep CNAME with no .txt extension.
