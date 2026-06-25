@@ -41,7 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="A memoir about autism, grief, survival, and the German Shepherd who kept morning arriving." name="twitter:description"/>
 <meta content="https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg" name="twitter:image"/>
 <!-- Canonical -->
-<link href="https://chriscarazas.com/" rel="canonical"/><link as="image" fetchpriority="high" href="https://chriscarazas.com/christopher-shadow-book-hero.webp?v=40" rel="preload" type="image/webp"/>
+<link href="https://chriscarazas.com/" rel="canonical"/><link as="image" fetchpriority="high" href="/christopher-shadow-book-hero.jpg" rel="preload"/>
 <!-- Schema.org -->
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SMJ44Q2SHG"></script>
@@ -968,7 +968,142 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
   letter-spacing:.2em;
 }
 </style>
-<meta content="en_US" property="og:locale"/><meta content="https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg" property="og:image:secure_url"/><meta content="image/jpeg" property="og:image:type"/><meta content="Now That I’m Still Here by Christopher Carazas, a memoir about autism, grief, survival, and Shadow." name="twitter:image:alt"/></head>
+<meta content="en_US" property="og:locale"/><meta content="https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg" property="og:image:secure_url"/><meta content="image/jpeg" property="og:image:type"/><meta content="Now That I’m Still Here by Christopher Carazas, a memoir about autism, grief, survival, and Shadow." name="twitter:image:alt"/><style>
+.hero-photo-feature{
+  max-width:620px;
+  width:100%;
+  margin:0;
+  overflow:visible;
+}
+.hero-photo-feature picture{
+  display:block;
+  overflow:hidden;
+  background:#120A06;
+  border:1px solid rgba(196,120,58,.3);
+  box-shadow:0 28px 70px rgba(0,0,0,.5);
+}
+.hero-photo-feature img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/10;
+  object-fit:cover;
+  object-position:center center;
+}
+.hero-photo-caption{
+  margin:-.9rem 0 0 1rem;
+  max-width:calc(100% - 2rem);
+}
+@media(max-width:900px){
+  .hero-photo-feature{
+    max-width:720px;
+    margin:1rem auto 0;
+  }
+  .hero-photo-caption{
+    margin:-.75rem 0 0 .75rem;
+    max-width:calc(100% - 1.5rem);
+  }
+}
+</style><style>
+/* V43 cinematic hero fade */
+.hero-v28{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.hero-v28-copy{
+  position:relative;
+  z-index:3;
+}
+.hero-photo-feature{
+  position:relative;
+  z-index:1;
+  margin-left:-7rem;
+  width:calc(100% + 7rem);
+  max-width:none;
+}
+.hero-photo-feature picture{
+  display:block;
+  position:relative;
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0,0,0,.16) 11%,
+    rgba(0,0,0,.62) 27%,
+    #000 48%,
+    #000 100%
+  );
+  mask-image:linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0,0,0,.16) 11%,
+    rgba(0,0,0,.62) 27%,
+    #000 48%,
+    #000 100%
+  );
+}
+.hero-photo-feature::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(22,18,16,.95) 0%,rgba(22,18,16,.52) 20%,transparent 48%),
+    linear-gradient(0deg,rgba(22,18,16,.3) 0%,transparent 38%);
+}
+.hero-photo-feature img{
+  display:block;
+  width:100%;
+  height:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center center;
+  animation:heroImageReveal 1.15s cubic-bezier(.2,.75,.2,1) both;
+}
+.hero-v28-copy > *{
+  opacity:0;
+  transform:translateY(18px);
+  animation:heroCopyReveal .78s cubic-bezier(.2,.75,.2,1) forwards;
+}
+.hero-v28-copy .hero-kicker{animation-delay:.12s;}
+.hero-v28-copy .hero-main{animation-delay:.24s;}
+.hero-v28-copy .hero-seo-intro{animation-delay:.38s;}
+.hero-v28-copy .cta-row{animation-delay:.52s;}
+.hero-v28-copy .hero-proof{animation-delay:.66s;}
+
+@keyframes heroImageReveal{
+  from{opacity:0;transform:scale(1.035);}
+  to{opacity:1;transform:scale(1);}
+}
+@keyframes heroCopyReveal{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@media(max-width:900px){
+  .hero-photo-feature{
+    margin-left:0;
+    width:100%;
+  }
+  .hero-photo-feature picture{
+    -webkit-mask-image:none;
+    mask-image:none;
+  }
+  .hero-photo-feature::before{
+    background:linear-gradient(0deg,rgba(22,18,16,.35),transparent 50%);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-photo-feature img,
+  .hero-v28-copy > *{
+    animation:none!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+}
+</style></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-K4S3734R" style="display:none;visibility:hidden" width="0"></iframe></noscript>
@@ -983,12 +1118,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 <!-- ═══ HERO ═══ -->
 <section aria-labelledby="hero-title" class="hero-v28" id="top">
 <div class="hero-v28-copy"><p class="hero-kicker">Christopher Carazas · Author · Kingston, Massachusetts</p><h1 class="hero-main" id="hero-title">I BECAME FLUENT IN <em>DISAPPEARING.</em></h1><p class="hero-seo-intro">I grew up autistic across five countries without knowing it, learning to become whoever each room required. <em>Now That I’m Still Here</em> is the story of what happened when that performance collapsed, and how grief, truth, and one stubborn German Shepherd helped me become visible again.</p><div class="cta-row"><a aria-label="Buy Now That I'm Still Here directly from Christopher Carazas through Lulu" class="btn-direct" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Direct from Me!</a><a aria-label="Buy Now That I'm Still Here from online book retailers" class="btn-cream" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a><a class="btn-ghost-l" href="#book">Read About the Memoir →</a></div><p class="hero-proof">For anyone who learned to disappear in order to belong, and anyone trying to become visible again.</p></div>
-<figure class="hero-v28-cover hero-photo-feature">
-<picture>
-<source srcset="https://chriscarazas.com/christopher-shadow-book-hero.webp?v=40" type="image/webp"/>
-<img alt="Christopher Carazas with Shadow beside a copy of Now That I’m Still Here in a warm café setting" decoding="async" fetchpriority="high" height="941" loading="eager" src="https://chriscarazas.com/christopher-shadow-book-hero.jpg?v=40" width="1672"/>
-</picture>
-</figure></section><section aria-label="Reader and campaign highlights" class="proof-strip"><div class="proof-item"><p class="proof-quote">“This book helped me stay.”</p><p class="proof-label">A reader at a December book event</p></div><div class="proof-item"><p class="proof-number">212</p><p class="proof-copy">copies placed into readers’ hands</p></div><div class="proof-item"><p class="proof-number">2,000</p><p class="proof-copy">reader campaign goal</p></div><div class="proof-item"><p class="proof-number">$6,000</p><p class="proof-copy">in donations to 3 organizations</p></div><div class="proof-item"><p class="proof-number">$18,000</p><p class="proof-copy">in estimated social impact</p></div></section>
+<figure class="hero-v28-cover hero-photo-feature"><picture><source srcset="/christopher-shadow-book-hero.webp" type="image/webp"/><img alt="Shadow walking along a field path toward a glowing sunset" decoding="async" fetchpriority="high" height="1080" loading="eager" src="/christopher-shadow-book-hero.jpg" width="1920"/></picture><figcaption class="amber-photo-caption hero-photo-caption">Shadow, once again, walking directly into the metaphor.</figcaption></figure></section><section aria-label="Reader and campaign highlights" class="proof-strip"><div class="proof-item"><p class="proof-quote">“This book helped me stay.”</p><p class="proof-label">A reader at a December book event</p></div><div class="proof-item"><p class="proof-number">212</p><p class="proof-copy">copies placed into readers’ hands</p></div><div class="proof-item"><p class="proof-number">2,000</p><p class="proof-copy">reader campaign goal</p></div><div class="proof-item"><p class="proof-number">$6,000</p><p class="proof-copy">in donations to 3 organizations</p></div><div class="proof-item"><p class="proof-number">$18,000</p><p class="proof-copy">in estimated social impact</p></div></section>
 <!-- ═══ QUOTE SLIDESHOW ═══ -->
 <section class="qs-section" id="quotes">
 <div class="qs-bg-mark">“</div>
