@@ -27,23 +27,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="https://ccarazas.substack.com/feed" rel="alternate" title="Now That I’m Still Here on Substack" type="application/rss+xml"/>
 <link href="https://chriscarazas.com/sitemap.xml" rel="sitemap" type="application/xml"/>
 <meta content="Now That I’m Still Here is Christopher Carazas’s memoir about late-diagnosed autism, psychological abuse, grief, survival, and the German Shepherd who helped him stay." name="description"/>
-<!-- Open Graph -->
 <meta content="website" property="og:type"/>
 <meta content="Now That I’m Still Here | Memoir by Christopher Carazas" property="og:title"/>
 <meta content="A memoir about late-diagnosed autism, grief, survival, belonging, and the German Shepherd who kept morning arriving." property="og:description"/>
 <meta content="https://chriscarazas.com/" property="og:url"/>
 <meta content="https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg" property="og:image"/>
 <meta content="Christopher Carazas" property="og:site_name"/>
-<!-- Twitter Card -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="@christheaspie" name="twitter:site"/>
 <meta content="Now That I’m Still Here | Memoir by Christopher Carazas" name="twitter:title"/>
 <meta content="A memoir about autism, grief, survival, and the German Shepherd who kept morning arriving." name="twitter:description"/>
 <meta content="https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg" name="twitter:image"/>
-<!-- Canonical -->
-<link href="https://chriscarazas.com/" rel="canonical"/><link as="image" fetchpriority="high" href="/christopher-shadow-book-hero.jpg" rel="preload"/>
-<!-- Schema.org -->
-<!-- Google tag (gtag.js) -->
+<link href="https://chriscarazas.com/" rel="canonical"/><link as="image" fetchpriority="high" href="christopher-shadow-book-hero.webp" rel="preload" type="image/webp"/>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SMJ44Q2SHG"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -53,1201 +48,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Space+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{background:#F4EEDD;color:#1A1410;font-family:'EB Garamond',Georgia,serif;overflow-x:hidden;}
-:root{
-  --dk:#161210;--dk2:#241C16;--dk3:#120A06;
-  --cr:#F4EEDD;--cr2:#FAF7F2;
-  --tl:#2D6458;--tm:#3B7A6C;--tll:#4A9080;
-  --am:#C4783A;--al:#D4924E;
-  --wg:#6B6560;--wl:#B0ABA5;
-  --ld:#2A2118;--ll:#DDD5C4;
-}
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;justify-content:space-between;align-items:center;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;}
-nav.scrolled{background:rgba(22,18,16,.97);border-color:var(--ld);backdrop-filter:blur(6px);}
-.nav-logo{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cr);text-decoration:none;}
-.nav-links{list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap;}
-.nav-links a{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,238,221,.45);text-decoration:none;transition:color .2s;}
-.nav-links a:hover{color:var(--cr);}
-/* HERO */
-.hero{min-height:100vh;background:var(--dk);display:flex;flex-direction:column;justify-content:flex-end;padding:0 3rem 7rem;position:relative;overflow:hidden;}
-.hero-ghost{font-family:'Bebas Neue',sans-serif;font-size:clamp(9rem,22vw,20rem);color:rgba(244,238,221,.035);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;line-height:1;}
-.hero-afoot{position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--am);opacity:.55;}
-.eyebrow{font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.22em;text-transform:uppercase;color:var(--wg);margin-bottom:1.75rem;}
-.hero-h1{font-family:'Bebas Neue',sans-serif;line-height:.88;margin-bottom:2.5rem;}
-.h1a,.h1b{display:block;font-size:clamp(3.5rem,12vw,12rem);color:var(--cr);letter-spacing:-.01em;}
-.h1c{display:block;font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.4rem,3.5vw,3.2rem);color:var(--al);margin-top:.5rem;line-height:1.25;}
-.hero-sub{font-size:clamp(.95rem,1.5vw,1.15rem);line-height:1.85;color:var(--wl);max-width:500px;margin-bottom:2.5rem;}
-.cta-row{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;}
-.btn-primary-hero{padding:1rem 2.75rem;font-size:.65rem;letter-spacing:.14em;}
-.btn-cream{display:inline-block;padding:.8rem 2rem;background:var(--am);color:var(--cr);font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s;}
-.btn-cream:hover{background:var(--al);color:var(--cr);}
-.btn-teal{display:inline-block;padding:.8rem 2rem;background:var(--am);color:var(--cr);font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s;}
-.btn-teal:hover{background:var(--al);}
-.btn-ghost-l{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wl);text-decoration:none;border-bottom:1px solid var(--wg);padding-bottom:.1rem;transition:color .2s;}
-.btn-ghost-l:hover{color:var(--cr);border-color:var(--cr);}
-/* QUOTE SLIDESHOW */
-.qs-section{background:var(--dk);min-height:65vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:5rem 3rem;border-top:1px solid rgba(196,120,58,.2);border-bottom:1px solid rgba(196,120,58,.2);}
-.qs-bg-mark{font-family:'Bebas Neue',sans-serif;font-size:28rem;color:rgba(244,238,221,.028);position:absolute;top:-4rem;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;user-select:none;}
-.qs-container{max-width:860px;width:100%;margin:0 auto;position:relative;z-index:1;text-align:center;}
-#qsSlides{display:grid;}
-.qs-slide{grid-area:1/1;opacity:0;pointer-events:none;transition:opacity .8s ease;}
-.qs-slide.active{opacity:1;pointer-events:auto;}
-@keyframes qsFadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-.qs-number{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.22em;text-transform:uppercase;color:var(--am);opacity:.55;margin-bottom:2rem;}
-.qs-quote{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.4rem,3vw,2.6rem);color:var(--cr);line-height:1.52;margin-bottom:2rem;}
-.qs-slide[data-size="large"] .qs-quote{font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.38;}
-.qs-slide[data-size="huge"] .qs-quote{font-family:'Bebas Neue',sans-serif;font-style:normal;font-size:clamp(3.5rem,9vw,8rem);line-height:.88;letter-spacing:-.01em;color:var(--cr);}
-.qs-slide[data-size="huge"] .qs-quote strong{color:var(--am);font-weight:400;}
-.qs-slide[data-size="huge"] .qs-number{margin-bottom:3rem;}
-.qs-quote strong{font-style:normal;font-weight:400;color:var(--al);}
-.qs-attr{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wg);}
-.qs-dots{display:flex;justify-content:center;gap:.65rem;margin-top:3rem;}
-.qs-dot{width:.55rem;height:.55rem;border-radius:50%;background:rgba(244,238,221,.2);border:none;cursor:pointer;transition:background .3s,transform .3s;padding:0;}
-.qs-dot.active{background:var(--am);transform:scale(1.25);}
-.qs-nav{position:absolute;top:50%;transform:translateY(-50%);width:100%;display:flex;justify-content:space-between;pointer-events:none;padding:0 1rem;}
-.qs-arrow{font-family:'Space Mono',monospace;font-size:.8rem;color:rgba(244,238,221,.25);background:none;border:none;cursor:pointer;pointer-events:auto;transition:color .2s;padding:.5rem 1rem;}
-.qs-arrow:hover{color:var(--cr);}
-
-/* REVIEW TICKER (kept for bottom) */
-.rv-out{overflow:hidden;padding:2rem 0;background:var(--dk2);}
-.rv-track{display:flex;white-space:nowrap;animation:rvL 70s linear infinite;}
-.rv-track:hover{animation-play-state:paused;}
-.rv{flex-shrink:0;width:300px;margin:0 .75rem;border:1px solid rgba(244,238,221,.07);padding:1.75rem;background:rgba(255,255,255,.022);}
-.rv-s{color:var(--am);font-size:.8rem;margin-bottom:.55rem;letter-spacing:.08em;}
-.rv-q{font-style:italic;font-size:.95rem;line-height:1.7;color:var(--wl);margin-bottom:.85rem;}
-.rv-a{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tm);}
-@keyframes rvL{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-/* SHARED */
-.slbl{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wg);margin-bottom:2rem;display:flex;align-items:center;gap:.75rem;padding-left:.65rem;border-left:2px solid var(--am);}
-.slbl::after{content:'';display:block;height:1px;width:2.5rem;background:currentColor;opacity:.3;}
-.slbl-t{color:var(--tm);}
-.slbl-a{color:var(--al);}
-.btn-dark{display:inline-block;padding:.78rem 1.85rem;background:var(--am);color:var(--cr);font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s;}
-.btn-dark:hover{background:var(--al);}
-.btn-direct{display:inline-block;padding:.8rem 2rem;background:var(--tl);color:var(--cr);font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid var(--tl);transition:background .2s,border-color .2s,transform .2s;}
-.btn-direct:hover{background:var(--tm);border-color:var(--tm);transform:translateY(-1px);}
-.btn-direct:focus-visible{outline:3px solid var(--al);outline-offset:3px;}
-.body-txt{font-size:1.1rem;line-height:1.87;color:#4A433C;}
-.body-txt p+p{margin-top:1rem;}
-.amber-rule{width:3rem;height:2px;background:var(--am);margin:2rem 0;}
-section{padding:7rem 3rem;}
-/* BOOK */
-.book{background:var(--cr);}
-.book-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:5.5rem;align-items:start;}
-.book-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,8vw,9.5rem);line-height:.87;color:var(--dk);margin-bottom:.4rem;}
-.book-sub{font-style:italic;font-size:1.05rem;color:var(--tm);margin-bottom:2rem;}
-.book-cta{margin-top:2rem;display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap;}
-.cov{background:var(--dk);aspect-ratio:2/3;padding:2rem;display:flex;flex-direction:column;position:relative;overflow:hidden;border:1px solid #1A1410;}
-.cov-stripe{position:absolute;top:0;left:0;right:0;height:40%;background:var(--tl);opacity:.08;}
-.cov-dot{position:absolute;top:1.5rem;right:1.5rem;width:.48rem;height:.48rem;background:var(--am);border-radius:50%;}
-.cov-top{border-top:1.5px solid var(--cr);padding-top:1.1rem;position:relative;}
-.cov-tag{font-family:'Space Mono',monospace;font-size:.4rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wg);margin-bottom:.65rem;}
-.cov-title{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--cr);line-height:.95;}
-.cov-s{font-style:italic;font-size:.75rem;color:var(--tm);margin-top:.75rem;line-height:1.42;}
-.cov-bot{margin-top:auto;border-top:1px solid #2A2118;padding-top:.9rem;}
-.cov-real{border:none;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.5);border-radius:2px;}
-.cov-auth{font-family:'Space Mono',monospace;font-size:.42rem;letter-spacing:.2em;text-transform:uppercase;color:var(--wg);}
-/* REVIEWS - What the Book Left Behind */
-.reviews-behind{background:var(--dk2);}
-.reviews-behind-hdr{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4.5vw,4rem);line-height:.95;color:var(--cr);margin-bottom:.75rem;}
-.reviews-behind-sub{font-style:italic;font-size:1.05rem;color:var(--wl);margin-bottom:3rem;}
-.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(244,238,221,.06);}
-.rev-cell{background:var(--dk2);padding:2.5rem 2rem;}
-.rev-cell-mark{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--am);line-height:1;margin-bottom:1rem;}
-.rev-cell-q{font-style:italic;font-size:1.05rem;line-height:1.72;color:var(--wl);margin-bottom:1.1rem;}
-.rev-cell-a{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tm);}
-/* KATIE — split-screen */
-.katie{background:var(--dk3);padding:0;}
-.katie-split{display:grid;grid-template-columns:1fr 1fr;min-height:60vh;}
-.katie-photo-side{overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;padding:3.5rem 2.5rem;}
-.katie-words-side{padding:5.5rem 4rem;display:flex;flex-direction:column;justify-content:center;background:var(--dk3);position:relative;}
-.katie-words-side::before{content:'"';font-family:'Bebas Neue',sans-serif;font-size:18rem;color:rgba(244,238,221,.028);position:absolute;top:-2rem;left:2rem;line-height:1;pointer-events:none;}
-.katie-rule{width:2rem;height:1px;background:var(--am);margin:0 0 2rem;opacity:.5;}
-.katie-lbl{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.22em;text-transform:uppercase;color:var(--al);margin-bottom:1.5rem;opacity:.65;}
-.katie-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,7vw,7rem);color:var(--cr);line-height:.9;margin-bottom:1.75rem;}
-.katie-moment{font-family:'EB Garamond',Georgia,serif;font-size:clamp(.95rem,1.5vw,1.15rem);color:rgba(244,238,221,.5);line-height:1.75;margin-bottom:2rem;font-style:italic;}
-.katie-q1{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.25rem,2.2vw,1.75rem);color:rgba(244,238,221,.9);line-height:1.48;margin-bottom:1.5rem;border-left:2px solid var(--am);padding-left:1.1rem;}
-.katie-q2{font-family:'EB Garamond',Georgia,serif;font-size:clamp(.92rem,1.4vw,1.1rem);color:rgba(244,238,221,.5);line-height:1.72;margin-bottom:2rem;}
-.katie-close{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.18em;text-transform:uppercase;color:var(--al);opacity:.6;}
-/* SHADOW */
-.shadow-sec{background:var(--dk2);position:relative;overflow:hidden;}
-.shadow-bg-txt{font-family:'Bebas Neue',sans-serif;font-size:clamp(10rem,27vw,25rem);color:rgba(244,238,221,.022);position:absolute;bottom:-2rem;right:-.5rem;line-height:1;pointer-events:none;user-select:none;}
-.shadow-inner{display:grid;grid-template-columns:1fr 1.45fr;gap:5rem;align-items:start;position:relative;z-index:1;}
-.shadow-img{aspect-ratio:3/4;border:1px solid rgba(244,238,221,.07);background:#120E0B;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:1.1rem;}
-.shadow-img::before{content:'GSD';font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(244,238,221,.04);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1;}
-.shadow-img::after{content:'PHOTO — SHADOW / PLYMOUTH, MA';font-family:'Space Mono',monospace;font-size:.36rem;letter-spacing:.12em;color:#3A3026;position:relative;z-index:1;}
-.shadow-imgline{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--am);opacity:.14;}
-.shadow-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4.5vw,4.5rem);line-height:.92;color:var(--cr);margin-bottom:1.65rem;}
-.shadow-body{font-size:1.08rem;line-height:1.9;color:var(--wl);}
-.shadow-body p+p{margin-top:1rem;}
-.shadow-body strong{color:var(--cr);font-weight:400;}
-.shadow-body em{color:var(--al);font-style:italic;}
-/* GAZETTE */
-.gazette{background:var(--dk);}
-.gazette-header{margin-bottom:3rem;}
-.gazette-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.5rem);line-height:.95;color:var(--cr);margin-bottom:.5rem;}
-.gazette-tag{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.18em;text-transform:uppercase;color:var(--am);margin-bottom:1.25rem;}
-.gazette-desc{font-style:italic;font-size:1.05rem;color:var(--wl);max-width:560px;}
-.gazette-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(244,238,221,.06);}
-.gazette-card{background:var(--dk);padding:2rem 1.75rem;}
-.gazette-card-date{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.15em;text-transform:uppercase;color:var(--wg);margin-bottom:.85rem;}
-.gazette-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;line-height:1;color:var(--cr);margin-bottom:.85rem;}
-.gazette-card-desc{font-style:italic;font-size:.95rem;line-height:1.7;color:var(--wl);margin-bottom:1.25rem;}
-.gazette-card-link{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:var(--am);text-decoration:none;border-bottom:1px solid rgba(196,120,58,.35);padding-bottom:.1rem;}
-/* ABOUT */
-.about{background:var(--cr2);position:relative;overflow:hidden;}
-.about-bgnum{font-family:'Bebas Neue',sans-serif;font-size:clamp(12rem,38vw,35rem);color:var(--cr2);-webkit-text-stroke:1px #DDD5C4;position:absolute;right:-4vw;top:50%;transform:translateY(-50%);line-height:1;pointer-events:none;user-select:none;}
-.about-inner{display:grid;grid-template-columns:1fr 2fr;gap:5rem;position:relative;z-index:1;}
-.about-left{position:sticky;top:5rem;}
-.about-big{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,7rem);line-height:.88;color:var(--dk);margin-top:1.5rem;}
-.about-body{font-size:1.08rem;line-height:1.87;color:#4A433C;}
-.about-body p+p{margin-top:1.05rem;}
-.about-pull{border-left:3px solid var(--am);padding-left:1.5rem;margin:2.25rem 0;font-style:italic;font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.52;color:var(--dk);}
-/* SUBSTACK ESSAYS */
-.substack-sec{background:var(--cr);}
-.sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem;}
-.sub-card{border:1px solid var(--ll);padding:2rem;background:var(--cr2);position:relative;overflow:hidden;border-radius:2px;text-decoration:none;display:block;transition:border-color .2s;}
-.sub-card:hover{border-color:var(--tm);}
-.sub-card-acc{position:absolute;top:0;left:0;width:2px;height:100%;background:var(--tl);}
-.sub-card-label{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.15em;text-transform:uppercase;color:var(--tm);margin-bottom:.75rem;}
-.sub-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;line-height:1;color:var(--dark2, #241C16);margin-bottom:.75rem;transition:color .2s;}
-.sub-card:hover .sub-card-title{color:var(--tl);}
-.sub-card-desc{font-style:italic;font-size:.95rem;line-height:1.7;color:#4A433C;}
-.sub-cta{margin-top:2.5rem;display:flex;gap:1.25rem;align-items:center;}
-/* ROAD TO 2000 */
-.road{background:var(--dk);position:relative;overflow:hidden;}
-.road-bgnum{font-family:'Bebas Neue',sans-serif;font-size:clamp(10rem,24vw,22rem);color:rgba(244,238,221,.025);position:absolute;right:-1rem;bottom:-1.5rem;line-height:.85;pointer-events:none;user-select:none;}
-.road-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;position:relative;z-index:1;}
-.road-h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,5vw,4.5rem);line-height:.93;color:var(--cr);margin-bottom:1.25rem;}
-.road-body{font-size:1.05rem;line-height:1.87;color:var(--wl);margin-bottom:1.75rem;}
-.road-body p+p{margin-top:.95rem;}
-.road-body strong{color:var(--cr);font-weight:400;}
-.road-subh{font-family:'Bebas Neue',sans-serif;font-size:1.75rem;color:var(--cr);margin:2rem 0 1rem;line-height:1;}
-.road-pillars{display:flex;flex-direction:column;gap:.9rem;margin-bottom:1.5rem;}
-.road-pillar{display:flex;gap:.85rem;align-items:flex-start;border-left:2px solid var(--am);padding:.15rem 0 .15rem .9rem;}
-.road-pillar-num{font-family:'Bebas Neue',sans-serif;font-size:2.25rem;color:var(--al);line-height:1;min-width:3rem;}
-.road-pillar-txt{font-size:1rem;line-height:1.7;color:var(--wl);}
-.road-pillar-title{font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cr);margin-bottom:.3rem;}
-.road-prog-wrap{margin-bottom:2.25rem;}
-.road-prog-lbl{font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.15em;text-transform:uppercase;color:var(--wg);margin-bottom:.75rem;}
-.road-prog-bar{background:rgba(244,238,221,.07);height:3px;width:100%;margin-bottom:.6rem;}
-.road-prog-fill{background:var(--am);height:100%;}
-.road-prog-num{font-family:'Bebas Neue',sans-serif;font-size:2.25rem;color:var(--al);line-height:1;}
-.road-prog-sub{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wg);margin-top:.3rem;}
-.road-bens{display:flex;flex-direction:column;gap:1.1rem;}
-.road-ben{display:flex;gap:.85rem;align-items:flex-start;}
-.road-ben-dot{color:var(--am);font-size:.7rem;margin-top:.35rem;flex-shrink:0;}
-.road-ben-t{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cr);margin-bottom:.28rem;}
-.road-ben-d{font-size:.95rem;line-height:1.7;color:var(--wl);}
-/* EVENTS */
-.events-sec{background:var(--cr2);}
-.events-empty{text-align:center;padding:4rem 2rem;border:1px solid var(--ll);}
-.events-empty-icon{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:var(--ll);line-height:1;margin-bottom:1.25rem;}
-.events-empty-txt{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:1.2rem;color:var(--wg);line-height:1.7;margin-bottom:1.5rem;}
-/* PODCASTS */
-.pods-sec{background:var(--cr);}
-.pod-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem;}
-.pod-card{border:1px solid var(--ll);background:var(--cr2);overflow:hidden;}
-.pod-card-top{padding:2rem;border-left:2px solid var(--tl);}
-.pod-card-show{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.15em;text-transform:uppercase;color:var(--tm);margin-bottom:.7rem;}
-.pod-card-ep{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;line-height:1;color:var(--dk);margin-bottom:.7rem;}
-.pod-card-links{display:flex;gap:.85rem;flex-wrap:wrap;margin-top:1.1rem;}
-.pod-link{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);text-decoration:none;border-bottom:1px solid rgba(59,122,108,.3);padding-bottom:.1rem;}
-/* details/summary accordion */
-details.pod-card summary{list-style:none;cursor:pointer;}
-details.pod-card summary::-webkit-details-marker{display:none;}
-.pod-summary-btn{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wg);background:none;border:none;cursor:pointer;padding:.6rem 2rem 1rem;display:flex;align-items:center;gap:.5rem;}
-.pod-summary-btn::after{content:'▾';color:var(--am);}
-details[open] .pod-summary-btn::after{content:'▴';}
-.pod-details-body{padding:0 2rem 2rem;border-top:1px solid var(--ll);}
-.pod-details-txt{font-style:italic;font-size:.98rem;line-height:1.75;color:#4A433C;padding-top:1.25rem;}
-/* SUBSTACK LIVES */
-.lives-sec{background:var(--dk2);}
-.lives-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem;}
-.live-card{border:1px solid rgba(244,238,221,.08);padding:2rem;background:rgba(255,255,255,.022);}
-.live-card-label{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.15em;text-transform:uppercase;color:var(--al);margin-bottom:.75rem;}
-.live-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;line-height:1;color:var(--cr);margin-bottom:.75rem;}
-.live-card-desc{font-style:italic;font-size:.95rem;line-height:1.7;color:var(--wl);margin-bottom:1.25rem;}
-.live-card-link{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:var(--al);text-decoration:none;border-bottom:1px solid rgba(212,146,78,.3);padding-bottom:.1rem;}
-/* SOCIALS */
-.socials-strip{background:var(--dk);padding:3rem;border-top:1px solid var(--ld);border-bottom:1px solid var(--ld);}
-.socials-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem;}
-.socials-label{font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wg);}
-.socials-icons{display:flex;gap:1.5rem;align-items:center;}
-.social-icon{display:flex;align-items:center;gap:.5rem;text-decoration:none;opacity:.55;transition:opacity .2s;}
-.social-icon:hover{opacity:1;}
-.social-icon svg{width:1.25rem;height:1.25rem;fill:var(--cr);}
-.social-icon-lbl{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cr);}
-/* FOOTER */
-footer{background:var(--dk);padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem;}
-.footer-sign{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--am);line-height:1;}
-.footer-nav{list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap;}
-.footer-nav a{font-family:'Space Mono',monospace;font-size:.44rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,238,221,.62);text-decoration:none;transition:color .2s;}
-.footer-nav a:hover{color:var(--cr);}
-.footer-copy{font-family:'Space Mono',monospace;font-size:.42rem;letter-spacing:.06em;color:#2E2420;}
-/* HERO PHOTO OVERLAY */
-.hero-photo-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(22,18,16,.97) 0%,rgba(22,18,16,.88) 30%,rgba(22,18,16,.6) 58%,rgba(22,18,16,.25) 100%);pointer-events:none;z-index:0;}
-.hero-ghost{z-index:1;}
-.hero-afoot{z-index:2;}
-.eyebrow,.hero-h1,.hero-sub,.cta-row{position:relative;z-index:2;}
-
-
-.le-title{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;color:var(--cr);line-height:1;margin-bottom:.4rem;}
-.le-desc{font-size:.88rem;line-height:1.6;color:var(--wg);font-style:italic;}
-/* SCROLL REVEAL */
-.fade-up{opacity:0;transform:translateY(26px);transition:opacity .85s ease,transform .85s ease;}
-.fade-up.visible{opacity:1;transform:translateY(0);}
-.fade-up.delay-1{transition-delay:.12s;}
-.fade-up.delay-2{transition-delay:.24s;}
-.fade-up.delay-3{transition-delay:.36s;}
-.fade-up.delay-4{transition-delay:.48s;}
-
-/* REVIEWS SLIDESHOW */
-.rslideshow-wrap{position:relative;max-width:760px;margin:0 auto 0;text-align:center;min-height:320px;}
-.rslideshow-bg-mark{font-family:'Bebas Neue',sans-serif;font-size:14rem;color:rgba(244,238,221,.042);position:absolute;top:-3rem;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;user-select:none;}
-.rslideshow-inner{position:relative;min-height:280px;}
-.rslideshow-inner{display:grid;}
-.rslide{grid-area:1/1;opacity:0;pointer-events:none;transition:opacity .75s ease;}
-.rslide.rslide-active{opacity:1;pointer-events:auto;}
-@keyframes rsFade{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-.rslide-stars{color:var(--am);font-size:1rem;letter-spacing:.15em;margin-bottom:1.75rem;}
-.rslide-q{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.2rem,2.5vw,1.9rem);color:var(--cr);line-height:1.52;margin-bottom:1.5rem;position:relative;z-index:1;}
-.rslide-attr{font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.18em;text-transform:uppercase;color:var(--am);}
-.rslideshow-dots{display:flex;justify-content:center;gap:.55rem;margin-top:2.25rem;}
-.rslide-dot{width:.5rem;height:.5rem;border-radius:50%;background:rgba(244,238,221,.18);border:none;cursor:pointer;padding:0;transition:background .3s,transform .3s;}
-.rslide-dot.rslide-dot-active{background:var(--am);transform:scale(1.3);}
-.rslideshow-nav{position:absolute;top:40%;transform:translateY(-50%);width:calc(100% + 6rem);left:-3rem;display:flex;justify-content:space-between;pointer-events:none;}
-.rslide-arrow{font-family:'Space Mono',monospace;font-size:.9rem;color:rgba(244,238,221,.2);background:none;border:none;cursor:pointer;pointer-events:auto;transition:color .2s;padding:.5rem 1rem;}
-.rslide-arrow:hover{color:var(--cr);}
-
-/* TYPOGRAPHIC INTERSTITIAL */
-.type-pause{background:var(--dk3);padding:6rem 3rem 5.5rem;text-align:left;border-top:1px solid rgba(196,120,58,.15);border-bottom:1px solid rgba(196,120,58,.15);}
-.type-pause-a{font-family:'Bebas Neue',sans-serif;font-size:clamp(4.5rem,14vw,14rem);color:var(--cr);line-height:.88;letter-spacing:-.02em;display:block;}
-.type-pause-b{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,9vw,9rem);color:var(--am);line-height:.9;letter-spacing:-.02em;display:block;margin-top:.35rem;}
-
-/* SHADOW RECORD */
-.shadow-record{font-family:'Space Mono',monospace;font-size:clamp(.62rem,1vw,.78rem);letter-spacing:.11em;text-transform:uppercase;color:var(--am);margin-top:1.9rem;border-top:1px solid rgba(196,120,58,.3);padding-top:1.15rem;line-height:1.8;max-width:58rem;}
-
-/* KATIE - wider photo */
-.katie-photo{max-width:520px;margin:0 auto 2.75rem;}
-
-/* WARMER QUOTE SLIDE */
-.qs-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(196,120,58,.06) 0%,transparent 70%);pointer-events:none;}
-
-/* FOOTER WHISPER */
-.footer-whisper{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:.88rem;color:rgba(244,238,221,.42);margin-top:.45rem;line-height:1.5;}
-
-/* SECTION AMBER ACCENT LINE */
-.section-amber-line{width:3rem;height:2px;background:var(--am);margin:0 0 2.25rem;}
-
-/* HOVER polish on sub-cards */
-.sub-card{transition:border-color .25s,transform .25s;}
-.sub-card:hover{transform:translateY(-2px);}
-
-/* Review cell hover */
-.rev-cell{transition:background .25s;}
-.rev-cell:hover{background:rgba(244,238,221,.025);}
-
-
-/* KATIE CONTEXT */
-.katie-context{font-size:1rem;line-height:1.78;color:rgba(244,238,221,.62);margin-bottom:1.35rem;max-width:640px;}
-.katie-context strong{color:var(--cr);font-weight:400;}
-.katie-origin{margin:1.5rem 0 1.75rem;padding:1.25rem 1.35rem;border:1px solid rgba(196,120,58,.22);background:rgba(196,120,58,.055);}
-.katie-origin-label{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--al);margin-bottom:.7rem;}
-.katie-origin p:last-child{font-size:1.05rem;line-height:1.72;color:rgba(244,238,221,.78);}
-
-/* ROAD TO 2,000: SROI + MILESTONES */
-.milestone-wrap{grid-column:1/-1;margin-top:.5rem;padding-top:1.75rem;border-top:1px solid rgba(244,238,221,.1);}
-.milestone-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.35rem;}
-.milestone-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,3.5vw,3rem);line-height:1;color:var(--cr);}
-.milestone-caption{max-width:520px;font-size:.98rem;line-height:1.65;color:var(--wl);text-align:right;}
-.milestone-track{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:.7rem;padding-top:.85rem;}
-.milestone-track::before{content:'';position:absolute;left:8%;right:8%;top:1.52rem;height:2px;background:rgba(244,238,221,.12);}
-.milestone-track::after{content:'';position:absolute;left:8%;top:1.52rem;width:1.1%;height:2px;background:var(--am);}
-.milestone{position:relative;text-align:center;padding-top:2.1rem;}
-.milestone-dot{position:absolute;top:.95rem;left:50%;transform:translateX(-50%);width:1.15rem;height:1.15rem;border-radius:50%;border:2px solid rgba(244,238,221,.28);background:var(--dk);z-index:1;}
-.milestone.next .milestone-dot{border-color:var(--am);box-shadow:0 0 0 5px rgba(196,120,58,.12);}
-.milestone-goal{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;color:var(--cr);line-height:1;}
-.milestone-impact{font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:var(--al);margin:.45rem 0;}
-.milestone-note{font-size:.88rem;line-height:1.5;color:var(--wg);}
-.milestone-current{display:inline-block;margin-top:.55rem;padding:.28rem .5rem;background:var(--am);color:var(--dk);font-family:'Space Mono',monospace;font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;}
-/* Global image consistency */
-img{max-width:100%;height:auto;}
-/* Card border-radius system */
-.gazette-card{border-radius:2px;}
-.road-pillar{border-radius:2px;}
-
-@media(max-width:860px){
-  .milestone-head{align-items:flex-start;flex-direction:column;}
-  .milestone-caption{text-align:left;}
-  .milestone-track{grid-template-columns:1fr;padding-left:1.8rem;gap:1.5rem;}
-  .milestone-track::before{left:.55rem;right:auto;top:1rem;bottom:1rem;width:2px;height:auto;}
-  .milestone-track::after{left:.55rem;top:1rem;width:2px;height:0;background:var(--am);}
-  .milestone{text-align:left;padding:0 0 0 1.25rem;}
-  .milestone-dot{top:.15rem;left:-1.25rem;transform:none;}
-}
-
-/* RESPONSIVE */
-@media(max-width:860px){
-  .katie-split{grid-template-columns:1fr;min-height:auto;}
-  .katie-photo-side{padding:2.5rem 2rem;min-height:280px;}
-  .katie-photo-side{height:55vw;min-height:260px;}
-  .katie-words-side{padding:3.5rem 2rem;}
-  .book-inner,.shadow-inner,.about-inner,.road-inner,.rev-grid,.sub-grid,.gazette-grid,.pod-grid,.lives-grid{grid-template-columns:1fr;gap:2.5rem;}
-  .nav-links{display:none;}
-  section{padding:4.5rem 1.5rem;}
-  .hero{padding:0 1.5rem 5rem;}
-  .about-bgnum{opacity:.2;}
-  .about-left{position:static;}
-  .socials-inner{flex-direction:column;align-items:flex-start;}
-  footer{padding:2.25rem 1.5rem;}
-  .socials-strip{padding:2.5rem 1.5rem;}
-}
-
-/* V13 STRATEGIC REBUILD */
-:root{--max:1180px;}
-nav{padding:.9rem 2rem;}
-.nav-links{gap:1.1rem;align-items:center;}
-.nav-links a{font-size:.66rem;}
-.nav-buy{background:var(--am);color:var(--cr)!important;padding:.62rem .9rem;border:1px solid var(--am);}
-.nav-retail{border:1px solid rgba(244,238,221,.38);color:var(--cr)!important;padding:.62rem .9rem;}
-.nav-retail:hover{border-color:var(--cr);background:rgba(244,238,221,.08);}
-.nav-toggle{display:none;background:none;border:1px solid rgba(244,238,221,.24);color:var(--cr);font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:.55rem .7rem;cursor:pointer;}
-.hero{min-height:92vh;justify-content:center;padding:8rem 3rem 5rem;background-position:center;background-size:cover;}
-.hero-content{width:min(var(--max),100%);margin:0 auto;position:relative;z-index:2;border-left:2px solid rgba(196,120,58,.25);padding-left:1.5rem;}
-.hero-kicker{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--al);margin-bottom:1.5rem;}
-.hero-main{font-family:'Bebas Neue',sans-serif;font-size:clamp(4.8rem,12vw,12rem);line-height:.84;color:var(--cr);max-width:1100px;letter-spacing:-.02em;}
-.hero-main em{color:var(--am);font-style:normal;}
-.hero-main em{display:block;color:var(--am);font-style:normal;}
-.hero-deck{font-size:clamp(1.1rem,1.8vw,1.45rem);line-height:1.65;color:rgba(244,238,221,.78);max-width:670px;margin:2rem 0 2.3rem;}
-.hero-proof{font-family:'Space Mono',monospace;font-size:.66rem;line-height:1.7;letter-spacing:.08em;text-transform:uppercase;color:rgba(244,238,221,.44);margin-top:1.4rem;}
-.audience{background:var(--cr2);padding:6rem 3rem;}
-.audience-inner{width:min(var(--max),100%);margin:0 auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:5rem;align-items:start;}
-.audience h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,6.5rem);line-height:.88;color:var(--dk);}
-.audience-list{display:grid;gap:0;border-top:1px solid var(--ll);}
-.audience-item{padding:1.25rem 0;border-bottom:1px solid var(--ll);font-size:1.15rem;line-height:1.55;color:#4A433C;display:grid;grid-template-columns:2rem 1fr;gap:1rem;}
-.audience-item span{font-family:'Space Mono',monospace;color:var(--am);font-size:.7rem;padding-top:.35rem;}
-.about{padding:6rem 3rem;}
-.about-inner{width:min(var(--max),100%);margin:0 auto;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:start;}
-.about-left{position:static;}
-.about-big{font-size:clamp(3rem,6vw,5.8rem);}
-.about-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--ll);margin-top:2rem;}
-.about-fact{background:var(--cr2);padding:1rem;}
-.about-fact b{display:block;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:.35rem;}
-.road{padding:4.75rem 3rem;}
-.road-inner{width:min(var(--max),100%);margin:0 auto;grid-template-columns:1fr 1fr;gap:2.75rem;align-items:start;}
-.road-h2{font-size:clamp(3.2rem,7vw,6.4rem);}
-.pods-sec{padding:6rem 3rem!important;}
-.podcast-feature-grid{width:min(var(--max),100%);margin:2.5rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
-.podcast-feature{border:1px solid var(--ll);background:var(--cr2);padding:1.6rem;display:flex;flex-direction:column;min-height:330px;}
-.podcast-feature .kind{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tm);margin-bottom:1.2rem;}
-.podcast-feature h3{font-family:'EB Garamond',Georgia,serif;font-size:1.55rem;line-height:1.18;color:var(--dk);margin-bottom:.8rem;}
-.podcast-feature p{font-size:1rem;line-height:1.65;color:#4A433C;margin-bottom:1.3rem;}
-.podcast-feature .show{font-family:'Space Mono',monospace;font-size:.58rem;line-height:1.5;letter-spacing:.1em;text-transform:uppercase;color:var(--wg);margin-bottom:1rem;}
-.podcast-feature .links{margin-top:auto;display:flex;gap:.8rem;flex-wrap:wrap;}
-.podcast-feature .links a{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);text-decoration:none;border-bottom:1px solid rgba(59,122,108,.3);}
-.final-cta{background:var(--am);padding:7rem 3rem;text-align:center;}
-.final-cta-inner{width:min(950px,100%);margin:0 auto;}
-.final-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.8rem,9vw,8rem);line-height:.88;color:var(--dk);}
-.final-cta p{font-size:clamp(1.1rem,2vw,1.45rem);line-height:1.65;color:#2A2118;max-width:720px;margin:1.5rem auto 2rem;}
-.final-cta .btn-dark{background:var(--dk);}
-.slbl,.pod-card-show,.pod-card-links,.road-prog-lbl,.road-prog-sub,.road-ben-t,.road-pillar-title,.footer-nav a,.social-icon-lbl{font-size:.66rem;}
-.qs-number,.qs-attr,.rslide-attr{font-size:.68rem;}
-@media(max-width:860px){
-  .nav-toggle{display:block;}
-  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(22,18,16,.99);padding:1rem 1.5rem 1.5rem;flex-direction:column;align-items:flex-start;border-top:1px solid var(--ld);}
-  .nav-links.open{display:flex;}
-  .audience-inner,.podcast-feature-grid{grid-template-columns:1fr;gap:2rem;}
-  .hero{padding:7rem 1.5rem 4rem;}
-  .audience,.final-cta{padding:4.5rem 1.5rem;}
-  .about-facts{grid-template-columns:1fr;}
-}
-
-
-/* V17 KATIE PHOTO + MOBILE POLISH */
-
-/* Keep Katie's full photograph visible on desktop */
-.katie-photo-side{
-  background:var(--dk3);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:88vh;
-  padding:1.5rem;
-}
-.katie-photo-side img{
-  width:100% !important;
-  height:100% !important;
-  max-height:calc(88vh - 3rem);
-  object-fit:contain !important;
-  object-position:center center !important;
-  display:block;
-}
-
-/* Tablet and mobile */
-@media(max-width:860px){
-  html{scroll-padding-top:4.5rem;}
-  body{font-size:16px;}
-
-  nav{
-    padding:.8rem 1rem;
-  }
-  .nav-logo{
-    font-size:.62rem;
-    max-width:62%;
-    line-height:1.35;
-  }
-  .nav-toggle{
-    min-height:42px;
-    min-width:68px;
-  }
-  .nav-links{
-    gap:.35rem;
-    max-height:calc(100vh - 64px);
-    overflow-y:auto;
-  }
-  .nav-links a{
-    display:block;
-    width:100%;
-    padding:.8rem 0;
-    font-size:.72rem;
-  }
-  .nav-buy{
-    text-align:center;
-    margin-top:.35rem;
-  }
-
-  section{
-    padding:4rem 1.15rem;
-  }
-
-  .hero{
-    min-height:auto;
-    padding:7rem 1.15rem 4rem;
-    background-position:center top;
-  }
-  .hero-main{
-    font-size:clamp(3.55rem,18vw,5.8rem);
-    line-height:.88;
-  }
-  .hero-deck{
-    font-size:1.08rem;
-    line-height:1.62;
-    margin:1.5rem 0 1.8rem;
-  }
-  .hero-proof{
-    font-size:.6rem;
-    line-height:1.65;
-  }
-  .cta-row{
-    gap:.75rem;
-    align-items:stretch;
-  }
-  .cta-row a,
-  .book-cta a,
-  .sub-cta a{
-    width:100%;
-    text-align:center;
-  }
-
-  .qs-section{
-    min-height:auto;
-    padding:4.5rem 1.15rem;
-  }
-  .qs-quote{
-    font-size:clamp(1.45rem,7vw,2.15rem);
-    line-height:1.42;
-  }
-  .qs-nav{
-    display:none;
-  }
-  .qs-dots{
-    gap:.5rem;
-    flex-wrap:wrap;
-  }
-
-  .book-inner,
-  .shadow-inner,
-  .about-inner,
-  .road-inner,
-  .rev-grid,
-  .sub-grid,
-  .gazette-grid,
-  .pod-grid,
-  .lives-grid,
-  .audience-inner,
-  .podcast-feature-grid{
-    grid-template-columns:1fr !important;
-    gap:2rem !important;
-  }
-
-  .book-title,
-  .shadow-h2,
-  .about-big,
-  .road-h2,
-  .gazette-title,
-  .reviews-behind-hdr{
-    overflow-wrap:anywhere;
-  }
-
-  .book-inner{
-    display:flex;
-    flex-direction:column;
-  }
-  .book-inner > :first-child{
-    order:2;
-  }
-  .book-inner > :last-child{
-    order:1;
-  }
-  .cov-real{
-    max-width:320px;
-    margin:0 auto;
-  }
-
-  /* Katie section: full image, no crop */
-  .katie-split{
-    grid-template-columns:1fr;
-    min-height:auto;
-  }
-  .katie-photo-side{
-    height:auto !important;
-    min-height:0 !important;
-    padding:0;
-    display:block;
-    background:var(--dk3);
-  }
-  .katie-photo-side img{
-    width:100% !important;
-    height:auto !important;
-    max-height:none !important;
-    object-fit:contain !important;
-    object-position:center center !important;
-  }
-  .katie-words-side{
-    padding:3.25rem 1.25rem 3.75rem;
-  }
-  .katie-name{
-    font-size:clamp(4rem,19vw,6rem);
-  }
-  .katie-q1{
-    font-size:1.28rem;
-  }
-
-  .shadow-sec{
-    padding-top:4.25rem;
-  }
-  .shadow-img{
-    max-width:420px;
-    margin:0 auto;
-  }
-  .shadow-record{
-    font-size:.62rem !important;
-    line-height:1.85 !important;
-    letter-spacing:.09em !important;
-    overflow-wrap:anywhere;
-  }
-
-  .gazette-card,
-  .sub-card,
-  .podcast-feature{
-    padding:1.4rem;
-  }
-  .gazette-card-title,
-  .sub-card-title,
-  .podcast-feature h3{
-    font-size:1.45rem;
-  }
-
-  .about{
-    padding:4.25rem 1.15rem;
-  }
-  .about-body,
-  .body-txt,
-  .shadow-body,
-  .road-body{
-    font-size:1.04rem;
-    line-height:1.75;
-  }
-  .about-pull{
-    font-size:1.08rem;
-  }
-  .about-facts{
-    grid-template-columns:1fr;
-  }
-
-  .road{
-    padding:4.25rem 1.15rem;
-  }
-  .road-prog-num{
-    font-size:2rem;
-  }
-  .road-pillars,
-  .road-bens{
-    gap:1rem;
-  }
-
-  .milestone-track{
-    padding-left:1.45rem;
-  }
-  .milestone{
-    padding-left:1.1rem;
-  }
-
-  .events-empty{
-    padding:2.75rem 1.15rem;
-  }
-
-  .podcast-feature{
-    min-height:0;
-  }
-
-  .socials-strip{
-    padding:2.5rem 1.15rem;
-  }
-  .socials-icons{
-    gap:1rem;
-    flex-wrap:wrap;
-  }
-
-  footer{
-    padding:2.25rem 1.15rem;
-    align-items:flex-start;
-  }
-  .footer-nav{
-    gap:.85rem 1.1rem;
-  }
-
-  .final-cta{
-    padding:4.5rem 1.15rem;
-  }
-  .final-cta h2{
-    font-size:clamp(3.3rem,17vw,5.5rem);
-  }
-  .final-cta .cta-row{
-    justify-content:center;
-  }
-}
-
-@media(max-width:480px){
-  .hero-main{
-    font-size:clamp(3.1rem,17vw,4.35rem);
-  }
-  .hero-kicker{
-    font-size:.58rem;
-    line-height:1.6;
-  }
-  .btn-cream,
-  .btn-teal,
-  .btn-dark,
-  .btn-direct{
-    padding:.9rem 1rem;
-    font-size:.62rem;
-  }
-  .katie-words-side{
-    padding-left:1rem;
-    padding-right:1rem;
-  }
-  .rslideshow-nav{
-    display:none;
-  }
-  .rslideshow-wrap{
-    min-height:0;
-  }
-  .rslideshow-inner{
-    min-height:0;
-  }
-}
-
-
-
-/* V25 EDITORIAL, FEEDS, SEO, AND MOBILE PASS */
-.skip-link{position:fixed;top:.75rem;left:.75rem;z-index:1000;transform:translateY(-180%);background:var(--am);color:var(--dk);padding:.75rem 1rem;font-family:'Space Mono',monospace;font-size:.72rem;text-transform:uppercase;text-decoration:none;transition:transform .2s;}
-.skip-link:focus{transform:translateY(0);}
-main{display:block;}
-section[id]{scroll-margin-top:5rem;}
-a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:4px;}
-.feed-section-shell,.pod-feed-shell{width:min(var(--max),100%);margin:0 auto;}
-.feed-section-header{display:grid;grid-template-columns:minmax(0,.9fr) minmax(320px,1.1fr);gap:4rem;align-items:end;margin-bottom:2.75rem;}
-.feed-section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.2rem,7vw,7rem);line-height:.86;color:var(--dk);letter-spacing:-.015em;}
-.feed-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;background:none;}
-.feed-card{min-width:0;}
-.feed-actions{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-top:2rem;}
-.feed-text-link{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--al);text-decoration:none;border-bottom:1px solid rgba(212,146,78,.35);padding-bottom:.15rem;}
-.feed-text-link-dark{color:var(--tm);border-color:rgba(59,122,108,.35);}
-.feed-refresh-note{font-family:'Space Mono',monospace;font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--wg);margin-top:.8rem;}
-.gazette{padding:6rem 3rem;}
-.gazette-header{display:grid;margin-bottom:2.75rem;}
-.gazette-card{display:flex;flex-direction:column;min-height:290px;border:1px solid rgba(244,238,221,.07);transition:transform .25s,border-color .25s,background .25s;}
-.gazette-card:hover{transform:translateY(-3px);border-color:rgba(196,120,58,.45);background:rgba(244,238,221,.025);}
-.gazette-card-title{overflow-wrap:anywhere;}
-.gazette-card-link{margin-top:auto;align-self:flex-start;}
-.writing-feed{padding:6rem 3rem;}
-.writing-feed-intro{font-size:1.05rem;line-height:1.78;color:#4A433C;max-width:650px;}
-.writing-feed-intro p+p{margin-top:.85rem;}
-.writing-feed .sub-grid{margin-top:0;}
-.writing-feed .sub-card{display:flex;flex-direction:column;min-height:300px;padding:1.75rem;}
-.sub-card-title{overflow-wrap:anywhere;}
-.sub-card-read{margin-top:auto;padding-top:1.25rem;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tm);text-decoration:none;}
-.sub-card-read:hover{color:var(--tl);}
-
-/* Editorial image system */
-.editorial-figure{position:relative;margin:0;overflow:visible!important;isolation:isolate;}
-.editorial-figure::before{content:'';position:absolute;inset:-10px 10px 10px -10px;border:1px solid rgba(196,120,58,.32);z-index:-1;transition:transform .35s ease;}
-.editorial-figure::after{content:'';position:absolute;inset:12px -12px -12px 12px;background:rgba(196,120,58,.08);z-index:-2;transition:transform .35s ease;}
-.editorial-figure:hover::before{transform:translate(-3px,-3px);}
-.editorial-figure:hover::after{transform:translate(3px,3px);}
-.editorial-photo-frame{overflow:hidden;background:var(--dk);}
-.editorial-photo-frame img{display:block;width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .6s;}
-.editorial-figure:hover .editorial-photo-frame img{transform:scale(1.018);}
-.amber-photo-caption{position:relative;display:inline-block;max-width:calc(100% - 1.5rem);margin:-1rem 0 0 1rem;padding:.55rem .8rem;background:var(--am);color:var(--dk);font-family:'Space Mono',monospace;font-size:.56rem;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 22px rgba(0,0,0,.24);z-index:3;}
-.book-cover-figure{max-width:430px;margin-left:auto;}
-.book-cover-figure .editorial-photo-frame{aspect-ratio:987/1536;}
-.book-cover-figure img{height:100%;object-fit:contain;background:#090806;}
-.katie-figure{width:min(100%,620px);}
-.katie-photo-side .editorial-photo-frame{background:var(--dk3);}
-.katie-photo-side .editorial-photo-frame img{max-height:calc(88vh - 4rem);object-fit:contain!important;}
-.shadow-img-real{max-height:none!important;}
-.shadow-img-real .editorial-photo-frame{border-radius:3px;}
-.shadow-img-real img{width:100%;height:auto!important;max-height:480px;object-fit:cover;object-position:center 34%;}
-
-/* Road dashboard */
-.road-inner{align-items:start;}
-.road-story,.road-dashboard{min-width:0;}
-.road-dashboard{display:flex;flex-direction:column;gap:1.25rem;}
-.sroi-callout{border:1px solid rgba(196,120,58,.25);background:rgba(196,120,58,.05);padding:1.25rem 1.4rem;margin:1.5rem 0;}
-.sroi-callout-label{font-family:'Space Mono',monospace;font-size:.56rem!important;letter-spacing:.15em;text-transform:uppercase;color:var(--am)!important;margin-bottom:.65rem!important;}
-.sroi-callout p:last-child{font-size:1rem;line-height:1.75;color:var(--wl);margin:0;}
-.road-manifesto{font-style:italic;font-size:1rem;line-height:1.72;color:var(--wl);margin-bottom:1.75rem;border-top:1px solid rgba(244,238,221,.08);padding-top:1.5rem;}
-.impact-ledger{border:1px solid rgba(244,238,221,.1);background:linear-gradient(145deg,rgba(244,238,221,.035),rgba(196,120,58,.055));padding:1.5rem;}
-.impact-ledger-kicker{font-family:'Space Mono',monospace;font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;color:var(--am);margin-bottom:.6rem;}
-.impact-ledger-head h3{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;line-height:.92;color:var(--cr);margin-bottom:.7rem;}
-.impact-ledger-head>p:last-child{font-size:.95rem;line-height:1.65;color:var(--wl);}
-.impact-ledger-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(244,238,221,.1);margin:1.3rem 0;}
-.impact-stat{background:var(--dk);padding:1rem;min-height:105px;display:flex;flex-direction:column;justify-content:center;}
-.impact-stat strong{font-family:'Bebas Neue',sans-serif;font-size:2.25rem;line-height:1;color:var(--al);font-weight:400;}
-.impact-stat span{font-family:'Space Mono',monospace;font-size:.5rem;line-height:1.45;letter-spacing:.08em;text-transform:uppercase;color:var(--wg);margin-top:.35rem;}
-.impact-ledger-note{border-top:1px solid rgba(244,238,221,.08);padding-top:1rem;}
-.impact-ledger-note ul{list-style:none;display:grid;gap:.55rem;margin-top:.7rem;}
-.impact-ledger-note li{position:relative;padding-left:1rem;font-size:.92rem;line-height:1.5;color:var(--wl);}
-.impact-ledger-note li::before{content:'•';position:absolute;left:0;color:var(--am);}
-
-/* Podcast feed */
-.podcast-feed-section{padding:6rem 3rem!important;}
-.pod-feed-header{display:grid;grid-template-columns:minmax(0,.95fr) minmax(320px,1.05fr);gap:4rem;align-items:end;margin-bottom:2.5rem;}
-.pod-feed-header .book-title{margin-bottom:0;font-size:clamp(3.6rem,8vw,7.5rem);}
-.pod-feed-intro{font-size:1.08rem;line-height:1.78;color:#4A433C;max-width:650px;}
-.pod-feed-intro p+p{margin-top:.85rem;}
-.pod-feed-count{display:flex;align-items:center;gap:1.25rem;background:var(--dk);color:var(--cr);padding:1.15rem 1.35rem;margin-bottom:1rem;border-left:3px solid var(--am);}
-.pod-feed-count strong{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;line-height:.8;color:var(--al);font-weight:400;}
-.pod-feed-count span{font-family:'Space Mono',monospace;font-size:.57rem;line-height:1.55;letter-spacing:.1em;text-transform:uppercase;color:var(--wl);}
-.pod-feed-list{border-top:1px solid var(--ll);}
-.pod-feed-row{display:grid;grid-template-columns:58px 1fr;gap:1rem;padding:1.35rem .4rem;border-bottom:1px solid var(--ll);transition:background .2s,padding .2s;}
-.pod-feed-row:hover{background:rgba(45,100,88,.045);padding-left:.8rem;padding-right:.8rem;}
-.pod-feed-index{font-family:'Bebas Neue',sans-serif;font-size:2rem;line-height:1;color:var(--ll);padding-top:.18rem;}
-.pod-feed-main{min-width:0;}
-.pod-feed-meta{display:flex;justify-content:space-between;gap:1rem;align-items:start;font-family:'Space Mono',monospace;font-size:.54rem;line-height:1.45;letter-spacing:.11em;text-transform:uppercase;color:var(--tm);margin-bottom:.45rem;}
-.pod-feed-meta time{color:var(--wg);white-space:nowrap;}
-.pod-feed-title{font-family:'EB Garamond',Georgia,serif;font-size:1.35rem;line-height:1.25;color:var(--dk);font-weight:500;overflow-wrap:anywhere;}
-.pod-feed-links{display:flex;gap:.55rem;flex-wrap:wrap;margin-top:.75rem;}
-.pod-feed-chip{display:inline-flex;align-items:center;min-height:32px;padding:.32rem .58rem;border:1px solid rgba(59,122,108,.25);font-family:'Space Mono',monospace;font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);text-decoration:none;transition:background .2s,color .2s,border-color .2s;}
-.pod-feed-chip:hover{background:var(--tl);border-color:var(--tl);color:var(--cr);}
-.pod-appearance-extra{display:none;}
-.pod-feed-list.expanded .pod-appearance-extra{display:grid;}
-.pod-feed-actions{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;}
-.pod-feed-toggle{min-height:44px;border:0;background:var(--am);color:var(--cr);padding:.8rem 1.1rem;font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .2s;}
-.pod-feed-toggle:hover{background:var(--al);}
-
-/* Mobile-first cleanup */
-@media(max-width:980px){
-  .feed-section-header,.pod-feed-header{grid-template-columns:1fr;gap:1.5rem;align-items:start;}
-  .feed-card-grid{grid-template-columns:1fr 1fr;}
-  .road-inner{gap:2rem;}
-}
-@media(max-width:860px){
-  .gazette,.writing-feed,.podcast-feed-section{padding:4.25rem 1.15rem!important;}
-  .feed-card-grid{grid-template-columns:1fr!important;gap:1rem!important;}
-  .gazette-card,.writing-feed .sub-card{min-height:0;}
-  .book-cover-figure{margin:0 auto;max-width:320px;}
-  .katie-photo-side{padding:1.2rem!important;}
-  .katie-photo-side .editorial-photo-frame img{max-height:none!important;height:auto!important;}
-  .amber-photo-caption{font-size:.5rem;margin-top:-.65rem;margin-left:.65rem;max-width:calc(100% - 1rem);}
-  .road-dashboard{margin-top:.5rem;}
-  .impact-ledger-grid{grid-template-columns:1fr 1fr;}
-  .pod-feed-header .book-title{font-size:clamp(3.3rem,16vw,5.5rem);}
-  .pod-feed-row{grid-template-columns:42px 1fr;padding:1.15rem 0;}
-  .pod-feed-index{font-size:1.65rem;}
-  .pod-feed-meta{flex-direction:column;gap:.2rem;}
-  .pod-feed-meta time{white-space:normal;}
-  .pod-feed-title{font-size:1.2rem;}
-  .pod-feed-actions{align-items:stretch;}
-  .pod-feed-toggle,.pod-feed-actions .feed-text-link{width:100%;text-align:center;}
-}
-@media(max-width:520px){
-  .feed-section-title{font-size:clamp(3rem,17vw,4.7rem);}
-  .impact-ledger-grid{grid-template-columns:1fr;}
-  .impact-stat{min-height:88px;}
-  .pod-feed-count{align-items:flex-start;}
-  .pod-feed-row{grid-template-columns:32px 1fr;gap:.65rem;}
-  .pod-feed-chip{min-height:38px;}
-  .editorial-figure::before{inset:-6px 6px 6px -6px;}
-  .editorial-figure::after{inset:7px -7px -7px 7px;}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto;}
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
-  .fade-up{opacity:1!important;transform:none!important;}
-}
-
-</style>
-<meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Now That I’m Still Here by Christopher Carazas" property="og:image:alt"/><link as_="image" fetchpriority="high" href="now-that-im-still-here-memoir-cover-christopher-carazas.webp" rel="preload" type="image/webp"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://chriscarazas.com/#website","url":"https://chriscarazas.com/","name":"Christopher Carazas","publisher":{"@id":"https://chriscarazas.com/#person"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://chriscarazas.com/#webpage","url":"https://chriscarazas.com/","name":"Now That I’m Still Here | Memoir by Christopher Carazas","isPartOf":{"@id":"https://chriscarazas.com/#website"},"mainEntity":{"@id":"https://chriscarazas.com/#book"},"about":[{"@id":"https://chriscarazas.com/#person"},{"@id":"https://chriscarazas.com/#book"}],"inLanguage":"en-US","description":"Official website for Christopher Carazas and Now That I’m Still Here, a memoir about late-diagnosed autism, psychological abuse, grief, survival, belonging, and Shadow.","primaryImageOfPage":{"@type":"ImageObject","@id":"https://chriscarazas.com/#primaryimage","url":"https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg","contentUrl":"https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg","width":1200,"height":630},"dateModified":"2026-06-25"},{"@type":"Person","@id":"https://chriscarazas.com/#person","name":"Christopher Carazas","image":"https://chriscarazas.com/christopher-carazas-shadow-author-portrait.jpg","alternateName":"Chris Carazas","url":"https://chriscarazas.com/","jobTitle":["Author","Social Impact Measurement Analyst"],"description":"Author of Now That I’m Still Here: A Memoir of Ruin and Resurrection, writing about autism, psychological abuse, grief, belonging, survival, and social impact.","sameAs":["https://ccarazas.substack.com","https://bsky.app/profile/ccarazas.bsky.social","https://www.instagram.com/christophercarazas/","https://www.threads.com/@christophercarazas","https://twitter.com/christheaspie"],"knowsLanguage":["English","Spanish","French","Italian","Turkish"],"homeLocation":{"@type":"Place","name":"Kingston, Massachusetts"},"subjectOf":{"@id":"https://chriscarazas.com/#book"}},{"@type":"Organization","@id":"https://chriscarazas.com/#publisher","name":"Sentinel House Press","url":"https://chriscarazas.com/"},{"@type":"Book","@id":"https://chriscarazas.com/#book","name":"Now That I’m Still Here","alternateName":"A Memoir of Ruin and Resurrection","author":{"@id":"https://chriscarazas.com/#person"},"publisher":{"@id":"https://chriscarazas.com/#publisher"},"datePublished":"2025-09-01","inLanguage":"en","isbn":"9798218750640","bookFormat":["https://schema.org/Paperback","https://schema.org/EBook"],"numberOfPages":204,"image":"https://chriscarazas.com/now-that-im-still-here-memoir-cover-christopher-carazas.jpg","url":"https://chriscarazas.com/#book","description":"A memoir about late-diagnosed autism, psychological abuse, grief, belonging, survival, and the German Shepherd who kept morning arriving.","genre":["Memoir","Autobiography","Mental Health","Autism"],"identifier":[{"@type":"PropertyValue","propertyID":"ISBN-13","value":"9798218750640"},{"@type":"PropertyValue","propertyID":"LCCN","value":"2025916597"}],"potentialAction":[{"@type":"BuyAction","name":"Buy Direct from Christopher Carazas","target":"https://www.lulu.com/search?sortBy=RELEVANCE&page=1&q=Christopher+carazas&pageSize=10&adult_audience_rating=00"},{"@type":"BuyAction","name":"Buy From Retailers","target":"https://books2read.com/u/bz0n1Z"}],"mainEntityOfPage":{"@id":"https://chriscarazas.com/#webpage"}},{"@type":"ItemList","@id":"https://chriscarazas.com/#sections","name":"Christopher Carazas official site sections","itemListElement":[{"@type":"ListItem","position":1,"url":"https://chriscarazas.com/#book","name":"Now That I’m Still Here memoir"},{"@type":"ListItem","position":2,"url":"https://chriscarazas.com/#substack","name":"Essays and Substack writing"},{"@type":"ListItem","position":3,"url":"https://chriscarazas.com/#gazette","name":"Plymouth Sentinel and Canine Gazette"},{"@type":"ListItem","position":4,"url":"https://chriscarazas.com/#podcasts","name":"Podcast interviews"},{"@type":"ListItem","position":5,"url":"https://chriscarazas.com/#road","name":"Road to 2,000 impact campaign"},{"@type":"ListItem","position":6,"url":"https://chriscarazas.com/#about","name":"About Christopher Carazas"}]}]}</script><style>
-/* V28 SEO + NARRATIVE REBUILD */
-.hero-v28{min-height:100vh;background:var(--dk);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.72fr);gap:4.5rem;align-items:center;padding:7.5rem max(3rem,calc((100vw - 1180px)/2)) 5rem;position:relative;overflow:hidden}
-.hero-v28-copy{position:relative;z-index:2;border-left:2px solid rgba(196,120,58,.35);padding-left:1.5rem}.hero-v28-cover{position:relative;z-index:2;max-width:430px;justify-self:end}.hero-v28-cover img{width:100%;height:auto;display:block;box-shadow:0 28px 70px rgba(0,0,0,.55)}
-.hero-v28 .hero-main{font-size:clamp(4.6rem,9vw,9.4rem)}.hero-seo-intro{font-size:clamp(1.05rem,1.5vw,1.28rem);line-height:1.7;color:rgba(244,238,221,.82);max-width:680px;margin:1.6rem 0}.hero-seo-intro strong{color:var(--cr);font-weight:500}.hero-v28 .cta-row{margin-top:1.7rem}.hero-v28 .hero-proof{margin-top:1.25rem}
-.proof-strip{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:1px;background:rgba(244,238,221,.1);padding:0}.proof-item{background:var(--dk2);padding:1.55rem}.proof-quote{font-style:italic;font-size:1.25rem;line-height:1.45;color:var(--cr)}.proof-label{font-family:'Space Mono',monospace;font-size:.54rem;letter-spacing:.11em;text-transform:uppercase;color:var(--am);margin-top:.65rem}.proof-number{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--cr);line-height:1}.proof-copy{font-size:.9rem;color:var(--wl);line-height:1.45}
-.narrative-bridge{padding:4.2rem 3rem;background:var(--dk3);text-align:center;border-top:1px solid rgba(196,120,58,.16);border-bottom:1px solid rgba(196,120,58,.16)}.narrative-bridge p{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.7rem,4vw,3.7rem);line-height:1.25;color:var(--cr);max-width:900px;margin:auto}.narrative-bridge strong{color:var(--am);font-weight:400}
-.seo-eyebrow{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--am);margin-bottom:.85rem}.faq-section{background:var(--cr2);padding:6rem 3rem}.faq-inner{width:min(980px,100%);margin:auto}.faq-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7vw,6rem);line-height:.9;color:var(--dk);margin-bottom:2rem}.faq-item{border-top:1px solid var(--ll);padding:1.25rem 0}.faq-item:last-child{border-bottom:1px solid var(--ll)}.faq-item summary{cursor:pointer;font-family:'EB Garamond',Georgia,serif;font-size:1.25rem;color:var(--dk);font-weight:500}.faq-item p{font-size:1rem;line-height:1.75;color:#4A433C;padding-top:.8rem;max-width:780px}.faq-item a{color:var(--tl)}
-.internal-links{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}.internal-links a{font-family:'Space Mono',monospace;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tm);text-decoration:none;border-bottom:1px solid rgba(59,122,108,.35)}
-@media(max-width:900px){.hero-v28{grid-template-columns:1fr;padding:7rem 1.15rem 4rem;gap:2.2rem}.hero-v28-cover{justify-self:center;max-width:320px;grid-row:2}.hero-v28-copy{grid-row:1}.proof-strip{grid-template-columns:1fr 1fr}.proof-item:first-child{grid-column:1/-1}.narrative-bridge{padding:3.5rem 1.15rem}.faq-section{padding:4.5rem 1.15rem}}
-@media(max-width:520px){.proof-strip{grid-template-columns:1fr}.proof-item:first-child{grid-column:auto}.hero-v28 .cta-row a{width:100%;text-align:center}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-
-/* V29 editorial corrections */
-.about-inner{grid-template-columns:minmax(320px,.95fr) minmax(0,1.2fr)!important;gap:4.5rem!important}
-.about-portrait{position:relative;margin:0 0 2rem;isolation:isolate}
-.about-portrait::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(196,120,58,.58);z-index:-1}
-.about-portrait img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 42%;filter:saturate(.9) contrast(1.03)}
-.about-portrait figcaption{display:inline-block;margin-top:.85rem;background:var(--am);color:var(--cr);padding:.48rem .72rem;font-family:'Space Mono',monospace;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.4}
-.hero-seo-intro em{color:var(--cr)}
-.audience-item div{font-size:1.12rem;line-height:1.55}
-@media(max-width:860px){.about-inner{grid-template-columns:1fr!important}.about-portrait{max-width:680px}.about-portrait::after{inset:10px -10px -10px 10px}}
-</style>
-<style>
-.hero-photo-feature{
-  max-width:560px;
-  width:100%;
-  border:1px solid rgba(196,120,58,.28);
-  box-shadow:0 28px 70px rgba(0,0,0,.55);
-  overflow:hidden;
-  background:#120A06;
-}
-.hero-photo-feature picture,
-.hero-photo-feature img{
-  display:block;
-  width:100%;
-  height:100%;
-}
-.hero-photo-feature img{
-  aspect-ratio:1.14/1;
-  object-fit:cover;
-  object-position:center center;
-}
-@media(max-width:900px){
-  .hero-photo-feature{
-    max-width:680px;
-    grid-row:2;
-    justify-self:center;
-  }
-  .hero-photo-feature img{
-    aspect-ratio:16/10;
-    object-position:center 42%;
-  }
-}
-</style>
-<style>
-/* V38 targeted content refinements */
-.katie-lbl{
-  font-size:.78rem;
-  line-height:1.4;
-  letter-spacing:.2em;
-}
-</style>
-<meta content="en_US" property="og:locale"/><meta content="https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg" property="og:image:secure_url"/><meta content="image/jpeg" property="og:image:type"/><meta content="Now That I’m Still Here by Christopher Carazas, a memoir about autism, grief, survival, and Shadow." name="twitter:image:alt"/><style>
-.hero-photo-feature{
-  max-width:620px;
-  width:100%;
-  margin:0;
-  overflow:visible;
-}
-.hero-photo-feature picture{
-  display:block;
-  overflow:hidden;
-  background:#120A06;
-  border:1px solid rgba(196,120,58,.3);
-  box-shadow:0 28px 70px rgba(0,0,0,.5);
-}
-.hero-photo-feature img{
-  display:block;
-  width:100%;
-  height:auto;
-  aspect-ratio:16/10;
-  object-fit:cover;
-  object-position:center center;
-}
-.hero-photo-caption{
-  margin:-.9rem 0 0 1rem;
-  max-width:calc(100% - 2rem);
-}
-@media(max-width:900px){
-  .hero-photo-feature{
-    max-width:720px;
-    margin:1rem auto 0;
-  }
-  .hero-photo-caption{
-    margin:-.75rem 0 0 .75rem;
-    max-width:calc(100% - 1.5rem);
-  }
-}
-</style><style>
-/* V43 cinematic hero fade */
-.hero-v28{
-  position:relative;
-  overflow:hidden;
-  isolation:isolate;
-}
-.hero-v28-copy{
-  position:relative;
-  z-index:3;
-}
-.hero-photo-feature{
-  position:relative;
-  z-index:1;
-  margin-left:-7rem;
-  width:calc(100% + 7rem);
-  max-width:none;
-}
-.hero-photo-feature picture{
-  display:block;
-  position:relative;
-  overflow:hidden;
-  -webkit-mask-image:linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0,0,0,.16) 11%,
-    rgba(0,0,0,.62) 27%,
-    #000 48%,
-    #000 100%
-  );
-  mask-image:linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(0,0,0,.16) 11%,
-    rgba(0,0,0,.62) 27%,
-    #000 48%,
-    #000 100%
-  );
-}
-.hero-photo-feature::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  pointer-events:none;
-  background:
-    linear-gradient(90deg,rgba(22,18,16,.95) 0%,rgba(22,18,16,.52) 20%,transparent 48%),
-    linear-gradient(0deg,rgba(22,18,16,.3) 0%,transparent 38%);
-}
-.hero-photo-feature img{
-  display:block;
-  width:100%;
-  height:100%;
-  aspect-ratio:16/9;
-  object-fit:cover;
-  object-position:center center;
-  animation:heroImageReveal 1.15s cubic-bezier(.2,.75,.2,1) both;
-}
-.hero-v28-copy > *{
-  opacity:0;
-  transform:translateY(18px);
-  animation:heroCopyReveal .78s cubic-bezier(.2,.75,.2,1) forwards;
-}
-.hero-v28-copy .hero-kicker{animation-delay:.12s;}
-.hero-v28-copy .hero-main{animation-delay:.24s;}
-.hero-v28-copy .hero-seo-intro{animation-delay:.38s;}
-.hero-v28-copy .cta-row{animation-delay:.52s;}
-.hero-v28-copy .hero-proof{animation-delay:.66s;}
-
-@keyframes heroImageReveal{
-  from{opacity:0;transform:scale(1.035);}
-  to{opacity:1;transform:scale(1);}
-}
-@keyframes heroCopyReveal{
-  from{opacity:0;transform:translateY(18px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
-@media(max-width:900px){
-  .hero-photo-feature{
-    margin-left:0;
-    width:100%;
-  }
-  .hero-photo-feature picture{
-    -webkit-mask-image:none;
-    mask-image:none;
-  }
-  .hero-photo-feature::before{
-    background:linear-gradient(0deg,rgba(22,18,16,.35),transparent 50%);
-  }
-}
-@media(prefers-reduced-motion:reduce){
-  .hero-photo-feature img,
-  .hero-v28-copy > *{
-    animation:none!important;
-    opacity:1!important;
-    transform:none!important;
-  }
-}
-</style><style>
-/* V44 full-bleed cinematic hero, based on reference composition */
-.hero-v28{
-  position:relative;
-  min-height:clamp(760px,92vh,980px);
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  isolation:isolate;
-  background:#120A06;
-}
-.hero-v28 .hero-photo-feature{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  max-width:none;
-  margin:0;
-  z-index:0;
-  overflow:hidden;
-}
-.hero-v28 .hero-photo-feature picture{
-  display:block;
-  width:100%;
-  height:100%;
-  -webkit-mask-image:none;
-  mask-image:none;
-}
-.hero-v28 .hero-photo-feature img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center center;
-  aspect-ratio:auto;
-  animation:heroImageReveal 1.15s cubic-bezier(.2,.75,.2,1) both;
-}
-.hero-v28 .hero-photo-feature::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  pointer-events:none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(12,9,7,1) 0%,
-      rgba(12,9,7,.98) 18%,
-      rgba(12,9,7,.88) 30%,
-      rgba(12,9,7,.58) 43%,
-      rgba(12,9,7,.18) 57%,
-      rgba(12,9,7,0) 72%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(12,9,7,.72) 0%,
-      rgba(12,9,7,.18) 24%,
-      transparent 52%
-    );
-}
-.hero-v28 .hero-photo-feature::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 74% 55%, transparent 0%, transparent 24%, rgba(12,9,7,.12) 50%, rgba(12,9,7,.42) 100%);
-}
-.hero-v28 .hero-v28-copy{
-  position:relative;
-  z-index:4;
-  width:min(1180px,100%);
-  margin:0 auto;
-  padding:8rem 3rem 6rem;
-}
-.hero-v28 .hero-v28-copy > *{
-  max-width:620px;
-}
-.hero-v28 .hero-main{
-  text-shadow:0 2px 18px rgba(0,0,0,.28);
-}
-.hero-v28 .hero-seo-intro,
-.hero-v28 .hero-proof{
-  text-shadow:0 1px 10px rgba(0,0,0,.35);
-}
-.hero-v28 .hero-photo-caption{
-  position:absolute;
-  right:2rem;
-  bottom:1.5rem;
-  margin:0;
-  max-width:min(420px,calc(100% - 4rem));
-  z-index:5;
-  background:rgba(196,120,58,.92);
-  backdrop-filter:blur(2px);
-}
-@media(max-width:900px){
-  .hero-v28{
-    min-height:auto;
-    display:block;
-  }
-  .hero-v28 .hero-photo-feature{
-    position:relative;
-    height:58vh;
-    min-height:420px;
-  }
-  .hero-v28 .hero-photo-feature::before{
-    background:
-      linear-gradient(
-        0deg,
-        rgba(12,9,7,1) 0%,
-        rgba(12,9,7,.96) 18%,
-        rgba(12,9,7,.52) 42%,
-        rgba(12,9,7,.08) 68%,
-        transparent 100%
-      );
-  }
-  .hero-v28 .hero-v28-copy{
-    margin-top:-14rem;
-    padding:3rem 1.25rem 4rem;
-  }
-  .hero-v28 .hero-photo-caption{
-    right:1rem;
-    bottom:1rem;
-    max-width:calc(100% - 2rem);
-  }
-}
-@media(max-width:540px){
-  .hero-v28 .hero-photo-feature{
-    height:52vh;
-    min-height:360px;
-  }
-  .hero-v28 .hero-photo-feature img{
-    object-position:64% center;
-  }
-  .hero-v28 .hero-v28-copy{
-    margin-top:-11rem;
-    padding-top:2rem;
-  }
-  .hero-v28 .hero-photo-caption{
-    font-size:.48rem;
-    line-height:1.35;
-    padding:.45rem .6rem;
-  }
-}
-</style></head>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Space+Mono:wght@400&amp;display=swap" rel="stylesheet"/><link href="styles.css" rel="stylesheet"/>
+<meta content="1200" property="og:image:width"/><meta content="630" property="og:image:height"/><meta content="Now That I’m Still Here by Christopher Carazas" property="og:image:alt"/><link as="image" fetchpriority="high" href="now-that-im-still-here-memoir-cover-christopher-carazas.webp" rel="preload" type="image/webp"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://chriscarazas.com/#website","url":"https://chriscarazas.com/","name":"Christopher Carazas","publisher":{"@id":"https://chriscarazas.com/#person"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"https://chriscarazas.com/#webpage","url":"https://chriscarazas.com/","name":"Now That I’m Still Here | Memoir by Christopher Carazas","isPartOf":{"@id":"https://chriscarazas.com/#website"},"mainEntity":{"@id":"https://chriscarazas.com/#book"},"about":[{"@id":"https://chriscarazas.com/#person"},{"@id":"https://chriscarazas.com/#book"}],"inLanguage":"en-US","description":"Official website for Christopher Carazas and Now That I’m Still Here, a memoir about late-diagnosed autism, psychological abuse, grief, survival, belonging, and Shadow.","primaryImageOfPage":{"@type":"ImageObject","@id":"https://chriscarazas.com/#primaryimage","url":"https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg","contentUrl":"https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg","width":1200,"height":630},"dateModified":"2026-06-25"},{"@type":"Person","@id":"https://chriscarazas.com/#person","name":"Christopher Carazas","image":"https://chriscarazas.com/christopher-carazas-shadow-author-portrait.jpg","alternateName":"Chris Carazas","url":"https://chriscarazas.com/","jobTitle":["Author","Social Impact Measurement Analyst"],"description":"Author of Now That I’m Still Here: A Memoir of Ruin and Resurrection, writing about autism, psychological abuse, grief, belonging, survival, and social impact.","sameAs":["https://ccarazas.substack.com","https://bsky.app/profile/ccarazas.bsky.social","https://www.instagram.com/christophercarazas/","https://www.threads.com/@christophercarazas","https://twitter.com/christheaspie"],"knowsLanguage":["English","Spanish","French","Italian","Turkish"],"homeLocation":{"@type":"Place","name":"Kingston, Massachusetts"},"subjectOf":{"@id":"https://chriscarazas.com/#book"}},{"@type":"Organization","@id":"https://chriscarazas.com/#publisher","name":"Sentinel House Press","url":"https://chriscarazas.com/"},{"@type":"Book","@id":"https://chriscarazas.com/#book","name":"Now That I’m Still Here","alternateName":"A Memoir of Ruin and Resurrection","author":{"@id":"https://chriscarazas.com/#person"},"publisher":{"@id":"https://chriscarazas.com/#publisher"},"datePublished":"2025-09-01","inLanguage":"en","isbn":"9798218750640","bookFormat":["https://schema.org/Paperback","https://schema.org/EBook"],"numberOfPages":204,"image":"https://chriscarazas.com/now-that-im-still-here-memoir-cover-christopher-carazas.jpg","url":"https://chriscarazas.com/#book","description":"A memoir about late-diagnosed autism, psychological abuse, grief, belonging, survival, and the German Shepherd who kept morning arriving.","genre":["Memoir","Autobiography","Mental Health","Autism"],"identifier":[{"@type":"PropertyValue","propertyID":"ISBN-13","value":"9798218750640"},{"@type":"PropertyValue","propertyID":"LCCN","value":"2025916597"}],"potentialAction":[{"@type":"BuyAction","name":"Buy Direct from Christopher Carazas","target":"https://www.lulu.com/search?sortBy=RELEVANCE&page=1&q=Christopher+carazas&pageSize=10&adult_audience_rating=00"},{"@type":"BuyAction","name":"Buy From Retailers","target":"https://books2read.com/u/bz0n1Z"}],"mainEntityOfPage":{"@id":"https://chriscarazas.com/#webpage"}},{"@type":"ItemList","@id":"https://chriscarazas.com/#sections","name":"Christopher Carazas official site sections","itemListElement":[{"@type":"ListItem","position":1,"url":"https://chriscarazas.com/#book","name":"Now That I’m Still Here memoir"},{"@type":"ListItem","position":2,"url":"https://chriscarazas.com/#substack","name":"Essays and Substack writing"},{"@type":"ListItem","position":3,"url":"https://chriscarazas.com/#gazette","name":"Plymouth Sentinel and Canine Gazette"},{"@type":"ListItem","position":4,"url":"https://chriscarazas.com/#podcasts","name":"Podcast interviews"},{"@type":"ListItem","position":5,"url":"https://chriscarazas.com/#road","name":"Road to 2,000 impact campaign"},{"@type":"ListItem","position":6,"url":"https://chriscarazas.com/#about","name":"About Christopher Carazas"}]}]}</script>
+<meta content="en_US" property="og:locale"/><meta content="https://chriscarazas.com/christopher-carazas-now-that-im-still-here-social-share.jpg" property="og:image:secure_url"/><meta content="image/jpeg" property="og:image:type"/><meta content="Now That I’m Still Here by Christopher Carazas, a memoir about autism, grief, survival, and Shadow." name="twitter:image:alt"/></head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-K4S3734R" style="display:none;visibility:hidden" width="0"></iframe></noscript>
@@ -1255,15 +58,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <nav aria-label="Primary navigation" id="mainNav">
 <a class="nav-logo" href="#top">Christopher Carazas</a>
-<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" id="navToggle">Menu</button>
-<ul class="nav-links" id="navLinks"><li><a href="#book">Book</a></li><li><a href="#substack">Writing</a></li><li><a href="#gazette">Gazette</a></li><li><a href="#road">Impact</a></li><li><a href="#podcasts">Podcasts</a></li><li><a href="#about">About</a></li><li><a class="nav-buy" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Direct</a></li><li><a class="nav-retail" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a></li></ul>
+<ul class="nav-links" id="navLinks"><li><a href="#book">Book</a></li><li><a href="#substack">Writing</a></li><li><a href="#gazette">Gazette</a></li><li><a href="#road">Impact</a></li><li><a href="#organizations">Organizations</a></li><li><a href="#podcasts">Podcasts</a></li><li><a href="#about">About</a></li><li><a class="nav-buy" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Directly</a></li><li><a class="nav-retail" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a></li></ul>
 </nav>
 <main id="main-content">
-<!-- ═══ HERO ═══ -->
-<section aria-labelledby="hero-title" class="hero-v28" id="top"><figure class="hero-v28-cover hero-photo-feature"><picture><source srcset="/christopher-shadow-book-hero.webp" type="image/webp"/><img alt="Shadow walking along a field path toward a glowing sunset" decoding="async" fetchpriority="high" height="1080" loading="eager" src="/christopher-shadow-book-hero.jpg" width="1920"/></picture><figcaption class="amber-photo-caption hero-photo-caption">Shadow, once again, walking directly into the metaphor.</figcaption></figure>
-<div class="hero-v28-copy"><p class="hero-kicker">Christopher Carazas · Author · Kingston, Massachusetts</p><h1 class="hero-main" id="hero-title">I BECAME FLUENT IN <em>DISAPPEARING.</em></h1><p class="hero-seo-intro">I grew up autistic across five countries without knowing it, learning to become whoever each room required. <em>Now That I’m Still Here</em> is the story of what happened when that performance collapsed, and how grief, truth, and one stubborn German Shepherd helped me become visible again.</p><div class="cta-row"><a aria-label="Buy Now That I'm Still Here directly from Christopher Carazas through Lulu" class="btn-direct" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Direct from Me!</a><a aria-label="Buy Now That I'm Still Here from online book retailers" class="btn-cream" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a><a class="btn-ghost-l" href="#book">Read About the Memoir →</a></div><p class="hero-proof">For anyone who learned to disappear in order to belong, and anyone trying to become visible again.</p></div>
-</section><section aria-label="Reader and campaign highlights" class="proof-strip"><div class="proof-item"><p class="proof-quote">“This book helped me stay.”</p><p class="proof-label">A reader at a December book event</p></div><div class="proof-item"><p class="proof-number">212</p><p class="proof-copy">copies placed into readers’ hands</p></div><div class="proof-item"><p class="proof-number">2,000</p><p class="proof-copy">reader campaign goal</p></div><div class="proof-item"><p class="proof-number">$6,000</p><p class="proof-copy">in donations to 3 organizations</p></div><div class="proof-item"><p class="proof-number">$18,000</p><p class="proof-copy">in estimated social impact</p></div></section>
-<!-- ═══ QUOTE SLIDESHOW ═══ -->
+<section aria-labelledby="hero-title" class="hero-v28" id="top"><figure class="hero-v28-cover hero-photo-feature"><picture><source srcset="christopher-shadow-book-hero.webp" type="image/webp"/><img alt="Shadow walking along a field path toward a glowing sunset" decoding="async" fetchpriority="high" height="1080" loading="eager" src="christopher-shadow-book-hero.jpg" width="1920"/></picture><figcaption class="amber-photo-caption hero-photo-caption hero-caption-hidden">Shadow, once again, walking directly into the metaphor.</figcaption></figure>
+<div class="hero-v28-copy"><p class="hero-kicker">Christopher Carazas · Author · Kingston, Massachusetts</p><h1 class="hero-main" id="hero-title"><span class="hero-line hero-line-one">I BECAME FLUENT</span><span class="hero-line hero-line-two">IN</span><span class="hero-line hero-line-three">DISAPPEARING.</span></h1><p class="hero-seo-intro">I grew up autistic across five countries without knowing it, learning to become whoever each room required. <em>Now That I’m Still Here</em> is the story of what happened when that performance collapsed, and how grief, truth, and one stubborn German Shepherd helped me become visible again.</p><div class="cta-row"><a aria-label="Buy Now That I'm Still Here directly from Christopher Carazas through Lulu" class="btn-direct" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Directly</a><span class="stripe-buy-group"><a class="btn-special stripe-buy-us" href="https://book.stripe.com/00w9AS358bIfbsp53p28802" rel="noopener noreferrer" target="_blank">Buy Signed Copy — US</a><a class="stripe-buy-intl" href="https://book.stripe.com/4gM5kC6hk7rZ685fI328803" rel="noopener noreferrer" target="_blank">International Orders</a></span><small class="stripe-price-note">$19.99 + $5 US shipping / $12 international shipping</small><a aria-label="Buy Now That I'm Still Here from online book retailers" class="btn-cream" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a><a class="btn-ghost-l" href="#book">Read About the Memoir →</a></div><p class="hero-proof">For anyone who learned to disappear in order to belong, and anyone trying to become visible again.</p></div>
+</section><section aria-label="Reader and campaign highlights" class="proof-strip"><div class="proof-item"><p class="proof-quote">“This book helped me stay.”</p><p class="proof-label">A reader at a December book event</p></div><div class="proof-item"><p class="proof-number">212</p><p class="proof-copy">copies placed into readers’ hands</p></div><div class="proof-item"><p class="proof-number">2,000</p><p class="proof-copy">reader campaign goal</p></div><div class="proof-item"><p class="proof-number">$6,000</p><p class="proof-copy">in donations cycling among 5 organizations</p></div><div class="proof-item"><p class="proof-number">$18,000</p><p class="proof-copy">in estimated social impact</p></div></section>
 <section class="qs-section" id="quotes">
 <div class="qs-bg-mark">“</div>
 <div class="qs-container">
@@ -1296,7 +96,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </section>
-<!-- ═══ BOOK ═══ -->
 <section class="narrative-bridge"><p>First, I learned how to <strong>disappear.</strong></p></section><section class="book" id="book">
 <div class="book-inner">
 <div>
@@ -1323,7 +122,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 <p style="color:var(--tm);font-style:italic;margin-top:.85rem;">For readers of Matt Haig, Cheryl Strayed, and anyone who has ever sent “sounds good!” when absolutely nothing about it did.</p>
 </div>
 <div class="book-cta">
-<a aria-label="Buy Now That I'm Still Here directly from Christopher Carazas through Lulu" class="btn-direct" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Direct from Me!</a>
+<a aria-label="Buy Now That I'm Still Here directly from Christopher Carazas through Lulu" class="btn-direct" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Directly</a>
+<span class="stripe-buy-group"><a class="btn-special stripe-buy-us" href="https://book.stripe.com/00w9AS358bIfbsp53p28802" rel="noopener noreferrer" target="_blank">Buy Signed Copy — US</a><a class="stripe-buy-intl" href="https://book.stripe.com/4gM5kC6hk7rZ685fI328803" rel="noopener noreferrer" target="_blank">International Orders</a></span><small class="stripe-price-note">$19.99 + $5 US shipping / $12 international shipping</small>
 <a aria-label="Buy Now That I'm Still Here from online book retailers" class="btn-dark" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a>
 <span style="font-family:'Space Mono',monospace;font-size:.46rem;letter-spacing:.08em;color:var(--wg);">Hardcover · Paperback · eBook · Worldwide</span>
 </div>
@@ -1335,7 +135,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 <div class="internal-links"><a href="#book">Explore the memoir page</a><a href="#road">See the Road to 2,000</a></div></div>
 </section>
-<!-- ═══ WHO THIS BOOK IS FOR ═══ -->
 <section class="audience" id="for-you">
 <div class="audience-inner">
 <div>
@@ -1351,7 +150,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </section>
-<!-- ═══ WHAT THE BOOK LEFT BEHIND ═══ -->
 <section class="reviews-behind" id="reviews">
 <p class="slbl" style="color:var(--wg);">Reader Responses</p>
 <h2 class="reviews-behind-hdr fade-up">Reader Reviews of Now That I’m Still Here</h2>
@@ -1421,7 +219,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 <a aria-label="Buy Now That I'm Still Here from online book retailers" class="btn-dark" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a>
 </div>
 </section>
-<!-- ═══ KATIE ═══ -->
 <section class="narrative-bridge"><p>Then a dog and a few impossible people kept the <strong>light on.</strong></p></section><section class="katie" id="katie">
 <div class="katie-split">
 <div class="katie-photo-side">
@@ -1444,13 +241,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </section>
-<!-- ═══ PAUSE ═══ -->
 <div class="type-pause">
 <p class="type-pause-a">SHE SCRATCHED</p>
 <p class="type-pause-a">AT THE DOOR.</p>
 <p class="type-pause-b">THAT WAS ENOUGH.</p>
 </div>
-<!-- ═══ SHADOW ═══ -->
 <section class="shadow-sec" id="shadow">
 <div class="shadow-bg-txt">SHADOW</div>
 <div class="shadow-inner">
@@ -1474,7 +269,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </section>
-<!-- ═══ THE GAZETTE ═══ -->
 <section aria-labelledby="gazetteTitle" class="gazette" id="gazette">
 <div class="feed-section-shell">
 <div class="feed-section-header gazette-header">
@@ -1509,8 +303,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </section>
-<!-- ═══ REVIEWS TICKER ═══ -->
-<!-- ═══ ABOUT ═══ -->
 <section class="about" id="about">
 <div class="about-bgnum">41</div>
 <div class="about-inner">
@@ -1542,13 +334,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </section>
-<!-- ═══ SUBSTACK ESSAYS ═══ -->
 <section aria-labelledby="substackTitle" class="substack-sec writing-feed" id="substack">
 <div class="feed-section-shell">
 <div class="feed-section-header writing-feed-header">
 <div>
 <p class="slbl">From the Writing Desk</p>
-<h2 class="feed-section-title" id="substackTitle">NOW THAT I’M STILL HERE</h2>
+<h2 class="feed-section-title" id="substackTitle">THE ESSAYS</h2>
 </div>
 <div class="writing-feed-intro">
 <p>On Substack, I write about the part after survival, when everyone expects a triumphant montage and instead you are standing in a kitchen wondering whether toast counts as recovery.</p>
@@ -1584,7 +375,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 <div class="internal-links"><a href="#substack">Read Christopher’s essays</a><a href="#about">About the author</a></div></div>
 </section>
-<!-- ═══ ROAD TO 2,000 ═══ -->
 <section class="narrative-bridge"><p>Staying became a story. The story became a <strong>responsibility.</strong></p></section><section aria-labelledby="roadTitle" class="road" id="road">
 <div class="road-bgnum">2000</div>
 <div class="road-inner">
@@ -1592,7 +382,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 <p class="slbl slbl-a">The Road to 2,000</p>
 <h2 class="road-h2" id="roadTitle">2,000 READERS.<br/><span style="color:var(--am);">$6,000 IN DONATIONS.</span><br/><span style="color:var(--al);">$18,000 IN ESTIMATED SOCIAL IMPACT.</span></h2>
 <div class="road-body">
-<p>When 2,000 copies of <em>Now That I’m Still Here</em> are sold, <strong>$6,000 will be donated across three organizations supporting suicide prevention, autism services, and eating-disorder recovery.</strong> Based on the campaign’s current social-value assumptions, those donations are estimated to generate approximately <strong>$18,000 in social impact.</strong></p>
+<p>When 2,000 copies of <em>Now That I’m Still Here</em> are sold, <strong>$6,000 will be distributed among five partner organizations, with contributions rotating among them as the campaign grows.</strong> The partners are the International Association for Suicide Prevention, the Autism Resource Project, South Shore Autism Center, the Cole Resource Center, the Multi-Service Eating Disorders Association (MEDA), and Grace Trail.</p>
 <p>A reader once told me, “This book helped me stay.” After that, selling the book could no longer be only about selling the book.</p>
 </div>
 <div class="sroi-callout">
@@ -1610,9 +400,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 <div class="road-dashboard">
 <div class="road-pillars">
-<div class="road-pillar"><div class="road-pillar-num">01</div><div class="road-pillar-txt"><div class="road-pillar-title">Suicide Prevention</div>$2,000 directed toward helping people stay through the hours when staying feels impossible.</div></div>
-<div class="road-pillar"><div class="road-pillar-num">02</div><div class="road-pillar-txt"><div class="road-pillar-title">Autism Support</div>$2,000 directed toward access, dignity, and practical support for autistic people and families.</div></div>
-<div class="road-pillar"><div class="road-pillar-num">03</div><div class="road-pillar-txt"><div class="road-pillar-title">Eating-Disorder Recovery</div>$2,000 directed toward treatment access and recovery support for people rebuilding a relationship with their bodies.</div></div>
+<div class="road-pillar"><div class="road-pillar-num">01</div><div class="road-pillar-txt"><div class="road-pillar-title">Suicide Prevention</div><a href="https://www.iasp.info/" rel="noopener noreferrer" style="color:var(--al);text-decoration:underline;text-underline-offset:.2em;" target="_blank">International Association for Suicide Prevention</a> connects researchers, advocates, and communities in over 30 countries working to reduce suicide. Their resources reach people in the moments when staying feels impossible.</div></div>
+<div class="road-pillar"><div class="road-pillar-num">02</div><div class="road-pillar-txt"><div class="road-pillar-title">Autism &amp; Neurodivergent Support</div><a href="https://autismresourceproject.org/" rel="noopener noreferrer" style="color:var(--al);text-decoration:underline;text-underline-offset:.2em;" target="_blank">Autism Resource Project</a> connects autistic individuals, families, and caregivers with resources and community. <a href="https://ssautismcenter.com/" rel="noopener noreferrer" style="color:var(--al);text-decoration:underline;text-underline-offset:.2em;" target="_blank">South Shore Autism Center</a> provides ABA services for children with autism on the South Shore of Massachusetts, building meaningful skills in a warm environment.</div></div>
+<div class="road-pillar"><div class="road-pillar-num">03</div><div class="road-pillar-txt"><div class="road-pillar-title">Recovery &amp; Community Wellness</div><a href="https://www.medainc.org/" rel="noopener noreferrer" style="color:var(--al);text-decoration:underline;text-underline-offset:.2em;" target="_blank">MEDA</a> supports individuals and families facing eating disorders through treatment, education, and community. <a href="https://www.coleresourcecenter.org/" rel="noopener noreferrer" style="color:var(--al);text-decoration:underline;text-underline-offset:.2em;" target="_blank">Cole Resource Center</a> offers free peer-led mental health navigation, support groups, and workforce programs. <a href="https://www.gracetrail.com/" rel="noopener noreferrer" style="color:var(--al);text-decoration:underline;text-underline-offset:.2em;" target="_blank">Grace Trail</a> is a reflective walking path in Plymouth built around five questions. Christopher has walked it. Shadow attended. It kept more than one person moving forward.</div></div>
 </div>
 <aside aria-label="Campaign impact ledger" class="impact-ledger">
 <div class="impact-ledger-head">
@@ -1651,8 +441,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </div>
-</section>
-<!-- ═══ EVENTS ═══ -->
+</section><section class="orgs-section" id="organizations"><div class="orgs-inner"><div class="orgs-header"><p class="slbl slbl-a">Where the Road Leads</p><h2 class="orgs-title">THE ORGANIZATIONS BEHIND THE NUMBERS</h2><div class="orgs-intro"><p>The Road to 2,000 is not only a sales goal. It is a promise that this book will return something tangible to the communities that helped make survival, recovery, and belonging possible.</p><p>When the campaign reaches its goal, <strong>$6,000 will be divided equally among three organizations</strong> whose work speaks directly to the heart of this memoir.</p></div></div><div class="orgs-subhead"><h3>The Three Donation Partners</h3><p>Three organizations. Three forms of care. One belief that staying alive should lead somewhere.</p></div><div class="orgs-grid orgs-grid-primary"><article class="org-card org-card-primary"><div class="org-card-top"><span class="org-number">01</span><span class="org-label">Suicide Prevention</span></div><h3 class="org-name">American Foundation for Suicide Prevention</h3><p class="org-copy">AFSP works to save lives and bring hope to people affected by suicide through research, education, advocacy, and support. Its work matters because survival should never depend on silence, luck, or whether someone knows the right words in time.</p><p class="org-amount">$2,000 at the campaign goal</p><a class="org-link" href="https://afsp.org/" rel="noopener noreferrer" target="_blank">Visit the organization</a></article><article class="org-card org-card-primary"><div class="org-card-top"><span class="org-number">02</span><span class="org-label">Eating Disorder Recovery</span></div><h3 class="org-name">MEDA</h3><p class="org-copy">The Multi-Service Eating Disorders Association provides clinical services, community education, professional training, and support for individuals and families affected by eating disorders. Recovery is not vanity. It is the difficult work of returning to a body and a life that once felt unsafe.</p><p class="org-amount">$2,000 at the campaign goal</p><a class="org-link" href="https://www.medainc.org/" rel="noopener noreferrer" target="_blank">Visit the organization</a></article><article class="org-card org-card-primary"><div class="org-card-top"><span class="org-number">03</span><span class="org-label">Autism &amp; Family Support</span></div><h3 class="org-name">South Shore Autism Center</h3><p class="org-copy">South Shore Autism Center provides locally rooted, family-centered services for children and adolescents with autism. Its work reflects a principle that should not be revolutionary, although humanity has given it a spirited attempt: autistic people deserve support that helps them participate fully in their own lives.</p><p class="org-amount">$2,000 at the campaign goal</p><a class="org-link" href="https://ssautismcenter.com/" rel="noopener noreferrer" target="_blank">Visit the organization</a></article></div><div class="orgs-meaningful"><div class="orgs-subhead orgs-subhead-secondary"><h3>Two More Places That Matter</h3><p>These organizations are not currently designated recipients of the Road to 2,000 donations. They belong here because their work has shaped how I understand recovery, community, and the possibility of finding a way forward.</p></div><div class="orgs-grid orgs-grid-secondary"><article class="org-card org-card-secondary"><p class="org-label">Peer Recovery &amp; Mental Health</p><h3 class="org-name">Cole Resource Center</h3><p class="org-copy">The Cole Resource Center partners with people on their mental health journeys through resource navigation, support groups, workforce programming, and non-clinical peer support. Its work is grounded in lived experience and in the stubborn, necessary belief that people facing mental health challenges can build full and healthy lives.</p><a class="org-link" href="https://www.coleresourcecenter.org/" rel="noopener noreferrer" target="_blank">Learn more</a></article><article class="org-card org-card-secondary"><p class="org-label">Reflection &amp; Resilience</p><h3 class="org-name">Grace Trail</h3><p class="org-copy">Grace Trail is a self-guided practice built around five questions: Gratitude, Release, Accept, Challenge, and Embrace. For me, it is more than a walking trail. It is a place where difficult questions are allowed to breathe, where movement becomes reflection, and where the next step can become possible before it becomes obvious.</p><a class="org-link" href="https://www.gracetrail.com/" rel="noopener noreferrer" target="_blank">Learn more</a></article></div></div><div class="orgs-closing"><p class="orgs-closing-quote">The point is not to turn survival into a brand. It is to let survival become useful.</p><p class="orgs-crisis">If you or someone you know is in crisis in the United States, call or text <a href="https://988lifeline.org/" rel="noopener noreferrer" target="_blank">988</a> for the Suicide &amp; Crisis Lifeline.</p></div></div></section>
 <section class="events-sec" id="events">
 <p class="slbl">Live &amp; In Person</p>
 <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4.5vw,4rem);line-height:.95;color:var(--dk);margin-bottom:2.5rem;">Christopher Carazas Events and Book Appearances</h2>
@@ -1669,7 +458,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </section>
-<!-- ═══ PODCASTS ═══ -->
 <section aria-labelledby="podcastTitle" class="pods-sec podcast-feed-section" id="podcasts">
 <div class="pod-feed-shell">
 <div class="pod-feed-header">
@@ -1830,12 +618,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 <div class="internal-links"><a href="#podcasts">Browse all podcast interviews</a><a href="#about">Invite Christopher to speak</a></div></div>
 </section>
-<!-- ═══ FINAL CTA ═══ -->
 <section aria-labelledby="faq-title" class="faq-section" id="faq"><div class="faq-inner"><p class="seo-eyebrow">Frequently Asked Questions</p><h2 class="faq-title" id="faq-title">ABOUT THE BOOK, THE WORK, AND THE DOG RUNNING EDITORIAL</h2>
 <details class="faq-item"><summary>What is <em>Now That I’m Still Here</em> about?</summary><p>It is Christopher Carazas’s memoir about growing up autistic across five countries without knowing it, surviving psychological abuse and profound grief, and rebuilding a life with help from Shadow, his German Shepherd. <a href="#book">Read more about the memoir.</a></p></details>
 <details class="faq-item"><summary>Where can I buy the book directly?</summary><p>You can <a href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00">buy directly from Christopher through Lulu</a>, or use the retailer link for other stores and formats.</p></details>
 <details class="faq-item"><summary>Where is the book available?</summary><p><em>Now That I’m Still Here</em> is available worldwide and wherever books are sold, including major online retailers, independent bookstores that can order it, and direct through Lulu.</p></details>
-<details class="faq-item"><summary>What is the Road to 2,000?</summary><p>The Road to 2,000 is a campaign to place the memoir with 2,000 readers, generate $6,000 in donations across three organizations, and create an estimated $18,000 in social impact. <a href="#road">See the campaign and impact ledger.</a></p></details>
+<details class="faq-item"><summary>What is the Road to 2,000?</summary><p>The Road to 2,000 is a campaign to place the memoir with 2,000 readers and generate $6,000 in donations rotating among six partner organizations: the <a href="https://www.iasp.info/" rel="noopener noreferrer" style="color:var(--tl);" target="_blank">International Association for Suicide Prevention</a>, the <a href="https://autismresourceproject.org/" rel="noopener noreferrer" style="color:var(--tl);" target="_blank">Autism Resource Project</a>, <a href="https://ssautismcenter.com/" rel="noopener noreferrer" style="color:var(--tl);" target="_blank">South Shore Autism Center</a>, the <a href="https://www.coleresourcecenter.org/" rel="noopener noreferrer" style="color:var(--tl);" target="_blank">Cole Resource Center</a>, <a href="https://www.medainc.org/" rel="noopener noreferrer" style="color:var(--tl);" target="_blank">MEDA</a>, and <a href="https://www.gracetrail.com/" rel="noopener noreferrer" style="color:var(--tl);" target="_blank">Grace Trail</a>. <a href="#road">See the campaign and impact ledger.</a></p></details>
 <details class="faq-item"><summary>Where can I read Christopher’s essays?</summary><p>Christopher publishes essays about autism, grief, identity, survival, and belonging on Substack. <a href="#substack">Explore the latest writing.</a></p></details>
 <details class="faq-item"><summary>What is the Plymouth Sentinel and Canine Gazette?</summary><p>It is a recurring satirical newspaper edited, in spirit and possibly by force, by Shadow. It blends local life, canine investigations, and human incompetence. <a href="#gazette">Read the Gazette.</a></p></details>
 <details class="faq-item"><summary>Is Christopher available for podcast interviews or speaking?</summary><p>Yes. Christopher speaks about late-diagnosed autism, psychological abuse, grief, writing, social impact, and survival. <a href="#podcasts">Listen to previous conversations</a> or email <a href="mailto:ccarazaswrites@gmail.com">ccarazaswrites@gmail.com</a>.</p></details>
@@ -1843,12 +630,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 <div class="final-cta-inner">
 <h2 style="font-size:clamp(2.5rem,7vw,8rem);line-height:.9;">THE BOOK IS ABOUT STAYING. BUYING IT HELPS THE STORY TRAVEL.</h2>
 <p>Read it for yourself. Send it to someone rebuilding. Help take the Road to 2,000 one reader farther.</p>
-<div class="cta-row" style="justify-content:center;"><a aria-label="Buy Now That I'm Still Here directly from Christopher Carazas through Lulu" class="btn-direct" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Direct from Me!</a><a aria-label="Buy Now That I'm Still Here from online book retailers" class="btn-dark" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a><a class="btn-cream" href="https://ccarazas.substack.com" rel="noopener noreferrer" target="_blank">Read on Substack</a></div>
+<div class="cta-row" style="justify-content:center;"><a aria-label="Buy Now That I'm Still Here directly from Christopher Carazas through Lulu" class="btn-direct" href="https://www.lulu.com/search?sortBy=RELEVANCE&amp;page=1&amp;q=Christopher+carazas&amp;pageSize=10&amp;adult_audience_rating=00" rel="noopener noreferrer" target="_blank">Buy Directly</a><span class="stripe-buy-group"><a class="btn-special stripe-buy-us" href="https://book.stripe.com/00w9AS358bIfbsp53p28802" rel="noopener noreferrer" target="_blank">Buy Signed Copy — US</a><a class="stripe-buy-intl" href="https://book.stripe.com/4gM5kC6hk7rZ685fI328803" rel="noopener noreferrer" target="_blank">International Orders</a></span><small class="stripe-price-note">$19.99 + $5 US shipping / $12 international shipping</small><a aria-label="Buy Now That I'm Still Here from online book retailers" class="btn-dark" href="https://books2read.com/u/bz0n1Z" rel="noopener noreferrer" target="_blank">Buy From Retailers</a><a class="btn-cream" href="https://ccarazas.substack.com" rel="noopener noreferrer" target="_blank">Read on Substack</a></div>
 <p style="font-size:.95rem;margin-top:1.5rem;opacity:.72;">Shadow would like it noted that all shipping delays remain a human failure.</p>
 </div>
 </section>
 </main>
-<!-- ═══ SOCIALS ═══ -->
 <div class="socials-strip">
 <div class="socials-inner">
 <p class="socials-label">Follow Along</p>
@@ -1880,7 +666,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 </div>
 </div>
 </div>
-<!-- ═══ FOOTER ═══ -->
 <footer style="position:relative;overflow:hidden;">
 <div style="position:absolute;font-family:'Bebas Neue',sans-serif;font-size:clamp(8rem,22vw,18rem);color:rgba(244,238,221,.025);line-height:1;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none;user-select:none;letter-spacing:-.02em;">STILL HERE</div>
 <div style="position:relative;z-index:1;">
@@ -1890,193 +675,5 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--al);outline-offset:
 <ul class="footer-nav" style="position:relative;z-index:1;"><li><a href="#book">Book</a></li><li><a href="#substack">Writing</a></li><li><a href="#gazette">Gazette</a></li><li><a href="#road">Impact</a></li><li><a href="#podcasts">Podcasts</a></li><li><a href="#about">About</a></li></ul>
 <p class="footer-copy" style="position:relative;z-index:1;color:rgba(244,238,221,.4);">© 2026 Christopher J. Carazas  ·  Sentinel House Press</p>
 </footer>
-<script>
-// NAV scroll
-const nav=document.getElementById('mainNav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
-
-// QUOTE SLIDESHOW
-(function(){
-  const slides = document.querySelectorAll('#qsSlides .qs-slide');
-  if(!slides.length) return;
-  const dotsContainer = document.getElementById('qsDots');
-  const prevBtn = document.getElementById('qsPrev');
-  const nextBtn = document.getElementById('qsNext');
-  let current = 0, timer;
-
-  // Create dots
-  slides.forEach((_,i)=>{
-    const d = document.createElement('button');
-    d.className = 'qs-dot' + (i===0?' active':'');
-    d.addEventListener('click',()=>{ goTo(i); resetTimer(); });
-    dotsContainer.appendChild(d);
-  });
-
-  function goTo(n){
-    slides[current].classList.remove('active');
-    dotsContainer.children[current].classList.remove('active');
-    current = (n + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dotsContainer.children[current].classList.add('active');
-  }
-
-  function startTimer(){ timer = setInterval(()=>goTo(current+1), 4500); }
-  function resetTimer(){ clearInterval(timer); startTimer(); }
-
-  const section = document.querySelector('.qs-section');
-  if(section){
-    section.addEventListener('mouseenter',()=>clearInterval(timer));
-    section.addEventListener('mouseleave', startTimer);
-  }
-
-  if(prevBtn) prevBtn.addEventListener('click',()=>{ goTo(current-1); resetTimer(); });
-  if(nextBtn) nextBtn.addEventListener('click',()=>{ goTo(current+1); resetTimer(); });
-
-  startTimer();
-})();
-
-// REVIEWS SLIDESHOW
-(function(){
-  const slides = document.querySelectorAll('#rSlides .rslide');
-  if(!slides.length) return;
-  const dotsWrap = document.getElementById('rDots');
-  const prev = document.getElementById('rPrev');
-  const next = document.getElementById('rNext');
-  let cur = 0, timer;
-  slides.forEach((_,i)=>{
-    const d = document.createElement('button');
-    d.className = 'rslide-dot' + (i===0?' rslide-dot-active':'');
-    d.addEventListener('click',()=>{ goTo(i); reset(); });
-    dotsWrap.appendChild(d);
-  });
-  function goTo(n){
-    slides[cur].classList.remove('rslide-active');
-    dotsWrap.children[cur].classList.remove('rslide-dot-active');
-    cur = (n + slides.length) % slides.length;
-    slides[cur].classList.add('rslide-active');
-    dotsWrap.children[cur].classList.add('rslide-dot-active');
-  }
-  function start(){ timer = setInterval(()=>goTo(cur+1), 5000); }
-  function reset(){ clearInterval(timer); start(); }
-  const wrap = document.querySelector('.rslideshow-wrap');
-  if(wrap){
-    wrap.addEventListener('mouseenter',()=>clearInterval(timer));
-    wrap.addEventListener('mouseleave', start);
-  }
-  if(prev) prev.addEventListener('click',()=>{ goTo(cur-1); reset(); });
-  if(next) next.addEventListener('click',()=>{ goTo(cur+1); reset(); });
-  start();
-})();
-
-// SCROLL REVEAL
-(function(){
-  const els = document.querySelectorAll('.fade-up');
-  if(!els.length) return;
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  },{threshold:0.12});
-  els.forEach(el=>obs.observe(el));
-})();
-</script>
-<script>
-(function(){
-  const toggle=document.getElementById('navToggle');
-  const links=document.getElementById('navLinks');
-  if(toggle&&links){
-    toggle.addEventListener('click',()=>{
-      const open=links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded',String(open));
-      toggle.textContent=open?'Close':'Menu';
-    });
-    links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-      links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu';
-    }));
-  }
-})();
-</script>
-<script>
-(function(){
-  var FEED_URL = "https://ccarazas.substack.com/feed";
-  var RSS2JSON_URL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(FEED_URL) + "&count=100";
-  var ALL_ORIGINS_URL = "https://api.allorigins.win/get?url=" + encodeURIComponent(FEED_URL);
-
-  function normalizeTitle(value){
-    return String(value || "").replace(/\u00a0/g," ").replace(/&amp;/gi,"&").toLowerCase().replace(/&/g," and ").replace(/\s+/g," ").trim();
-  }
-  function titleIsGazette(title){
-    return /^(?:the\s+)?plymouth\s+sentinel\s+and\s+canine\s+gazette\b/.test(normalizeTitle(title));
-  }
-  function titleLooksLikeLive(title, description){
-    var haystack = normalizeTitle(title + " " + description);
-    return /\bsubstack live\b|\blive with\b|\ba recording from\b/.test(haystack);
-  }
-  function formatDate(value){
-    var d = new Date(value); if(isNaN(d.getTime())) return "";
-    return d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
-  }
-  function stripHtml(value){
-    var node=document.createElement("div"); node.innerHTML=value||"";
-    return (node.textContent||node.innerText||"").replace(/\s+/g," ").trim();
-  }
-  function escapeHtml(value){
-    return String(value||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
-  }
-  function cleanTitle(value){
-    return String(value||"").replace(/[\u{1F300}-\u{1FFFF}]/gu,"").replace(/[\u{2600}-\u{27BF}]/gu,"").replace(/\s+/g," ").trim();
-  }
-  function newestFirst(a,b){ return (new Date(b.pubDate||0).getTime()||0)-(new Date(a.pubDate||0).getTime()||0); }
-  function withTimeout(url, options, ms){
-    var controller=new AbortController(); var timer=setTimeout(function(){controller.abort();},ms||8000);
-    return fetch(url,Object.assign({},options||{},{signal:controller.signal})).finally(function(){clearTimeout(timer);});
-  }
-  function postsFromXml(xmlText){
-    var xml=new DOMParser().parseFromString(xmlText,"text/xml");
-    if(xml.querySelector("parsererror")) throw new Error("Invalid RSS XML");
-    return Array.from(xml.querySelectorAll("item")).map(function(item){
-      function get(selector){var n=item.querySelector(selector);return n?n.textContent||"":"";}
-      return {title:get("title"),link:get("link"),pubDate:get("pubDate"),description:get("description")};
-    });
-  }
-  function fetchDirect(){ return withTimeout(FEED_URL,{mode:"cors"},7000).then(function(r){if(!r.ok)throw new Error("Direct feed "+r.status);return r.text();}).then(postsFromXml); }
-  function fetchAllOrigins(){ return withTimeout(ALL_ORIGINS_URL,{},8000).then(function(r){if(!r.ok)throw new Error("AllOrigins "+r.status);return r.json();}).then(function(d){if(!d.contents)throw new Error("No XML content");return postsFromXml(d.contents);}); }
-  function fetchRss2Json(){ return withTimeout(RSS2JSON_URL,{},8000).then(function(r){if(!r.ok)throw new Error("RSS2JSON "+r.status);return r.json();}).then(function(d){if(!Array.isArray(d.items))throw new Error("No JSON items");return d.items.map(function(i){return {title:i.title||"",link:i.link||"",pubDate:i.pubDate||"",description:i.description||i.content||""};});}); }
-  function getFeed(){ return fetchDirect().catch(fetchAllOrigins).catch(fetchRss2Json); }
-
-  function renderGazette(posts){
-    var grid=document.getElementById("gazetteGrid"); if(!grid)return;
-    var items=posts.filter(function(p){return titleIsGazette(p.title);}).sort(newestFirst).slice(0,3); if(!items.length)return;
-    grid.innerHTML=items.map(function(p){
-      var excerpt=stripHtml(p.description).slice(0,170);
-      return "<article class='gazette-card feed-card'><p class='gazette-card-date'>"+escapeHtml(formatDate(p.pubDate))+"</p><h3 class='gazette-card-title'>"+escapeHtml(cleanTitle(p.title).toUpperCase())+"</h3>"+(excerpt?"<p class='gazette-card-desc'>"+escapeHtml(excerpt)+(excerpt.length>=170?"&hellip;":"")+"</p>":"")+"<a class='gazette-card-link' href='"+escapeHtml(p.link)+"' target='_blank' rel='noopener noreferrer'>Read this edition &rarr;</a></article>";
-    }).join("");
-    grid.setAttribute("data-feed-state","live");
-  }
-  function renderEssays(posts){
-    var grid=document.getElementById("essayFeedGrid"); if(!grid)return;
-    var items=posts.filter(function(p){return !titleIsGazette(p.title)&&!titleLooksLikeLive(p.title,p.description);}).sort(newestFirst).slice(0,3); if(!items.length)return;
-    grid.innerHTML=items.map(function(p){
-      var excerpt=stripHtml(p.description).slice(0,190);
-      return "<article class='sub-card feed-card'><div class='sub-card-acc'></div><p class='sub-card-label'>"+escapeHtml(formatDate(p.pubDate))+"</p><h3 class='sub-card-title'>"+escapeHtml(cleanTitle(p.title).toUpperCase())+"</h3>"+(excerpt?"<p class='sub-card-desc'>"+escapeHtml(excerpt)+(excerpt.length>=190?"&hellip;":"")+"</p>":"")+"<a class='sub-card-read' href='"+escapeHtml(p.link)+"' target='_blank' rel='noopener noreferrer'>Read the essay &rarr;</a></article>";
-    }).join("");
-    grid.setAttribute("data-feed-state","live");
-  }
-  function initFeed(){
-    getFeed().then(function(posts){renderGazette(posts);renderEssays(posts);}).catch(function(error){console.warn("RSS refresh unavailable. Static fallback remains visible.",error);});
-  }
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initFeed);else initFeed();
-})();
-
-(function(){
-  var button=document.getElementById("podFeedToggle"); var list=document.getElementById("podcastFeedList");
-  if(!button||!list)return;
-  button.addEventListener("click",function(){
-    var expanded=list.classList.toggle("expanded");
-    button.setAttribute("aria-expanded",String(expanded));
-    button.textContent=expanded?"Show fewer conversations":"Show all 17 conversations";
-  });
-})();
-</script>
-</body>
+<script defer="True" src="site.js"></script></body>
 </html>
