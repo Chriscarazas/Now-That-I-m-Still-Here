@@ -1058,8 +1058,8 @@ button:focus-visible { outline-color: var(--al) !important; }
 
 /* ── CONTACT / SPEAKING — Chip Kidd / dd.nyc editorial rebuild ────── */
 .contact-speaking-sec {
-  background: var(--dk);
-  overflow: hidden;
+  background: var(--dk, #161210) !important;
+  overflow: hidden !important;
 }
 
 /* Top strip: label + enormous typographic anchor */
@@ -1118,10 +1118,10 @@ button:focus-visible { outline-color: var(--al) !important; }
 
 /* Numbered editorial list — no box, just hairline rules */
 .speaking-topic-list {
-  list-style: none;
-  counter-reset: topics;
-  padding: 0;
-  margin: 0;
+  list-style: none !important;
+  counter-reset: topics !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .speaking-topic-list li {
   counter-increment: topics;
@@ -1136,13 +1136,13 @@ button:focus-visible { outline-color: var(--al) !important; }
   list-style: none !important;
 }
 .speaking-topic-list li::before {
-  content: counter(topics, decimal-leading-zero);
-  font-family: 'Space Mono', monospace;
-  font-size: .5rem;
-  letter-spacing: .06em;
-  color: var(--am);
-  flex-shrink: 0;
-  min-width: 1.6rem;
+  content: counter(topics, decimal-leading-zero) !important;
+  font-family: 'Space Mono', monospace !important;
+  font-size: .5rem !important;
+  letter-spacing: .06em !important;
+  color: var(--am, #C4783A) !important;
+  flex-shrink: 0 !important;
+  min-width: 1.6rem !important;
 }
 
 /* Right: CTA block — sticky-ish, top-aligned */
