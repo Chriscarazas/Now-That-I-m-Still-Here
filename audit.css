@@ -1055,3 +1055,121 @@ button:focus-visible { outline-color: var(--al) !important; }
   background:   rgba(22,18,16,.1) !important;
   border-color: var(--dk) !important;
 }
+
+/* ── CONTACT / SPEAKING SECTION ──────────────────────────────────── */
+.contact-speaking-sec {
+  background: var(--cr);
+  padding: clamp(4rem, 10vw, 8rem) var(--pg);
+}
+.contact-speaking-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.contact-h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 9vw, 7rem);
+  line-height: .9;
+  letter-spacing: -.02em;
+  color: var(--dk);
+  margin: .75rem 0 1.25rem;
+}
+.contact-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.75;
+  color: #4A433C;
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+}
+.speaking-topics {
+  background: var(--dk);
+  padding: 2rem 2.25rem;
+  margin-bottom: 2.5rem;
+}
+.speaking-topics-label {
+  font-family: 'Space Mono', monospace;
+  font-size: .5rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--am);
+  margin-bottom: 1rem;
+}
+.speaking-topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: .6rem 2rem;
+}
+.speaking-topic-list li {
+  font-size: .95rem;
+  color: var(--cr);
+  line-height: 1.55;
+  padding-left: 1rem;
+  position: relative;
+}
+.speaking-topic-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--am);
+  font-weight: 700;
+}
+.contact-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .875rem;
+  margin-bottom: 1.25rem;
+}
+.contact-note {
+  font-family: 'Space Mono', monospace;
+  font-size: .5rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #9B8E85;
+}
+
+/* ── ORGS: also-note footnote ────────────────────────────────────── */
+.orgs-also-note {
+  font-family: 'Space Mono', monospace;
+  font-size: .52rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #7A6E68;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(196,120,58,.2);
+}
+
+/* ── SECONDARY ORGS SECTION (Three More Places That Matter) ───────── */
+.orgs-meaningful {
+  margin-top: 4rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid rgba(196,120,58,.2);
+}
+.orgs-subhead-secondary h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem) !important;
+  color: var(--dk) !important;
+  margin-bottom: .5rem;
+}
+.orgs-subhead-secondary p {
+  font-size: .95rem;
+  color: #7A6E68;
+  max-width: 580px;
+  margin-bottom: 2rem;
+}
+.orgs-grid-secondary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+/* Secondary cards match the dark primary cards but with no amount row,
+   and a 2px amber-left accent instead of 4px amber-top */
+.org-card-secondary {
+  border-left: 3px solid var(--am) !important;
+  border-top:  none !important;
+}
+/* Make the org-number muted on secondary cards */
+.org-card-secondary .org-number {
+  opacity: .4;
+}
