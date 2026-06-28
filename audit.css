@@ -1064,43 +1064,45 @@ button:focus-visible { outline-color: var(--al) !important; }
 
 /* Top strip: label + enormous typographic anchor */
 .contact-top-strip {
-  padding: clamp(3rem, 7vw, 5rem) var(--pg) 0;
+  padding: clamp(3rem, 7vw, 5rem) var(--pg, clamp(1.25rem, 5vw, 3rem)) 0 !important;
 }
 .contact-top-strip .slbl {
   margin-bottom: 1rem;
 }
 
-/* "SPEAK." — the graphic statement. Chip Kidd scale. */
+/* "SPEAK." — the graphic statement. Chip Kidd scale.
+   !important required — styles.css has base h2 rules that cascade in. */
+.contact-speaking-sec h2.contact-hero-word,
 .contact-hero-word {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(7rem, 28vw, 22rem);
-  line-height: .82;
-  letter-spacing: -.03em;
-  color: var(--cr);
-  margin: 0 0 0 -.02em;   /* optical left-edge alignment */
-  padding: 0;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: clamp(7rem, 28vw, 22rem) !important;
+  line-height: .82 !important;
+  letter-spacing: -.03em !important;
+  color: var(--cr, #F4EEDD) !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Two-column editorial content grid */
 .contact-speaking-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: clamp(2.5rem, 5vw, 4rem) var(--pg) clamp(4rem, 8vw, 7rem);
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 3rem 5rem;
-  align-items: start;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  padding: clamp(2.5rem, 5vw, 4rem) var(--pg, clamp(1.25rem, 5vw, 3rem)) clamp(4rem, 8vw, 7rem) !important;
+  display: grid !important;
+  grid-template-columns: 1fr 340px !important;
+  gap: 3rem 5rem !important;
+  align-items: start !important;
 }
 
 /* Left: deck + numbered topic list */
 .contact-left { }
 
 .contact-deck {
-  font-size: clamp(.95rem, 1.8vw, 1.1rem);
-  line-height: 1.75;
-  color: var(--wl);
+  font-size: clamp(.95rem, 1.8vw, 1.1rem) !important;
+  line-height: 1.75 !important;
+  color: var(--wl, rgba(244,238,221,.78)) !important;
   max-width: 520px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem !important;
 }
 
 .contact-topics-label {
@@ -1123,14 +1125,15 @@ button:focus-visible { outline-color: var(--al) !important; }
 }
 .speaking-topic-list li {
   counter-increment: topics;
-  display: flex;
-  align-items: baseline;
-  gap: 1.25rem;
-  padding: .875rem 0;
-  border-bottom: 1px solid rgba(244,238,221,.07);
-  font-size: .95rem;
-  color: var(--wl);
-  line-height: 1.5;
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 1.25rem !important;
+  padding: .875rem 0 !important;
+  border-bottom: 1px solid rgba(244,238,221,.07) !important;
+  font-size: .95rem !important;
+  color: var(--wl, rgba(244,238,221,.78)) !important;
+  line-height: 1.5 !important;
+  list-style: none !important;
 }
 .speaking-topic-list li::before {
   content: counter(topics, decimal-leading-zero);
