@@ -1,0 +1,1057 @@
+/* ================================================================
+   audit.css — chriscarazas.com
+   Aesthetic audit overrides. Link AFTER styles.css.
+   Reference: Chip Kidd · dd.nyc · Apple
+
+   Six changes, in order:
+   1. Palette — drop teal, amber/cream/dark only
+   2. Section backgrounds — dark or cream, no five-state alternation
+   3. Buttons — primary amber or ghost, nothing else
+   4. Section labels — one variant, always amber
+   5. Border radius — zero everywhere
+   6. Ghost text — two sections only (quotes + Road)
+   7. Navigation — six items
+   8. Katie section — strengthen typographic identity
+   9. Teal hardcode sweeps (for values not using CSS vars)
+  10. Misc cleanup
+   ================================================================ */
+
+
+/* ----------------------------------------------------------------
+   1. PALETTE
+   Map all teal vars to amber. Collapse dark and cream variants.
+   --dk  stays: #161210  (primary dark)
+   --dk3 becomes: #0E0B09  (one reserved deep-dark, interstitials only)
+   --dk2 collapses to --dk
+   --cr  stays: #F4EEDD  (cream)
+   --cr2 collapses to --cr
+   ---------------------------------------------------------------- */
+
+:root {
+  --tl:  #C4783A;
+  --tm:  #D4924E;
+  --tll: #C4783A;
+  --dk2: #161210;
+  --dk3: #0E0B09;
+  --cr2: #F4EEDD;
+}
+
+
+/* ----------------------------------------------------------------
+   2. SECTION BACKGROUNDS
+   Every section is --dk or --cr.
+   .type-pause and .narrative-bridge are the one allowed
+   exception using --dk3.
+   ---------------------------------------------------------------- */
+
+.reviews-behind          { background: var(--dk) !important; }
+.katie                   { background: var(--dk) !important; }
+.katie-words-side        { background: var(--dk) !important; }
+.shadow-sec              { background: var(--dk) !important; }
+.about                   { background: var(--cr) !important; }
+.substack-sec,
+.writing-feed            { background: var(--cr) !important; }
+.events-sec              { background: var(--cr) !important; }
+.faq-section             { background: var(--cr) !important; }
+.orgs-section            { background: var(--cr) !important; color: #1A1410 !important; }
+.pods-sec,
+.podcast-feed-section    { background: var(--cr) !important; }
+.audience                { background: var(--cr) !important; }
+
+/* Type text on cream sections */
+.about .about-body,
+.about .about-pull,
+.about .about-big        { color: var(--dk) !important; }
+
+.orgs-intro,
+.orgs-intro p            { color: #4A433C !important; }
+.orgs-title              { color: var(--dk) !important; }
+.orgs-subhead h3         { color: var(--dk) !important; }
+.orgs-closing-quote      { color: var(--dk) !important; }
+.org-name                { color: var(--dk) !important; }
+.org-copy                { color: #4A433C !important; }
+
+/* Podcast section on cream: body text adjusts */
+.pods-sec .pod-feed-title,
+.podcast-feed-section .pod-feed-title { color: var(--dk) !important; }
+
+.pods-sec .pod-feed-list,
+.podcast-feed-section .pod-feed-list  {
+  border-top-color: var(--ll) !important;
+}
+.pods-sec .pod-feed-row,
+.podcast-feed-section .pod-feed-row {
+  border-bottom-color: var(--ll) !important;
+}
+.pods-sec .pod-feed-index,
+.podcast-feed-section .pod-feed-index { color: var(--ll) !important; }
+
+/* Essays / Substack section on cream */
+.writing-feed .writing-feed-intro,
+.substack-sec .writing-feed-intro { color: #4A433C !important; }
+
+/* Audience section on cream */
+.audience .audience-item { color: #4A433C !important; }
+.audience h2             { color: var(--dk) !important; }
+.audience-item           { border-bottom-color: var(--ll) !important; border-top-color: var(--ll) !important; }
+
+/* Type pause and narrative bridge: deep dark interstitial */
+.type-pause,
+.narrative-bridge        { background: var(--dk3) !important; }
+
+
+/* ----------------------------------------------------------------
+   3. BUTTONS: TWO TYPES ONLY
+   Primary: solid amber, Space Mono, ALL CAPS, zero radius.
+   Ghost: transparent, amber border, same type.
+   All existing classes map to one of these two.
+   ---------------------------------------------------------------- */
+
+/* PRIMARY — every filled button class */
+.btn-cream,
+.btn-dark,
+.btn-direct,
+.btn-special,
+.pod-feed-toggle {
+  background:      var(--am) !important;
+  color:           var(--cr) !important;
+  border:          1px solid var(--am) !important;
+  border-radius:   0 !important;
+  font-family:     "Space Mono", monospace !important;
+  font-size:       .55rem !important;
+  letter-spacing:  .12em !important;
+  text-transform:  uppercase !important;
+  padding:         .8rem 2rem !important;
+  text-decoration: none !important;
+  display:         inline-block !important;
+  transition:      background .2s, border-color .2s !important;
+  transform:       none !important;
+}
+.btn-cream:hover,
+.btn-dark:hover,
+.btn-direct:hover,
+.btn-special:hover,
+.pod-feed-toggle:hover {
+  background:    var(--al) !important;
+  border-color:  var(--al) !important;
+  color:         var(--cr) !important;
+  transform:     none !important;
+}
+/* Primary on amber background (final-cta) inverts */
+.final-cta .btn-dark {
+  background:  var(--dk) !important;
+  border-color: var(--dk) !important;
+  color:       var(--cr) !important;
+}
+.final-cta .btn-dark:hover {
+  background:  rgba(22,18,16,.82) !important;
+}
+
+/* GHOST — transparent with amber border */
+.btn-ghost-l,
+.stripe-buy-intl {
+  background:      transparent !important;
+  color:           var(--am) !important;
+  border:          1px solid var(--am) !important;
+  border-radius:   0 !important;
+  font-family:     "Space Mono", monospace !important;
+  font-size:       .55rem !important;
+  letter-spacing:  .12em !important;
+  text-transform:  uppercase !important;
+  padding:         .8rem 2rem !important;
+  text-decoration: none !important;
+  display:         inline-block !important;
+  transition:      background .2s, color .2s, border-color .2s !important;
+}
+.btn-ghost-l:hover,
+.stripe-buy-intl:hover {
+  background:    var(--am) !important;
+  color:         var(--cr) !important;
+  border-color:  var(--am) !important;
+}
+
+/* Ghost on dark sections: cream-tinted */
+.hero-v28 .btn-ghost-l,
+.road .btn-ghost-l,
+.qs-section .btn-ghost-l,
+.katie .btn-ghost-l,
+.reviews-behind .btn-ghost-l {
+  color:        rgba(244,238,221,.78) !important;
+  border-color: rgba(244,238,221,.42) !important;
+}
+.hero-v28 .btn-ghost-l:hover,
+.road .btn-ghost-l:hover {
+  background:   rgba(244,238,221,.1) !important;
+  border-color: var(--cr) !important;
+  color:        var(--cr) !important;
+}
+
+/* Stripe intl ghost on dark context (hero) */
+.hero-v28 .stripe-buy-intl {
+  color:        rgba(244,238,221,.62) !important;
+  border-color: rgba(244,238,221,.38) !important;
+}
+.hero-v28 .stripe-buy-intl:hover {
+  color:        var(--cr) !important;
+  border-color: var(--cr) !important;
+  background:   rgba(244,238,221,.08) !important;
+}
+
+/* Book section stripe intl on cream */
+.book .stripe-buy-intl,
+.final-cta .stripe-buy-intl {
+  color:        var(--dk) !important;
+  border-color: rgba(22,18,16,.28) !important;
+}
+.book .stripe-buy-intl:hover,
+.final-cta .stripe-buy-intl:hover {
+  background:  var(--dk) !important;
+  color:       var(--cr) !important;
+  border-color: var(--dk) !important;
+}
+
+
+/* ----------------------------------------------------------------
+   4. SECTION LABELS: ONE VARIANT, ALWAYS AMBER
+   Remove the three-color .slbl system.
+   Every label gets amber border and amber text.
+   Tighten the label-to-heading gap.
+   ---------------------------------------------------------------- */
+
+.slbl,
+.slbl-t,
+.slbl-a {
+  color:              var(--am) !important;
+  border-left-color:  var(--am) !important;
+  margin-bottom:      .75rem !important;
+}
+
+/* Substack cards — labels and accent were teal */
+.sub-card-label    { color: var(--am) !important; }
+.sub-card-acc      { background: var(--am) !important; }
+.sub-card:hover    { border-color: var(--am) !important; }
+.sub-card:hover .sub-card-title { color: var(--am) !important; }
+.sub-card-read {
+  color:             var(--am) !important;
+  border-bottom-color: rgba(196,120,58,.35) !important;
+}
+.sub-card-read:hover { color: var(--dk) !important; }
+
+/* Podcast chips were teal */
+.pod-feed-chip {
+  border-color: rgba(196,120,58,.35) !important;
+  color:        var(--am) !important;
+}
+.pod-feed-chip:hover {
+  background:   var(--am) !important;
+  border-color: var(--am) !important;
+  color:        var(--cr) !important;
+}
+
+/* Podcast meta, index, row hover */
+.pod-feed-meta          { color: var(--am) !important; }
+.pod-feed-row:hover     { background: rgba(196,120,58,.042) !important; padding-left: .75rem !important; padding-right: .75rem !important; }
+
+/* Book subtitle was teal */
+.book-sub               { color: var(--am) !important; }
+
+/* About facts label was teal */
+.about-fact b           { color: var(--am) !important; }
+
+/* Org labels, links, and amounts */
+.org-label,
+.org-card-top .org-label    { color: var(--am) !important; }
+.org-card-secondary .org-label { color: var(--am) !important; }
+.org-link                   { color: var(--am) !important; border-bottom-color: rgba(196,120,58,.35) !important; }
+.org-link:hover             { color: var(--dk) !important; border-color: var(--dk) !important; }
+.org-card-secondary .org-link { color: var(--am) !important; }
+.org-card-secondary .org-link:hover { color: var(--cr) !important; border-color: var(--cr) !important; }
+.org-amount                 { color: var(--am) !important; border-top-color: var(--ll) !important; }
+
+/* Crisis link */
+.orgs-crisis a              { color: var(--am) !important; }
+
+/* FAQ links */
+.faq-item a                 { color: var(--am) !important; }
+
+/* Internal nav links (below sections) */
+.internal-links a {
+  color:             var(--am) !important;
+  border-bottom-color: rgba(196,120,58,.35) !important;
+}
+.internal-links a:hover { color: var(--dk) !important; }
+
+/* Feed text links - dark variant was teal */
+.feed-text-link-dark {
+  color:             var(--am) !important;
+  border-bottom-color: rgba(196,120,58,.35) !important;
+}
+.feed-text-link-dark:hover { color: var(--dk) !important; }
+
+/* Gazette card links are already amber — confirm */
+.gazette-card-link:hover { color: var(--al) !important; }
+
+
+/* ----------------------------------------------------------------
+   5. BORDER RADIUS: ZERO EVERYWHERE
+   This material is angular. No softening.
+   Exception: milestone dot is a tracker circle, keep it.
+   ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after { border-radius: 0 !important; }
+
+.milestone-dot { border-radius: 50% !important; }
+
+
+/* ----------------------------------------------------------------
+   6. GHOST TEXT: TWO SECTIONS ONLY
+   Keep: .qs-bg-mark (quote slideshow)
+         .road-bgnum (Road to 2,000 — the number has meaning)
+   Remove: reviews, shadow, about, katie
+   ---------------------------------------------------------------- */
+
+.rslideshow-bg-mark                       { display: none !important; }
+.shadow-bg-txt                            { display: none !important; }
+.about-bgnum                              { display: none !important; }
+.katie-words-side::before                 { content: none !important; display: none !important; }
+
+
+/* ----------------------------------------------------------------
+   7. NAVIGATION: SIX ITEMS
+   Keep: Book / Writing / Gazette / Impact / About / Buy
+   Hide: Organizations (5th), Podcasts (6th), Buy From Retailers
+   ---------------------------------------------------------------- */
+
+.nav-links li:nth-child(5),
+.nav-links li:nth-child(6) { display: none !important; }
+
+.nav-links li:has(.nav-retail) { display: none !important; }
+
+/* Tighten the primary buy button */
+.nav-buy {
+  background:     var(--am) !important;
+  color:          var(--cr) !important;
+  border:         1px solid var(--am) !important;
+  border-radius:  0 !important;
+  padding:        .55rem 1rem !important;
+  font-size:      .6rem !important;
+  letter-spacing: .1em !important;
+  opacity:        1 !important;
+}
+.nav-buy:hover {
+  background:    var(--al) !important;
+  border-color:  var(--al) !important;
+  color:         var(--cr) !important;
+}
+
+
+/* ----------------------------------------------------------------
+   8. KATIE SECTION
+   Drop the ::before ghost mark (done above).
+   Strengthen the typographic identity.
+   Amber rule, stronger name, pull quote treatment.
+   ---------------------------------------------------------------- */
+
+.katie {
+  border-top:    1px solid rgba(196,120,58,.18) !important;
+  border-bottom: 1px solid rgba(196,120,58,.18) !important;
+}
+
+.katie-rule {
+  width:      3rem !important;
+  height:     2px !important;
+  opacity:    1 !important;
+  background: var(--am) !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.katie-name {
+  font-size:      clamp(4rem, 8vw, 8rem) !important;
+  line-height:    .84 !important;
+  letter-spacing: -.02em !important;
+  margin-bottom:  2rem !important;
+  color:          var(--cr) !important;
+}
+
+.katie-q1 {
+  border-left:  3px solid var(--am) !important;
+  padding-left: 1.25rem !important;
+  font-size:    clamp(1.4rem, 2.5vw, 2rem) !important;
+  line-height:  1.5 !important;
+  color:        var(--cr) !important;
+}
+
+.katie-lbl,
+.katie-close { color: var(--am) !important; opacity: .8 !important; }
+
+
+/* ----------------------------------------------------------------
+   9. TEAL HARDCODE SWEEPS
+   Values set as literal hex in styles.css, not via CSS vars.
+   These need explicit overrides since variable remapping
+   won't catch them.
+   ---------------------------------------------------------------- */
+
+/* Org label hardcoded as #3B7A6C */
+.org-label { color: var(--am) !important; }
+
+/* Org link hardcoded as #2D6458 */
+.org-link { color: var(--am) !important; }
+
+/* Crisis link hardcoded as #2D6458 */
+.orgs-crisis a { color: var(--am) !important; }
+
+/* Podcast chip border was rgba(59,122,108,...) */
+.pod-feed-chip { border-color: rgba(196,120,58,.35) !important; }
+
+/* Podcast row hover was rgba(45,100,88,...) */
+.pod-feed-row:hover { background: rgba(196,120,58,.042) !important; }
+
+/* Podcast count bar: left border was --am already, confirm amber */
+.pod-feed-count { border-left-color: var(--am) !important; }
+
+/* About fact label hardcoded via var(--tm) — now updated via var */
+/* Explicit fallback anyway */
+.about-fact b { color: var(--am) !important; }
+
+/* Sub-card accent and hover border */
+.sub-card-acc { background: var(--am) !important; }
+.sub-card:hover { border-color: var(--am) !important; }
+.sub-card:hover .sub-card-title { color: var(--am) !important; }
+
+/* The proof-strip uses --dk2 (now same as --dk) */
+.proof-item { background: var(--dk) !important; }
+
+/* Impact stat backgrounds */
+.impact-stat { background: var(--dk) !important; }
+
+/* SROI callout border */
+.sroi-callout {
+  border-color: rgba(196,120,58,.25) !important;
+  background:   rgba(196,120,58,.05) !important;
+}
+
+/* About pull quote border */
+.about-pull { border-left-color: var(--am) !important; }
+
+
+/* ----------------------------------------------------------------
+  10. MISC CLEANUP
+   Cover shadow, editorial figures, org cards,
+   and a handful of small structural cleanups.
+   ---------------------------------------------------------------- */
+
+/* Hard-edge book cover — no radius, strong shadow */
+.cov-real {
+  border-radius: 0 !important;
+  box-shadow: 0 24px 72px rgba(0,0,0,.6) !important;
+}
+
+/* org primary card top border */
+.org-card-primary {
+  border-top:    4px solid var(--am) !important;
+  border-radius: 0 !important;
+}
+
+/* Org secondary on dark — already gets --dk via palette change */
+.org-card-secondary {
+  background:   var(--dk) !important;
+  border-color: rgba(244,238,221,.1) !important;
+}
+.org-card-secondary:hover {
+  border-color: rgba(196,120,58,.5) !important;
+  box-shadow:   0 18px 42px rgba(0,0,0,.2) !important;
+}
+.org-card-secondary .org-name  { color: var(--cr) !important; }
+.org-card-secondary .org-copy  { color: var(--wl) !important; }
+
+/* Sub-card on cream */
+.sub-card {
+  background:   var(--cr) !important;
+  border-color: var(--ll) !important;
+}
+
+/* Gazette card dark, sharp */
+.gazette-card       { border-radius: 0 !important; background: var(--dk) !important; }
+
+/* Road section pillar lines */
+.road-pillar        { border-radius: 0 !important; border-left-color: var(--am) !important; }
+
+/* Editorial figure border accent */
+.editorial-figure::before {
+  border-color: rgba(196,120,58,.32) !important;
+  border-radius: 0 !important;
+}
+.editorial-figure::after { border-radius: 0 !important; }
+
+/* Katie origin box */
+.katie-origin {
+  border-color: rgba(196,120,58,.22) !important;
+  background:   rgba(196,120,58,.055) !important;
+  border-radius: 0 !important;
+}
+
+/* Impact ledger */
+.impact-ledger {
+  border-color: rgba(244,238,221,.1) !important;
+  border-radius: 0 !important;
+}
+.impact-ledger-grid { border-radius: 0 !important; }
+.impact-stat        { border-radius: 0 !important; }
+
+/* Milestone dot stays circular — confirmed above */
+
+/* Progress bar on road section */
+.road-prog-bar  { background: rgba(244,238,221,.07) !important; }
+.road-prog-fill { background: var(--am) !important; }
+
+/* Current milestone tag */
+.milestone-current {
+  background: var(--am) !important;
+  color:      var(--dk) !important;
+  border-radius: 0 !important;
+}
+
+/* Focus ring stays amber across the site */
+a:focus-visible,
+button:focus-visible { outline-color: var(--al) !important; }
+
+/* Footer sign stays amber */
+.footer-sign { color: var(--am) !important; }
+
+/* Socials strip border */
+.socials-strip { border-top-color: rgba(196,120,58,.15) !important; border-bottom-color: rgba(196,120,58,.15) !important; }
+
+
+/* ----------------------------------------------------------------
+   RESPONSIVE PATCHES
+   Confirm the above changes hold at mobile breakpoints.
+   ---------------------------------------------------------------- */
+
+@media (max-width: 860px) {
+  .slbl,
+  .slbl-t,
+  .slbl-a {
+    color:             var(--am) !important;
+    border-left-color: var(--am) !important;
+    margin-bottom:     .6rem !important;
+  }
+
+  .btn-cream,
+  .btn-dark,
+  .btn-direct,
+  .btn-special {
+    padding: .9rem 1.1rem !important;
+    font-size: .62rem !important;
+  }
+
+  .katie-name {
+    font-size: clamp(3.5rem, 18vw, 6rem) !important;
+  }
+
+  .katie-q1 {
+    font-size: 1.2rem !important;
+  }
+
+  /* Ensure about section reads clearly on cream at mobile */
+  .about {
+    background: var(--cr) !important;
+  }
+
+  /* On small screens the nav retail item hidden by :has() above —
+     confirm the nth-child hides still apply */
+  .nav-links li:nth-child(5),
+  .nav-links li:nth-child(6) { display: none !important; }
+}
+
+
+
+/* ================================================================
+
+/* ----------------------------------------------------------------
+   HERO CTA: RESPONSIVE STACK + WORLDWIDE NOTE
+   Both buttons stack full-width at mobile.
+   .hero-available is the quiet worldwide availability line.
+   ---------------------------------------------------------------- */
+
+/* Worldwide note below the CTA row */
+.hero-available {
+  font-family:    "Space Mono", monospace;
+  font-size:      .48rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color:          rgba(244,238,221,.32);
+  margin-top:     1.1rem;
+}
+
+/* Stack CTA buttons vertically and to equal width at mobile */
+@media (max-width: 860px) {
+  .hero-v28 .cta-row {
+    flex-direction: column !important;
+    align-items:    stretch !important;
+    width:          100% !important;
+    gap:            .75rem !important;
+  }
+
+  .hero-v28 .cta-row > a {
+    display:    block !important;
+    width:      100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ghost button on dark hero: full border, same padding as primary */
+  .hero-v28 .cta-row .btn-ghost-l {
+    padding:        .8rem 2rem !important;
+    border:         1px solid rgba(244,238,221,.42) !important;
+    display:        block !important;
+    width:          100% !important;
+    text-align:     center !important;
+    box-sizing:     border-box !important;
+  }
+
+  .hero-available {
+    font-size: .46rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration:        .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration:       .01ms !important;
+  }
+}
+
+
+/* ================================================================
+   AUDIT PASS 2 — Conversion + SEO improvements
+   ================================================================ */
+
+/* ── VISUALLY HIDDEN SEO H1 ────────────────────────────────────── */
+/* Standard accessibility pattern: present in DOM, not on screen.
+   Google indexes it. Screen readers announce it. Not cloaking. */
+.seo-h1 {
+  position:   absolute;
+  width:      1px;
+  height:     1px;
+  padding:    0;
+  margin:     -1px;
+  overflow:   hidden;
+  clip:       rect(0,0,0,0);
+  white-space:nowrap;
+  border:     0;
+}
+
+/* ── FEATURED REVIEWS — static 3-up grid ───────────────────────── */
+.featured-reviews {
+  background:   var(--dk);
+  padding:      6rem max(2.5rem, calc((100vw - 1180px) / 2));
+  border-top:   1px solid rgba(196,120,58,.12);
+}
+.featured-reviews-inner {
+  width:  min(1180px, 100%);
+  margin: 0 auto;
+}
+.featured-reviews-grid {
+  display:    grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap:        1px;
+  background: rgba(196,120,58,.12);
+}
+.featured-review {
+  background:     var(--dk);
+  padding:        2.5rem 2rem;
+  display:        flex;
+  flex-direction: column;
+}
+.featured-review-lead {
+  background: rgba(196,120,58,.06);
+  border-top: 3px solid var(--am);
+}
+.featured-review-stars {
+  color:        var(--am);
+  font-size:    .92rem;
+  letter-spacing:.1em;
+  margin-bottom:1.2rem;
+}
+.featured-review-q {
+  font-family:  "EB Garamond", Georgia, serif;
+  font-style:   italic;
+  font-size:    clamp(1.1rem, 2vw, 1.45rem);
+  line-height:  1.5;
+  color:        var(--cr);
+  flex:         1;
+  margin-bottom:1.25rem;
+}
+.featured-review-lead .featured-review-q {
+  font-size:   clamp(1.55rem, 3.5vw, 2.4rem);
+  line-height: 1.28;
+  color:       var(--cr);
+}
+.featured-review-attr {
+  font-family:    "Space Mono", monospace;
+  font-size:      .46rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color:          var(--am);
+}
+
+@media (max-width: 860px) {
+  .featured-reviews-grid { grid-template-columns: 1fr; }
+  .featured-reviews {
+    padding-top:    4.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+
+/* ── EMAIL CAPTURE SECTION ──────────────────────────────────────── */
+.email-capture-sec {
+  background:  var(--cr);
+  padding:     6rem max(2.5rem, calc((100vw - 1180px) / 2));
+  text-align:  center;
+  border-top:  1px solid var(--ll);
+  border-bottom: 1px solid var(--ll);
+}
+.email-capture-inner {
+  width:  min(680px, 100%);
+  margin: 0 auto;
+}
+.email-capture-title {
+  font-family:    "Bebas Neue", sans-serif;
+  font-size:      clamp(2.5rem, 6vw, 5rem);
+  line-height:    .88;
+  letter-spacing: -.015em;
+  color:          var(--dk);
+  margin-bottom:  1.25rem;
+}
+.email-capture-desc {
+  font-size:     1.08rem;
+  line-height:   1.75;
+  color:         #4A433C;
+  margin-bottom: 2rem;
+}
+.email-capture-btn {
+  display:        inline-block;
+  margin-bottom:  .85rem;
+}
+.email-capture-note {
+  font-family:    "Space Mono", monospace;
+  font-size:      .46rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color:          var(--wg);
+}
+
+@media (max-width: 860px) {
+  .email-capture-sec {
+    padding-top:    4.5rem;
+    padding-bottom: 4.5rem;
+  }
+  .email-capture-btn {
+    display:    block;
+    text-align: center;
+  }
+}
+
+/* ── KATIE CONTEXT FRAME ────────────────────────────────────────── */
+/* Orienting line for cold visitors who don't know who Katie is. */
+.katie-context-frame {
+  font-family:    "Space Mono", monospace;
+  font-size:      .48rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color:          rgba(244,238,221,.3);
+  text-align:     center;
+  padding:        1.75rem 2rem 0;
+  display:        block;
+}
+
+
+/* ================================================================
+   AUDIT PASS 3 — Seven-item fix: sizes, overflow, carousel,
+   impact ledger, rhythm, Trevor Noah/Chip Kidd/Apple pass
+   ================================================================ */
+
+/* ── 1. SECTION TITLES: BIGGER ──────────────────────────────────── */
+/* These were the undersized headings identified in the audit */
+.shadow-h2 {
+  font-size: clamp(2.8rem, 6vw, 6rem) !important;
+  line-height: .88 !important;
+}
+.gazette-title {
+  font-size: clamp(2.5rem, 5.5vw, 5rem) !important;
+  line-height: .88 !important;
+}
+.reviews-behind-hdr {
+  font-size: clamp(2.5rem, 6vw, 5.5rem) !important;
+  line-height: .88 !important;
+}
+/* Impact ledger heading — Chip Kidd confrontational */
+.impact-ledger-head h3 {
+  font-family: "Bebas Neue", sans-serif !important;
+  font-size:   clamp(2.8rem, 6vw, 5.5rem) !important;
+  line-height: .85 !important;
+  color:       var(--cr) !important;
+  margin-bottom: .75rem !important;
+}
+
+/* ── 2. NARRATIVE BRIDGES: MUCH BIGGER ──────────────────────────── */
+/* These are the Chip Kidd moments — they should stop people cold */
+.narrative-bridge {
+  padding: 5rem max(2.5rem, calc((100vw - 1180px) / 2)) !important;
+}
+.narrative-bridge p {
+  font-family:    "Bebas Neue", sans-serif !important;
+  font-size:      clamp(3.5rem, 9vw, 8.5rem) !important;
+  line-height:    .86 !important;
+  letter-spacing: -.025em !important;
+  font-style:     normal !important;
+  color:          var(--cr) !important;
+}
+.narrative-bridge p strong {
+  color:       var(--am) !important;
+  font-weight: 400 !important;
+}
+
+/* ── 3. IMAGE OVERFLOW PREVENTION ───────────────────────────────── */
+/* Defensive: grid children get min-width:0 to stop overflow.
+   Images in flex/grid containers scale to their container. */
+.book-inner > *,
+.shadow-inner > *,
+.about-inner > *,
+.road-inner > * {
+  min-width: 0;
+}
+.editorial-figure,
+.editorial-photo-frame,
+.about-portrait {
+  max-width:  100%;
+  overflow:   hidden;
+}
+.editorial-photo-frame img,
+.about-portrait img {
+  max-width: 100%;
+}
+/* Mid-range breakpoint: collapse grids before they break */
+@media (max-width: 1040px) {
+  .book-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .book-cover-figure {
+    max-width: 400px !important;
+    margin:    0 auto !important;
+  }
+  .shadow-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .about-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+  .katie-split {
+    grid-template-columns: 1fr !important;
+  }
+  .road-inner {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+}
+
+/* ── 4. FEATURED REVIEWS: CYCLING CAROUSEL ──────────────────────── */
+/* Replaces static 3-up grid with one-at-a-time cycling display */
+.featured-reviews {
+  background:    var(--dk) !important;
+  padding:       7rem max(2.5rem, calc((100vw - 1180px) / 2)) !important;
+  border-top:    1px solid rgba(196,120,58,.12) !important;
+  min-height:    40vh;
+  display:       flex;
+  align-items:   center;
+}
+.featured-reviews-inner {
+  width:  min(1180px, 100%);
+  margin: 0 auto;
+}
+.fr-carousel {
+  position:   relative;
+  min-height: 260px;
+  display:    grid;
+  margin-top: .5rem;
+  text-align: center;
+  max-width:  860px;
+  margin:     0 auto;
+}
+.fr-slide {
+  grid-area:      1 / 1;
+  opacity:        0;
+  pointer-events: none;
+  transition:     opacity .85s ease;
+}
+.fr-slide.fr-active {
+  opacity:        1;
+  pointer-events: auto;
+}
+.fr-stars {
+  color:          var(--am);
+  font-size:      .95rem;
+  letter-spacing: .12em;
+  margin-bottom:  1.75rem;
+}
+.fr-quote {
+  font-family:  "EB Garamond", Georgia, serif;
+  font-style:   italic;
+  font-size:    clamp(1.5rem, 3.5vw, 2.8rem);
+  line-height:  1.45;
+  color:        var(--cr);
+  margin-bottom:1.5rem;
+}
+.fr-attr {
+  font-family:    "Space Mono", monospace;
+  font-size:      .5rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color:          var(--am);
+}
+/* Nav row below the quote */
+.fr-nav {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             1.5rem;
+  margin-top:      2.5rem;
+}
+.fr-dots {
+  display: flex;
+  gap:     .55rem;
+}
+.fr-dot {
+  width:         8px;
+  height:        8px;
+  border-radius: 50%;
+  background:    rgba(244,238,221,.2);
+  border:        none;
+  cursor:        pointer;
+  padding:       0;
+  transition:    background .2s, transform .2s;
+}
+.fr-dot.fr-dot-active {
+  background: var(--am);
+  transform:  scale(1.3);
+}
+.fr-arrow {
+  font-family:    "Space Mono", monospace;
+  font-size:      .85rem;
+  color:          rgba(244,238,221,.28);
+  background:     none;
+  border:         none;
+  cursor:         pointer;
+  padding:        .5rem .75rem;
+  transition:     color .2s;
+}
+.fr-arrow:hover { color: var(--cr); }
+
+@media (max-width: 860px) {
+  .featured-reviews { min-height: auto !important; }
+  .fr-quote { font-size: clamp(1.3rem, 6vw, 2rem); }
+  .fr-carousel { min-height: 220px; }
+}
+
+/* ── 5. APPLE/CHIP KIDD RHYTHM PASS ─────────────────────────────── */
+/* More breathing room in key sections. Let the content land. */
+.qs-section {
+  min-height: 70vh !important;
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+/* Audience items — bigger numbers for dd.nyc graphic weight */
+.audience-item span {
+  font-size:      .85rem !important;
+  font-weight:    400 !important;
+  color:          var(--am) !important;
+  padding-top:    .15rem !important;
+}
+.audience-item div {
+  font-size:   1.2rem !important;
+  line-height: 1.5 !important;
+}
+
+/* About pull quote — larger for Chip Kidd emphasis */
+.about-pull {
+  font-size:   clamp(1.4rem, 2.5vw, 2rem) !important;
+  line-height: 1.45 !important;
+}
+
+/* Road section headline — bigger and bolder */
+.road-h2 {
+  font-size:   clamp(3rem, 7vw, 6.5rem) !important;
+  line-height: .88 !important;
+}
+
+/* Milestone goal numbers — more graphic weight */
+.milestone-goal {
+  font-size: 2.2rem !important;
+  color:     var(--cr) !important;
+}
+.milestone.next .milestone-goal {
+  color: var(--am) !important;
+}
+
+/* Impact stat strong values — more dominant */
+.impact-stat strong {
+  font-size:   clamp(2.5rem, 5vw, 3.5rem) !important;
+  line-height: .92 !important;
+  color:       var(--am) !important;
+}
+.impact-stat span {
+  font-size:   .82rem !important;
+  line-height: 1.55 !important;
+  margin-top:  .4rem !important;
+}
+
+/* ── 6. MOBILE RESPONSIVE PATCHES ───────────────────────────────── */
+@media (max-width: 860px) {
+  .narrative-bridge p {
+    font-size: clamp(2.5rem, 13vw, 4.5rem) !important;
+  }
+  .shadow-h2,
+  .gazette-title,
+  .reviews-behind-hdr {
+    font-size: clamp(2.2rem, 11vw, 3.5rem) !important;
+  }
+  .featured-reviews {
+    padding-top:    4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+}
+
+/* ── FINAL CTA: amber background → invert button colors ──────────── */
+/* Primary button: dark on amber instead of amber on amber */
+.final-cta .btn-direct,
+.final-cta .btn-cream,
+.final-cta .btn-dark {
+  background:   var(--dk) !important;
+  color:        var(--cr) !important;
+  border-color: var(--dk) !important;
+}
+.final-cta .btn-direct:hover,
+.final-cta .btn-cream:hover,
+.final-cta .btn-dark:hover {
+  background:   rgba(22,18,16,.82) !important;
+  border-color: rgba(22,18,16,.82) !important;
+}
+
+/* Ghost buttons: dark border on amber instead of amber border on amber */
+.final-cta .btn-ghost-l {
+  color:        var(--dk) !important;
+  border-color: rgba(22,18,16,.45) !important;
+  background:   transparent !important;
+}
+.final-cta .btn-ghost-l:hover {
+  background:   rgba(22,18,16,.1) !important;
+  border-color: var(--dk) !important;
+}
