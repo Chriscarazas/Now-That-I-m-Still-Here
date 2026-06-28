@@ -857,6 +857,79 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <script>
+/* ── ESSAY FEED — live RSS via rss2json ────────────────────────────
+   Fetches the 6 most recent Substack posts and replaces the
+   hardcoded fallback cards in #essayFeedGrid.
+   If the fetch fails for any reason, the fallback cards stay visible.
+   CORS is handled by rss2json.com (free tier: 150 req/hr).
+──────────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+
+  var FEED    = 'https://ccarazas.substack.com/feed';
+  var API     = 'https://api.rss2json.com/v1/api.json?rss_url='
+                + encodeURIComponent(FEED);
+  var GRID    = document.getElementById('essayFeedGrid');
+
+  if (!GRID) return;
+
+  /* Strip HTML tags and truncate to ~160 chars at a word boundary */
+  function clean(str, max) {
+    if (!str) return '';
+    var text = str.replace(/<[^>]+>/g, ' ')
+                  .replace(/&amp;/g,'&').replace(/&lt;/g,'<')
+                  .replace(/&gt;/g,'>').replace(/&nbsp;/g,' ')
+                  .replace(/\s+/g,' ').trim();
+    if (text.length <= max) return text;
+    return text.slice(0, max).replace(/\s\S*$/, '') + '…';
+  }
+
+  /* Format pubDate → "Jun 20, 2026" */
+  function fmt(dateStr) {
+    var d = new Date(dateStr);
+    if (isNaN(d)) return '';
+    return d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+  }
+
+  function buildCard(item) {
+    var a = document.createElement('article');
+    a.className = 'sub-card feed-card';
+    var date  = fmt(item.pubDate);
+    var title = (item.title || '').toUpperCase();
+    var desc  = clean(item.description || item.content || '', 160);
+    var href  = item.link || '#';
+    a.innerHTML =
+      '<div class="sub-card-acc"></div>' +
+      (date  ? '<p class="sub-card-label">'  + date  + '</p>' : '') +
+      '<h3 class="sub-card-title">'          + title + '</h3>' +
+      (desc  ? '<p class="sub-card-desc">'   + desc  + '</p>' : '') +
+      '<a class="sub-card-read" href="'      + href  +
+        '" rel="noopener noreferrer" target="_blank">Read the essay →</a>';
+    return a;
+  }
+
+  fetch(API)
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      if (data.status !== 'ok' || !data.items || !data.items.length) {
+        throw new Error('Feed empty or error: ' + data.status);
+      }
+      var frag = document.createDocumentFragment();
+      data.items.slice(0, 6).forEach(function (item) { frag.appendChild(buildCard(item)); });
+      GRID.innerHTML = '';
+      GRID.appendChild(frag);
+    })
+    .catch(function (err) {
+      /* Fail silently — hardcoded fallback cards remain */
+      console.warn('[Essay feed]', err.message);
+    });
+})();
+</script>
+
+<script>
 /* ================================================================
    ANALYTICS — chriscarazas.com
    Tracks: buy clicks · Substack clicks · podcast clicks
