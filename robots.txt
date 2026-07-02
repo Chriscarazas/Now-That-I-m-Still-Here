@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://chriscarazas.com/sitemap.xml
+
+Sitemap: https://chriscarazas.com/image-sitemap.xml

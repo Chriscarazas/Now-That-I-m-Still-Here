@@ -1,172 +1,173 @@
-// NAV scroll
-const nav=document.getElementById('mainNav');
-window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+(() => {
+  // Let page-specific title-sequence motion begin only after the document is ready.
+  requestAnimationFrame(() => document.body.classList.add('is-loaded'));
 
-// QUOTE SLIDESHOW
-(function(){
-  const slides = document.querySelectorAll('#qsSlides .qs-slide');
-  if(!slides.length) return;
-  const dotsContainer = document.getElementById('qsDots');
-  const prevBtn = document.getElementById('qsPrev');
-  const nextBtn = document.getElementById('qsNext');
-  let current = 0, timer;
-
-  // Create dots
-  slides.forEach((_,i)=>{
-    const d = document.createElement('button');
-    d.className = 'qs-dot' + (i===0?' active':'');
-    d.addEventListener('click',()=>{ goTo(i); resetTimer(); });
-    dotsContainer.appendChild(d);
-  });
-
-  function goTo(n){
-    slides[current].classList.remove('active');
-    dotsContainer.children[current].classList.remove('active');
-    current = (n + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dotsContainer.children[current].classList.add('active');
-  }
-
-  function startTimer(){ timer = setInterval(()=>goTo(current+1), 4500); }
-  function resetTimer(){ clearInterval(timer); startTimer(); }
-
-  const section = document.querySelector('.qs-section');
-  if(section){
-    section.addEventListener('mouseenter',()=>clearInterval(timer));
-    section.addEventListener('mouseleave', startTimer);
-  }
-
-  if(prevBtn) prevBtn.addEventListener('click',()=>{ goTo(current-1); resetTimer(); });
-  if(nextBtn) nextBtn.addEventListener('click',()=>{ goTo(current+1); resetTimer(); });
-
-  startTimer();
-})();
-
-// REVIEWS SLIDESHOW
-(function(){
-  const slides = document.querySelectorAll('#rSlides .rslide');
-  if(!slides.length) return;
-  const dotsWrap = document.getElementById('rDots');
-  const prev = document.getElementById('rPrev');
-  const next = document.getElementById('rNext');
-  let cur = 0, timer;
-  slides.forEach((_,i)=>{
-    const d = document.createElement('button');
-    d.className = 'rslide-dot' + (i===0?' rslide-dot-active':'');
-    d.addEventListener('click',()=>{ goTo(i); reset(); });
-    dotsWrap.appendChild(d);
-  });
-  function goTo(n){
-    slides[cur].classList.remove('rslide-active');
-    dotsWrap.children[cur].classList.remove('rslide-dot-active');
-    cur = (n + slides.length) % slides.length;
-    slides[cur].classList.add('rslide-active');
-    dotsWrap.children[cur].classList.add('rslide-dot-active');
-  }
-  function start(){ timer = setInterval(()=>goTo(cur+1), 5000); }
-  function reset(){ clearInterval(timer); start(); }
-  const wrap = document.querySelector('.rslideshow-wrap');
-  if(wrap){
-    wrap.addEventListener('mouseenter',()=>clearInterval(timer));
-    wrap.addEventListener('mouseleave', start);
-  }
-  if(prev) prev.addEventListener('click',()=>{ goTo(cur-1); reset(); });
-  if(next) next.addEventListener('click',()=>{ goTo(cur+1); reset(); });
-  start();
-})();
-
-// SCROLL REVEAL
-(function(){
-  const els = document.querySelectorAll('.fade-up');
-  if(!els.length) return;
-  const obs = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+  const menuButton = document.querySelector('.nav-toggle');
+  const nav = document.getElementById('primary-nav');
+  if (menuButton && nav) {
+    nav.addEventListener('click', (event) => { if (event.target.closest('a')) { nav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); } });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { nav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); } });
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      nav.classList.toggle('open', !open);
     });
-  },{threshold:0.12});
-  els.forEach(el=>obs.observe(el));
-})();
-
-
-(function(){
-  var FEED_URL = "https://ccarazas.substack.com/feed";
-  var RSS2JSON_URL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(FEED_URL) + "&count=100";
-  var ALL_ORIGINS_URL = "https://api.allorigins.win/get?url=" + encodeURIComponent(FEED_URL);
-  var CORSPROXY_URL = "https://corsproxy.io/?url=" + encodeURIComponent(FEED_URL);
-
-  function normalizeTitle(value){
-    return String(value || "").replace(/\u00a0/g," ").replace(/&amp;/gi,"&").toLowerCase().replace(/&/g," and ").replace(/\s+/g," ").trim();
-  }
-  function titleIsGazette(title){
-    return /^(?:the\s+)?plymouth\s+sentinel\s+and\s+canine\s+gazette\b/.test(normalizeTitle(title));
-  }
-  function titleLooksLikeLive(title, description){
-    var haystack = normalizeTitle(title + " " + description);
-    return /\bsubstack live\b|\blive with\b|\ba recording from\b/.test(haystack);
-  }
-  function formatDate(value){
-    var d = new Date(value); if(isNaN(d.getTime())) return "";
-    return d.toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
-  }
-  function stripHtml(value){
-    var node=document.createElement("div"); node.innerHTML=value||"";
-    return (node.textContent||node.innerText||"").replace(/\s+/g," ").trim();
-  }
-  function escapeHtml(value){
-    return String(value||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;");
-  }
-  function cleanTitle(value){
-    return String(value||"").replace(/[\u{1F300}-\u{1FFFF}]/gu,"").replace(/[\u{2600}-\u{27BF}]/gu,"").replace(/\s+/g," ").trim();
-  }
-  function newestFirst(a,b){ return (new Date(b.pubDate||0).getTime()||0)-(new Date(a.pubDate||0).getTime()||0); }
-  function withTimeout(url, options, ms){
-    var deadline = new Promise(function(_,reject){setTimeout(function(){reject(new Error('timeout'));}, ms||8000);});
-    return Promise.race([fetch(url, options||{}), deadline]);
-  }
-  function postsFromXml(xmlText){
-    var xml=new DOMParser().parseFromString(xmlText,"text/xml");
-    if(xml.querySelector("parsererror")) throw new Error("Invalid RSS XML");
-    return Array.from(xml.querySelectorAll("item")).map(function(item){
-      function get(selector){var n=item.querySelector(selector);return n?n.textContent||"":"";}
-      return {title:get("title"),link:get("link"),pubDate:get("pubDate"),description:get("description")};
+    document.addEventListener('click', (event) => {
+      if (!nav.classList.contains('open') || nav.contains(event.target) || menuButton.contains(event.target)) return;
+      nav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
     });
   }
-  function fetchDirect(){ return withTimeout(FEED_URL,{mode:"cors"},7000).then(function(r){if(!r.ok)throw new Error("Direct feed "+r.status);return r.text();}).then(postsFromXml); }
-  function fetchCorsProxy(){ return withTimeout(CORSPROXY_URL,{},8000).then(function(r){if(!r.ok)throw new Error("CorsProxy "+r.status);return r.text();}).then(postsFromXml); }
-  function fetchAllOrigins(){ return withTimeout(ALL_ORIGINS_URL,{},8000).then(function(r){if(!r.ok)throw new Error("AllOrigins "+r.status);return r.json();}).then(function(d){if(!d.contents)throw new Error("No XML content");return postsFromXml(d.contents);}); }
-  function fetchRss2Json(){ return withTimeout(RSS2JSON_URL,{},8000).then(function(r){if(!r.ok)throw new Error("RSS2JSON "+r.status);return r.json();}).then(function(d){if(!Array.isArray(d.items))throw new Error("No JSON items");return d.items.map(function(i){return {title:i.title||"",link:i.link||"",pubDate:i.pubDate||"",description:i.description||i.content||""};});}); }
-  function getFeed(){ return fetchDirect().catch(fetchCorsProxy).catch(fetchAllOrigins).catch(fetchRss2Json); }
 
-  function renderGazette(posts){
-    var grid=document.getElementById("gazetteGrid"); if(!grid)return;
-    var items=posts.filter(function(p){return titleIsGazette(p.title);}).sort(newestFirst).slice(0,3); if(!items.length)return;
-    grid.innerHTML=items.map(function(p){
-      var excerpt=stripHtml(p.description).slice(0,170);
-      return "<article class='gazette-card feed-card'><p class='gazette-card-date'>"+escapeHtml(formatDate(p.pubDate))+"</p><h3 class='gazette-card-title'>"+escapeHtml(cleanTitle(p.title).toUpperCase())+"</h3>"+(excerpt?"<p class='gazette-card-desc'>"+escapeHtml(excerpt)+(excerpt.length>=170?"&hellip;":"")+"</p>":"")+"<a class='gazette-card-link' href='"+escapeHtml(p.link)+"' target='_blank' rel='noopener noreferrer'>Read this edition &rarr;</a></article>";
-    }).join("");
-    grid.setAttribute("data-feed-state","live");
+  // Announce new-window behavior without burdening the visible Victorian labels.
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    if (link.querySelector('.new-window-note')) return;
+    const note = document.createElement('span');
+    note.className = 'sr-only new-window-note';
+    note.textContent = ' (opens in a new tab)';
+    link.append(note);
+  });
+
+  const dropdowns = [...document.querySelectorAll('[data-getbook]')];
+  const closeDropdowns = (except = null) => {
+    dropdowns.forEach((wrap) => {
+      if (wrap === except) return;
+      const button = wrap.querySelector('button');
+      const panel = wrap.querySelector('.getbook-panel');
+      button?.setAttribute('aria-expanded', 'false');
+      if (panel) panel.hidden = true;
+    });
+  };
+  dropdowns.forEach((wrap) => {
+    const button = wrap.querySelector('button');
+    const panel = wrap.querySelector('.getbook-panel');
+    if (!button || !panel) return;
+    button.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const open = button.getAttribute('aria-expanded') === 'true';
+      closeDropdowns(wrap);
+      button.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+      if (!open) panel.querySelector('a')?.focus();
+    });
+    wrap.addEventListener('keydown', (event) => {
+      const items = [...panel.querySelectorAll('a')];
+      const index = items.indexOf(document.activeElement);
+      if (event.key === 'Escape') {
+        panel.hidden = true;
+        button.setAttribute('aria-expanded', 'false');
+        button.focus();
+      } else if (event.key === 'ArrowDown' && !panel.hidden) {
+        event.preventDefault();
+        items[(index + 1 + items.length) % items.length]?.focus();
+      } else if (event.key === 'ArrowUp' && !panel.hidden) {
+        event.preventDefault();
+        items[(index - 1 + items.length) % items.length]?.focus();
+      }
+    });
+  });
+  document.addEventListener('click', () => closeDropdowns());
+
+  document.querySelectorAll('[data-year]').forEach((el) => el.textContent = new Date().getFullYear());
+
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealNodes = [...document.querySelectorAll('[data-reveal]')];
+  if (reduced || !('IntersectionObserver' in window)) {
+    revealNodes.forEach((node) => node.classList.add('is-visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealNodes.forEach((node) => observer.observe(node));
   }
-  function renderEssays(posts){
-    var grid=document.getElementById("essayFeedGrid"); if(!grid)return;
-    var items=posts.filter(function(p){return !titleIsGazette(p.title)&&!titleLooksLikeLive(p.title,p.description);}).sort(newestFirst).slice(0,3); if(!items.length)return;
-    grid.innerHTML=items.map(function(p){
-      var excerpt=stripHtml(p.description).slice(0,190);
-      return "<article class='sub-card feed-card'><div class='sub-card-acc'></div><p class='sub-card-label'>"+escapeHtml(formatDate(p.pubDate))+"</p><h3 class='sub-card-title'>"+escapeHtml(cleanTitle(p.title).toUpperCase())+"</h3>"+(excerpt?"<p class='sub-card-desc'>"+escapeHtml(excerpt)+(excerpt.length>=190?"&hellip;":"")+"</p>":"")+"<a class='sub-card-read' href='"+escapeHtml(p.link)+"' target='_blank' rel='noopener noreferrer'>Read the essay &rarr;</a></article>";
-    }).join("");
-    grid.setAttribute("data-feed-state","live");
+
+  const progressBar = document.querySelector('.nav-progress span');
+  const updateProgress = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    const pct = max > 0 ? (doc.scrollTop / max) * 100 : 0;
+    if (progressBar) progressBar.style.width = `${pct}%`;
+  };
+  let progressQueued = false;
+  const queueProgress = () => {
+    if (progressQueued) return;
+    progressQueued = true;
+    requestAnimationFrame(() => { updateProgress(); progressQueued = false; });
+  };
+  window.addEventListener('scroll', queueProgress, { passive: true });
+  updateProgress();
+
+
+  // Page-view signals for the core conversion funnel.
+  const path = location.pathname;
+  const funnelEvent = path === '/sample/' ? 'sample_view' : path === '/buy/' ? 'buy_page_view' : path === '/book/' ? 'book_page_view' : '';
+  if (funnelEvent) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: funnelEvent, page: path });
   }
-  function initFeed(){
-    getFeed().then(function(posts){renderGazette(posts);renderEssays(posts);}).catch(function(){/* RSS unavailable — static fallback is displayed */});
-  }
-  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initFeed);else initFeed();
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('[data-event]');
+    if (!link) return;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: link.dataset.event, page: location.pathname, destination: link.href || '' });
+  });
 })();
 
-(function(){
-  var button=document.getElementById("podFeedToggle"); var list=document.getElementById("podcastFeedList");
-  if(!button||!list)return;
-  button.addEventListener("click",function(){
-    var expanded=list.classList.toggle("expanded");
-    button.setAttribute("aria-expanded",String(expanded));
-    button.textContent=expanded?"Show fewer conversations":"Show all 17 conversations";
-  });
+
+// Archive publication details
+(() => {
+  document.querySelectorAll('.katie-card-interlude h2, .archive-hero h1').forEach((el) => el.classList.add('red-proof'));
+  document.querySelectorAll('.artifact-entry').forEach((entry, index) => entry.style.setProperty('--archive-order', index + 1));
+})();
+
+
+// Same-origin, last-known-good Substack cache.
+(async () => {
+  const target = document.getElementById('substack-posts');
+  if (!target) return;
+  const status = document.getElementById('feed-status');
+  try {
+    const response = await fetch('/data/substack-posts.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('Feed cache unavailable');
+    const payload = await response.json();
+    const posts = Array.isArray(payload.posts) ? payload.posts.filter((post) => post?.title && post?.url) : [];
+    if (!posts.length) throw new Error('Feed cache empty');
+    const fragment = document.createDocumentFragment();
+    posts.slice(0, 3).forEach((post) => {
+      const article = document.createElement('article');
+      article.className = 'rss-card';
+      const label = document.createElement('span'); label.textContent = post.date || 'Latest essay';
+      const heading = document.createElement('h3'); heading.textContent = post.title;
+      const excerpt = document.createElement('p'); excerpt.textContent = post.excerpt || 'Read the latest essay on Substack.';
+      const link = document.createElement('a');
+      if (post.internalPath) {
+        link.href = post.internalPath;
+        link.textContent = 'Read the preview →';
+        link.dataset.event = 'owned_essay_preview_click';
+      } else {
+        link.href = post.url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = 'Read on Substack →';
+        link.dataset.event = 'substack_read_click';
+      }
+      article.append(label, heading, excerpt, link); fragment.append(article);
+    });
+    target.replaceChildren(fragment);
+    if (status && payload.generatedAt) {
+      const refreshed = new Date(payload.generatedAt);
+      const ageDays = (Date.now() - refreshed.getTime()) / 86400000;
+      status.textContent = ageDays > 7
+        ? `Showing the latest verified archive cached ${refreshed.toLocaleDateString()}.`
+        : `Feed refreshed ${refreshed.toLocaleDateString()}.`;
+    }
+  } catch (error) {
+    if (status) status.textContent = 'Showing the editorial selection while the live archive catches its breath.';
+  }
 })();
