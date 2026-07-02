@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 (() => {
   // Let page-specific title-sequence motion begin only after the document is ready.
   requestAnimationFrame(() => document.body.classList.add('is-loaded'));
@@ -72,18 +74,47 @@
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealNodes = [...document.querySelectorAll('[data-reveal]')];
+  const reveal = (node) => node.classList.add('is-visible');
+  const revealInViewport = () => {
+    const viewportBottom = window.innerHeight * 1.12;
+    revealNodes.forEach((node) => {
+      if (node.classList.contains('is-visible')) return;
+      const rect = node.getBoundingClientRect();
+      if (rect.top <= viewportBottom && rect.bottom >= -80) reveal(node);
+    });
+  };
+
+  // Keep the first screen visible without depending on IntersectionObserver.
+  document.querySelectorAll('.art-hero[data-reveal], .detail-hero[data-reveal], .home-hero[data-reveal]').forEach(reveal);
+
   if (reduced || !('IntersectionObserver' in window)) {
-    revealNodes.forEach((node) => node.classList.add('is-visible'));
+    revealNodes.forEach(reveal);
   } else {
+    revealInViewport();
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
+          reveal(entry.target);
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.08 });
-    revealNodes.forEach((node) => observer.observe(node));
+    }, { rootMargin: '0px 0px 12% 0px', threshold: 0.01 });
+    revealNodes.forEach((node) => {
+      if (!node.classList.contains('is-visible')) observer.observe(node);
+    });
+
+    // Scroll/resize fallback in case an observer callback is delayed or suppressed.
+    let revealQueued = false;
+    const queueReveal = () => {
+      if (revealQueued) return;
+      revealQueued = true;
+      requestAnimationFrame(() => { revealInViewport(); revealQueued = false; });
+    };
+    window.addEventListener('scroll', queueReveal, { passive: true });
+    window.addEventListener('resize', queueReveal, { passive: true });
+    window.addEventListener('pageshow', revealInViewport);
+    setTimeout(revealInViewport, 250);
+    setTimeout(revealInViewport, 1200);
   }
 
   const progressBar = document.querySelector('.nav-progress span');
