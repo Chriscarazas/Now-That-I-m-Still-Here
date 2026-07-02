@@ -1313,3 +1313,25 @@ html:not(.js) [data-reveal]{opacity:1!important;transform:none!important;visibil
 .js .art-hero[data-reveal],
 .js .detail-hero[data-reveal],
 .js .home-hero[data-reveal]{opacity:1!important;transform:none!important;visibility:visible!important}
+
+
+/* V6.9 SITEWIDE VISIBILITY HOTFIX
+   All page content must remain visible even if reveal JavaScript fails. */
+html [data-reveal],
+html .js [data-reveal],
+html [data-reveal].is-visible,
+html .art-hero,
+html .detail-hero,
+html .home-hero,
+html .book-art-hero,
+html .buy-art-hero,
+html .road-art-hero,
+html .writing-art-hero,
+html .gazette-art-hero,
+html .reviews-art-hero,
+html .podcasts-art-hero,
+html .about-art-hero {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
