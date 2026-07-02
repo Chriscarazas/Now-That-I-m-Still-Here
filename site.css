@@ -1315,23 +1315,24 @@ html:not(.js) [data-reveal]{opacity:1!important;transform:none!important;visibil
 .js .home-hero[data-reveal]{opacity:1!important;transform:none!important;visibility:visible!important}
 
 
-/* V6.9 SITEWIDE VISIBILITY HOTFIX
-   All page content must remain visible even if reveal JavaScript fails. */
-html [data-reveal],
-html .js [data-reveal],
-html [data-reveal].is-visible,
-html .art-hero,
-html .detail-hero,
-html .home-hero,
-html .book-art-hero,
-html .buy-art-hero,
-html .road-art-hero,
-html .writing-art-hero,
-html .gazette-art-hero,
-html .reviews-art-hero,
-html .podcasts-art-hero,
-html .about-art-hero {
+/* V7.0 SITEWIDE VISIBILITY FAILSAFE
+   Content must remain visible even when reveal JavaScript fails. */
+[data-reveal],
+.js [data-reveal],
+[data-reveal].is-visible,
+.art-hero,
+.detail-hero,
+.home-hero,
+.book-art-hero,
+.buy-art-hero,
+.road-art-hero,
+.writing-art-hero,
+.gazette-art-hero,
+.reviews-art-hero,
+.podcasts-art-hero,
+.about-art-hero {
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
+  animation: none !important;
 }
