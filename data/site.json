@@ -1,0 +1,28 @@
+{
+  "edition": "XI",
+  "navigation": [
+    ["Home", "/"],
+    ["Book", "/book/"],
+    ["Buy", "/buy/"],
+    ["Road to 2,000", "/road-to-2000/"],
+    ["Writing", "/writing/"],
+    ["Gazette", "/gazette/"],
+    ["Reviews", "/reviews/"],
+    ["Podcasts", "/podcasts/"],
+    ["About", "/about/"]
+  ],
+  "plates": [
+    {"roman": "I", "number": "01", "title": "The Witness", "url": "/"},
+    {"roman": "II", "number": "02", "title": "The Open Door", "url": "/book/"},
+    {"roman": "III", "number": "03", "title": "The Road", "url": "/road-to-2000/"},
+    {"roman": "IV", "number": "04", "title": "The Writing Desk", "url": "/writing/"},
+    {"roman": "V", "number": "05", "title": "Reader Marginalia", "url": "/reviews/"},
+    {"roman": "VI", "number": "06", "title": "The Microphone", "url": "/podcasts/"},
+    {"roman": "VII", "number": "07", "title": "The Author and the Witness", "url": "/about/"},
+    {"roman": "VIII", "number": "08", "title": "The Object", "url": "/buy/"},
+    {"roman": "IX", "number": "09", "title": "The Extraordinary Edition", "url": "/gazette/"},
+    {"roman": "X", "number": "10", "title": "Evidence That I Mattered", "url": "/evidence-that-i-mattered/"},
+    {"roman": "XI", "number": "11", "title": "The Girl Who Stayed", "url": "/meet-katie/"},
+    {"roman": "XII", "number": "12", "title": "The Silent Sentry", "url": "/meet-shadow/"}
+  ]
+}
