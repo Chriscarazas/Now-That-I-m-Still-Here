@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Editorial microphone collage</title>
+<desc id="desc">A black and amber microphone emerges from layered paper panels and quiet sound waves.</desc>
+<defs>
+  <linearGradient id="paper" x1="0" x2="1"><stop stop-color="#15110f"/><stop offset=".48" stop-color="#3a2a1f"/><stop offset="1" stop-color="#e8dcc4"/></linearGradient>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" seed="14" result="n"/><feColorMatrix in="n" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 .16 0"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#paper)"/>
+<g opacity=".38" fill="none" stroke="#c17823" stroke-width="3">
+  <path d="M70 470 C280 360 430 580 650 450 S1030 300 1240 430 1510 530 1580 410"/>
+  <path d="M80 520 C280 420 450 630 680 500 S1050 360 1280 490 1500 570 1580 470"/>
+  <path d="M80 570 C280 490 470 680 700 550 S1080 420 1320 540 1510 620 1580 520"/>
+</g>
+<g opacity=".62">
+  <rect x="70" y="80" width="380" height="650" fill="#0b0a09"/>
+  <rect x="330" y="145" width="310" height="580" fill="#b87525" opacity=".44"/>
+  <rect x="560" y="70" width="260" height="700" fill="#efe4cf" opacity=".26"/>
+  <rect x="760" y="155" width="320" height="580" fill="#0f0d0c" opacity=".42"/>
+  <rect x="1040" y="95" width="430" height="680" fill="#efe4cf" opacity=".44"/>
+</g>
+<g transform="translate(1120 155)" fill="none" stroke="#17120f" stroke-width="19" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="80" y="0" width="190" height="360" rx="95" fill="#d9c8a9" fill-opacity=".38"/>
+  <path d="M15 265v30c0 145 110 235 160 235s160-90 160-235v-30"/>
+  <path d="M175 530v120M85 650h180"/>
+  <path d="M116 82h118M116 142h118M116 202h118M116 262h118" stroke-width="12"/>
+</g>
+<g fill="#c17823">
+  <circle cx="1030" cy="250" r="20"/><circle cx="970" cy="320" r="11"/><circle cx="1010" cy="385" r="7"/>
+</g>
+<rect width="1600" height="900" filter="url(#grain)" opacity=".42"/>
+</svg>
