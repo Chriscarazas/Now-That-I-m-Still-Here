@@ -9,7 +9,7 @@ V6.6 is a consolidation release rather than another decorative redesign. The pub
 - valid internal links and fragment targets
 - valid local image references, alt treatment, and intrinsic dimensions
 - valid JSON-LD without duplicate BreadcrumbList objects
-- canonical email: ccarazaswrites@gmail.com
+- canonical email: chris@chriscarazas.com
 - sitemap coverage for indexable pages
 - valid Substack cache and internal preview paths
 - production CSS parse and statistics

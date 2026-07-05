@@ -68,7 +68,7 @@ SOCIALS = [
     ('Instagram','https://www.instagram.com/christophercarazas/'),('Facebook','https://www.facebook.com/christopher.carazas.2025'),
     ('Threads','https://www.threads.com/@christophercarazas'),('X / Twitter','https://twitter.com/christheaspie'),
     ('Bluesky','https://bsky.app/profile/ccarazas.bsky.social'),('Substack','https://ccarazas.substack.com'),
-    ('Email','mailto:ccarazaswrites@gmail.com')
+    ('Email','mailto:chris@chriscarazas.com')
 ]
 
 def route_for(path: Path) -> str:
@@ -171,7 +171,7 @@ def base_person():
     return {'@type':'Person','@id':SITE+'/#christopher-carazas','name':'Christopher J. Carazas','url':SITE+'/',
             'jobTitle':['Author','Social Impact Analyst'],
             'image':SITE+'/assets/images/christopher-carazas-shadow-kingston.webp',
-            'email':'mailto:ccarazaswrites@gmail.com',
+            'email':'mailto:chris@chriscarazas.com',
             'sameAs':[u for _,u in SOCIALS if u.startswith('http')]}
 
 def book_schema():

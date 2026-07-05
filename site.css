@@ -1356,3 +1356,473 @@ body{padding-top:68px}
     transition: none !important;
   }
 }
+
+/* V7.3 RESPONSIVE HERO + ARCHIVAL STABILITY PATCH
+   Keeps artwork anchored, prevents label collisions, and preserves Katie's handwriting. */
+
+/* A restrained Victorian frame that does not interfere with controls. */
+.art-hero::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  z-index: 30;
+  border: 1px solid rgba(225, 166, 77, .24);
+  box-shadow: inset 0 0 0 3px rgba(9, 11, 11, .18);
+  pointer-events: none;
+}
+
+/* Give hero artwork a stable crop instead of letting each intermediate width improvise. */
+.hero-canvas > figure[class*="-art-plate"] picture,
+.hero-canvas > figure[class*="-art-plate"] img {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Caption and field note occupy deliberately separate zones. */
+.writing-art-plate figcaption {
+  right: 1rem;
+  bottom: 1rem;
+  max-width: min(380px, 46%);
+  border: 1px solid rgba(247, 237, 221, .18);
+  background: rgba(9, 11, 11, .88);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .22);
+}
+
+.writing-margin {
+  grid-column: 9 / 13;
+  grid-row: 2 / 5;
+  align-self: start;
+  justify-self: end;
+  width: min(300px, 100%);
+  margin-top: 1.3rem;
+  z-index: 16;
+  transform: rotate(.35deg);
+}
+
+/* Katie's actual handwriting stays light, legible, and spatially stable. */
+.page-writing .handwriting-fragment {
+  width: min(100%, 700px);
+  max-width: 700px;
+  height: clamp(250px, 34vw, 410px) !important;
+  object-fit: cover;
+  object-position: center 61%;
+  mix-blend-mode: normal;
+  filter: sepia(.16) contrast(.94) brightness(1.08);
+  transform: none !important;
+  opacity: 1;
+  border: 10px solid #eee4d3;
+  outline: 1px solid rgba(71, 47, 25, .42);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .28);
+}
+
+.page-writing .handwriting-proof.is-visible .handwriting-fragment {
+  animation: v73InkSettle .65s ease-out both;
+}
+
+@keyframes v73InkSettle {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slightly aged photographic treatment, without turning every person into a Civil War ghost. */
+.media--cinematic img,
+.artifact-card img,
+.cinematic-photo img {
+  filter: saturate(.84) contrast(1.035) sepia(.06);
+}
+
+.media--cinematic::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: inset 0 0 70px rgba(21, 13, 7, .24);
+}
+
+/* Tablet composition: retain the designed hero rather than prematurely stacking it. */
+@media (min-width: 701px) and (max-width: 900px) {
+  .art-hero .hero-canvas {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 42px repeat(7, minmax(48px, 1fr));
+    min-height: clamp(500px, 68vw, 610px) !important;
+    padding-block: 24px 28px;
+  }
+
+  .art-hero .hero-canvas > .folio {
+    order: initial;
+    grid-column: 1 / 6;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .art-hero .hero-canvas > div[class*="-title-block"] {
+    order: initial !important;
+    grid-column: 1 / 7;
+    grid-row: 2 / 8;
+    align-self: center;
+    max-width: 470px;
+    z-index: 12;
+  }
+
+  .art-hero .hero-canvas > figure[class*="-art-plate"] {
+    order: initial !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    z-index: 0 !important;
+  }
+
+  .art-hero .hero-canvas > figure[class*="-art-plate"]::before {
+    background: linear-gradient(90deg, rgba(9,11,11,.98) 0%, rgba(9,11,11,.91) 36%, rgba(9,11,11,.42) 62%, rgba(9,11,11,.04) 88%);
+  }
+
+  .writing-art-hero .writing-title-block h1 {
+    font-size: clamp(3.15rem, 7vw, 4.65rem);
+  }
+
+  .writing-art-hero .writing-title-block p:not(.eyebrow):not(.subhead) {
+    max-width: 390px;
+  }
+
+  .writing-margin {
+    order: initial !important;
+    position: absolute !important;
+    right: 1.25rem;
+    top: 5.25rem;
+    width: min(250px, 31vw);
+    margin: 0;
+  }
+
+  .writing-art-plate figcaption {
+    max-width: min(340px, 44%);
+  }
+}
+
+/* True mobile layout: artwork becomes a contained plate, then the note follows it. */
+@media (max-width: 700px) {
+  .art-hero::after { inset: 5px; }
+
+  .hero-canvas > figure[class*="-art-plate"] {
+    overflow: hidden;
+    border-top: 1px solid rgba(225, 166, 77, .32);
+    border-bottom: 1px solid rgba(225, 166, 77, .32);
+  }
+
+  .hero-canvas > figure[class*="-art-plate"] picture,
+  .hero-canvas > figure[class*="-art-plate"] img {
+    min-height: 0;
+    object-position: center center;
+  }
+
+  .writing-margin {
+    order: 3 !important;
+    position: relative !important;
+    width: 100%;
+    margin: .9rem 0 0;
+    transform: none;
+  }
+
+  .writing-art-plate figcaption {
+    right: .6rem;
+    bottom: .6rem;
+    max-width: calc(100% - 1.2rem);
+    font-size: .76rem;
+  }
+
+  .page-writing .handwriting-fragment {
+    width: 100%;
+    height: clamp(230px, 72vw, 350px) !important;
+    border-width: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-writing .handwriting-proof.is-visible .handwriting-fragment {
+    animation: none !important;
+  }
+}
+
+/* V7.4 PRODUCTION STABILITY LAYER
+   Consolidates responsive hero behavior, accessible navigation, typography safety,
+   and marginalia placement without changing the site's editorial identity. */
+
+:root {
+  --header-height: 68px;
+  --focus-ring: 3px solid #f2b85b;
+  --focus-offset: 4px;
+  --hero-edge: clamp(1rem, 3vw, 2.25rem);
+}
+
+:where(a, button, input, textarea, select, summary):focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+button, .button, .header-book-cta, .getbook-panel a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button, .header-book-cta {
+  border-radius: 0;
+  font-weight: 500;
+}
+
+.art-hero,
+.art-hero .hero-canvas,
+.art-hero .hero-canvas > figure[class*="-art-plate"] {
+  max-width: 100%;
+}
+
+.art-hero .hero-canvas {
+  overflow: clip;
+}
+
+.art-hero .hero-canvas > div[class*="-title-block"] {
+  min-width: 0;
+  padding-block: .5rem;
+}
+
+.art-hero h1,
+.art-hero .display-hero,
+.detail-hero h1,
+.archive-hero h1 {
+  overflow: visible;
+  text-wrap: balance;
+  padding-inline: .03em;
+  padding-block: .08em .12em;
+}
+
+.art-hero .subhead,
+.art-hero .hero-lede,
+.detail-hero p,
+.archive-hero p {
+  overflow-wrap: anywhere;
+}
+
+.hero-canvas > figure[class*="-art-plate"] {
+  min-width: 0;
+  min-height: 0;
+  contain: paint;
+}
+
+.hero-canvas > figure[class*="-art-plate"] picture,
+.hero-canvas > figure[class*="-art-plate"] img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* Marginalia remains in authored zones instead of relying on viewport offsets. */
+.home-note,
+.book-margin,
+.road-margin,
+.writing-margin,
+.margin-note {
+  max-width: 32rem;
+  overflow: visible;
+}
+
+.home-note,
+.book-margin,
+.road-margin,
+.writing-margin {
+  align-self: end;
+  margin: 0;
+}
+
+/* Preserve handwritten ascenders, descenders, swashes, and image edges. */
+.page-writing .handwriting-proof,
+.page-writing .handwriting-proof figure,
+.page-writing .handwriting-fragment,
+.meet-katie-page .script-note,
+.meet-katie-page [class*="handwriting"],
+.page-katie .script-note,
+.page-katie [class*="handwriting"] {
+  overflow: visible;
+}
+
+.page-writing .handwriting-proof,
+.meet-katie-page [class*="handwriting"],
+.page-katie [class*="handwriting"] {
+  padding: clamp(.65rem, 1.5vw, 1.25rem);
+}
+
+.page-writing .handwriting-fragment {
+  object-fit: contain;
+  object-position: center;
+  height: auto !important;
+  aspect-ratio: 7 / 4;
+}
+
+/* Mobile navigation behaves like a temporary layer, not a permanent ceiling tile. */
+@media (max-width: 900px) {
+  :root { --header-height: 64px; }
+
+  body.nav-open {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  .primary-nav {
+    max-height: calc(100dvh - var(--header-height));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    box-shadow: 0 24px 44px rgba(0,0,0,.38);
+  }
+
+  .primary-nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* Tablet: overlap the title and artwork through Grid, not absolute coordinates. */
+@media (min-width: 701px) and (max-width: 900px) {
+  .art-hero .hero-canvas {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 42px repeat(7, minmax(52px, 1fr));
+    min-height: clamp(540px, 72vw, 650px) !important;
+    padding: 1.5rem var(--hero-edge) 1.75rem;
+  }
+
+  .art-hero .hero-canvas > figure[class*="-art-plate"] {
+    position: relative !important;
+    inset: auto !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 1 / -1 !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    z-index: 0 !important;
+  }
+
+  .art-hero .hero-canvas > .folio {
+    grid-column: 1 / 7;
+    grid-row: 1;
+    z-index: 12;
+  }
+
+  .art-hero .hero-canvas > div[class*="-title-block"] {
+    grid-column: 1 / 8;
+    grid-row: 2 / 8;
+    align-self: center;
+    max-width: 31rem;
+    z-index: 12;
+  }
+
+  .home-cover-plate,
+  .book-cover-overlap {
+    grid-column: 9 / 12;
+    grid-row: 5 / 8;
+    width: min(9.5rem, 100%);
+    margin: 0;
+    z-index: 15;
+  }
+
+  .home-note,
+  .book-margin,
+  .road-margin,
+  .writing-margin {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    grid-column: 8 / 13;
+    grid-row: 2 / 4;
+    width: auto;
+    margin: 0;
+    justify-self: end;
+    z-index: 16;
+  }
+}
+
+/* Mobile: every object returns to document flow in a deliberate sequence. */
+@media (max-width: 700px) {
+  .art-hero .hero-canvas {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    overflow: visible;
+    padding: 2rem 0 0;
+  }
+
+  .art-hero .hero-canvas > .folio,
+  .art-hero .hero-canvas > div[class*="-title-block"] {
+    width: min(100% - 2rem, 42rem);
+    margin-inline: auto;
+  }
+
+  .art-hero .hero-canvas > figure[class*="-art-plate"] {
+    order: 2 !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: clamp(19rem, 78vw, 31rem) !important;
+    margin: 1.5rem 0 0 !important;
+  }
+
+  .art-hero .hero-canvas > figure[class*="-art-plate"]::before {
+    background: linear-gradient(180deg, rgba(9,11,11,.2), transparent 44%);
+  }
+
+  .home-cover-plate,
+  .book-cover-overlap {
+    order: 3 !important;
+    width: min(8.5rem, 38vw);
+    margin: -4.25rem 1rem 0 auto;
+  }
+
+  .home-note,
+  .book-margin,
+  .road-margin,
+  .writing-margin {
+    order: 4 !important;
+    position: relative !important;
+    inset: auto !important;
+    width: calc(100% - 2rem);
+    margin: 1rem auto 1.5rem;
+    transform: none !important;
+  }
+
+  .art-hero h1,
+  .art-hero .display-hero {
+    font-size: clamp(2.85rem, 14vw, 4.45rem);
+    line-height: .94;
+  }
+
+  .art-hero .subhead {
+    font-size: clamp(1.2rem, 6vw, 1.65rem);
+  }
+
+  .writing-art-plate figcaption,
+  .hero-canvas > figure[class*="-art-plate"] figcaption {
+    max-width: calc(100% - 1.2rem);
+    left: .6rem;
+    right: .6rem;
+    bottom: .6rem;
+  }
+
+  .page-writing .handwriting-fragment {
+    aspect-ratio: 7 / 4;
+    height: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-progress,
+  .waveform {
+    display: none;
+  }
+}

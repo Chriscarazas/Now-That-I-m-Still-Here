@@ -7,18 +7,35 @@ document.documentElement.classList.add('js');
   const menuButton = document.querySelector('.nav-toggle');
   const nav = document.getElementById('primary-nav');
   if (menuButton && nav) {
-    nav.addEventListener('click', (event) => { if (event.target.closest('a')) { nav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); } });
-    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { nav.classList.remove('open'); menuButton.setAttribute('aria-expanded','false'); } });
-    menuButton.addEventListener('click', () => {
-      const open = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!open));
-      nav.classList.toggle('open', !open);
-    });
-    document.addEventListener('click', (event) => {
-      if (!nav.classList.contains('open') || nav.contains(event.target) || menuButton.contains(event.target)) return;
+    const desktopQuery = window.matchMedia('(min-width: 901px)');
+    const closeMenu = ({ restoreFocus = false } = {}) => {
       nav.classList.remove('open');
       menuButton.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+      if (restoreFocus) menuButton.focus();
+    };
+    const openMenu = () => {
+      nav.classList.add('open');
+      menuButton.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-open');
+    };
+
+    nav.addEventListener('click', (event) => {
+      if (event.target.closest('a')) closeMenu();
     });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && nav.classList.contains('open')) closeMenu({ restoreFocus: true });
+    });
+    menuButton.addEventListener('click', () => {
+      if (menuButton.getAttribute('aria-expanded') === 'true') closeMenu();
+      else openMenu();
+    });
+    document.addEventListener('pointerdown', (event) => {
+      if (!nav.classList.contains('open') || nav.contains(event.target) || menuButton.contains(event.target)) return;
+      closeMenu();
+    });
+    desktopQuery.addEventListener?.('change', (event) => { if (event.matches) closeMenu(); });
+    window.addEventListener('pageshow', () => closeMenu());
   }
 
   // Announce new-window behavior without burdening the visible Victorian labels.

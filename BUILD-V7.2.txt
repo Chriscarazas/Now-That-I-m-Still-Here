@@ -1,3 +1,3 @@
 V7.2 COMPLETE SITEWIDE REVEAL FIX
-Every HTML page references site.css?v=7.2 and site.js?v=7.2.
+Every HTML page references site.css?v=7.4 and site.js?v=7.4.
 Content is visible by default. Animations activate only after initialization.
