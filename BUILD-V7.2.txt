@@ -1,3 +1,5 @@
 V7.2 COMPLETE SITEWIDE REVEAL FIX
 Every HTML page references site.css?v=7.2 and site.js?v=7.2.
 Content is visible by default. Animations activate only after initialization.
+
+V7.5: Corrected hero stacking so Home, About, and Road to 2,000 copy stays above cinematic gradients at all viewport widths.
