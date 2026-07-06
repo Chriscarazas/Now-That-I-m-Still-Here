@@ -1,0 +1,10 @@
+CHRISCARAZAS.COM V7.4
+
+Upload the extracted contents of this folder to the root of the GitHub repository.
+Allow GitHub to replace the existing files, then commit to main.
+
+V7.4 repairs:
+- Restores cinematic fade on mobile Home and About heroes
+- Removes left-edge hero gaps
+- Moves About field note to the bottom of the hero
+- Adds a black cinematic fade to Road to 2,000

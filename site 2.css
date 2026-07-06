@@ -1933,9 +1933,3 @@ body{padding-top:68px}
     visibility:visible!important;
   }
 }
-
-/* V7.7 — remove duplicated decorative echo behind the final home hero word */
-.page-home .display-hero span:last-child::after {
-  content: none !important;
-  display: none !important;
-}

@@ -1,0 +1,1 @@
+V7.7 fixes the duplicated “disappearing” word in the homepage hero by removing the decorative CSS echo layer. All pages now request site.css?v=7.7 to bypass cached CSS.
