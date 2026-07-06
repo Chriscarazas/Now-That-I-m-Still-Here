@@ -1,0 +1,2 @@
+BUILD V7.6
+Hero text visibility, artwork-contained fades, and stylesheet cache busting.

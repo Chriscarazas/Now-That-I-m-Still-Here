@@ -1826,3 +1826,110 @@ body{padding-top:68px}
   -webkit-text-fill-color:var(--paper-light)!important;
   text-shadow:0 2px 22px rgba(0,0,0,.48);
 }
+
+/* ========================================================================== 
+   V7.6 DEFINITIVE HERO VISIBILITY REPAIR
+   Keep the fade inside the artwork layer, never above the hero content.
+   ========================================================================== */
+.home-art-hero::after,
+.about-art-hero::after,
+.road-art-hero::after{
+  display:none!important;
+  content:none!important;
+}
+
+.home-art-hero .hero-canvas,
+.about-art-hero .hero-canvas,
+.road-art-hero .hero-canvas{
+  position:relative!important;
+  z-index:1!important;
+  isolation:isolate!important;
+}
+
+.home-art-hero .hero-canvas>figure[class*="-art-plate"],
+.about-art-hero .hero-canvas>figure[class*="-art-plate"],
+.road-art-hero .hero-canvas>figure[class*="-art-plate"]{
+  position:absolute!important;
+  z-index:0!important;
+  isolation:isolate!important;
+}
+
+.home-art-hero .hero-canvas>figure[class*="-art-plate"]::after,
+.about-art-hero .hero-canvas>figure[class*="-art-plate"]::after,
+.road-art-hero .hero-canvas>figure[class*="-art-plate"]::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:3!important;
+  pointer-events:none!important;
+  background:linear-gradient(90deg,
+    #090b0b 0%,
+    rgba(9,11,11,.98) 27%,
+    rgba(9,11,11,.86) 42%,
+    rgba(9,11,11,.43) 62%,
+    rgba(9,11,11,.08) 82%,
+    transparent 96%)!important;
+}
+
+.home-art-hero .hero-canvas>figure[class*="-art-plate"] picture,
+.home-art-hero .hero-canvas>figure[class*="-art-plate"] img,
+.about-art-hero .hero-canvas>figure[class*="-art-plate"] picture,
+.about-art-hero .hero-canvas>figure[class*="-art-plate"] img,
+.road-art-hero .hero-canvas>figure[class*="-art-plate"] picture,
+.road-art-hero .hero-canvas>figure[class*="-art-plate"] img{
+  z-index:0!important;
+}
+
+.home-art-hero .home-title-block,
+.about-art-hero .about-title-block,
+.road-art-hero .road-title-block,
+.home-art-hero .hero-canvas>.folio,
+.about-art-hero .hero-canvas>.folio,
+.road-art-hero .hero-canvas>.folio,
+.home-art-hero .hero-actions,
+.about-art-hero .hero-actions,
+.road-art-hero .hero-actions,
+.home-art-hero .home-cover-plate,
+.home-art-hero .home-note,
+.road-art-hero .road-margin{
+  position:relative!important;
+  z-index:50!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+
+.home-art-hero .home-title-block h1,
+.home-art-hero .home-title-block p,
+.home-art-hero .home-title-block .script-note,
+.about-art-hero .about-title-block h1,
+.about-art-hero .about-title-block p,
+.road-art-hero .road-title-block h1,
+.road-art-hero .road-title-block p{
+  opacity:1!important;
+  visibility:visible!important;
+  color:#f7eddd!important;
+  -webkit-text-fill-color:#f7eddd!important;
+}
+
+@media(max-width:900px){
+  .home-art-hero .hero-canvas>figure[class*="-art-plate"]::after,
+  .about-art-hero .hero-canvas>figure[class*="-art-plate"]::after,
+  .road-art-hero .hero-canvas>figure[class*="-art-plate"]::after{
+    background:linear-gradient(180deg,
+      rgba(9,11,11,.84) 0%,
+      rgba(9,11,11,.72) 38%,
+      rgba(9,11,11,.52) 65%,
+      rgba(9,11,11,.82) 100%)!important;
+  }
+
+  .home-art-hero .home-title-block,
+  .about-art-hero .about-title-block,
+  .road-art-hero .road-title-block{
+    display:block!important;
+    position:relative!important;
+    z-index:50!important;
+    opacity:1!important;
+    visibility:visible!important;
+  }
+}
