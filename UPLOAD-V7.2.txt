@@ -1,4 +1,4 @@
 Upload EVERYTHING INSIDE this folder to the root of the GitHub repository.
 Replace all existing files and folders, then commit to main.
 Do not upload the enclosing folder or the ZIP itself.
-Verify book/index.html contains /site.css?v=7.4 and /site.js?v=7.4.
+Verify book/index.html contains /site.css?v=7.2 and /site.js?v=7.2.

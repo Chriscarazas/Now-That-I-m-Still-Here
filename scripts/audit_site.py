@@ -95,9 +95,9 @@ for page in html_pages:
     if breadcrumb_count>1: errors.append(f'{rel}: duplicate BreadcrumbList schema')
     # Cache key and public contact consistency.
     css_links=[l.get('href','') for l in soup.find_all('link',rel='stylesheet') if '/site.css' in l.get('href','')]
-    if css_links and any('v=7.4' not in l for l in css_links): errors.append(f'{rel}: stale CSS cache key')
+    if css_links and any('v=6.6' not in l for l in css_links): errors.append(f'{rel}: stale CSS cache key')
     emails=set(re.findall(r'[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}',page.read_text()))
-    if emails and emails!={'chris@chriscarazas.com'}: errors.append(f'{rel}: unexpected public email {emails}')
+    if emails and emails!={'ccarazaswrites@gmail.com'}: errors.append(f'{rel}: unexpected public email {emails}')
 
 # Required files and data.
 for name in ['sitemap.xml','image-sitemap.xml','robots.txt','site.css','site.js','data/substack-posts.json','data/site.json','scripts/build_site.py','scripts/build_css.cjs','scripts/build_sitemaps.py']:
