@@ -1625,3 +1625,128 @@ body{padding-top:68px}
   border:1px solid rgba(72,48,28,.4);
   box-shadow:0 18px 46px rgba(20,13,7,.24);
 }
+
+/* ========================================================================== 
+   V7.4 HERO GRADIENT + EDGE SEAL REPAIR
+   ========================================================================== */
+
+/* Seal occasional sub-pixel gaps at the viewport edge. */
+.home-art-hero,
+.about-art-hero,
+.road-art-hero{
+  width:100%;
+  margin-inline:0!important;
+}
+.home-art-hero::before,
+.about-art-hero::before,
+.road-art-hero::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:max(2px,env(safe-area-inset-left));
+  background:#090b0b;
+  z-index:8;
+  pointer-events:none;
+}
+
+/* Keep a strong cinematic left-to-right fade on the dark heroes. */
+.home-art-hero::after,
+.about-art-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    #090b0b 0%,
+    rgba(9,11,11,.98) 25%,
+    rgba(9,11,11,.88) 38%,
+    rgba(9,11,11,.48) 57%,
+    rgba(9,11,11,.12) 77%,
+    transparent 92%);
+}
+
+/* Road to 2,000 now uses the same dark editorial fade instead of a pale wash. */
+.road-art-hero{
+  background:#090b0b!important;
+  color:var(--paper-light)!important;
+}
+.road-art-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    #090b0b 0%,
+    rgba(9,11,11,.97) 27%,
+    rgba(9,11,11,.82) 41%,
+    rgba(9,11,11,.38) 59%,
+    rgba(9,11,11,.06) 79%,
+    transparent 94%);
+}
+.road-art-hero .road-title-block h1,
+.road-art-hero .road-title-block .subhead{
+  color:var(--paper-light)!important;
+  -webkit-text-fill-color:var(--paper-light)!important;
+  text-shadow:0 2px 20px rgba(0,0,0,.32);
+}
+.road-art-hero .folio,
+.road-art-hero .eyebrow{
+  color:var(--amber-bright)!important;
+}
+
+/* Move the About field note out of the headline's way. */
+.page-about .about-art-hero .hero-canvas>.folio{
+  top:auto!important;
+  right:auto!important;
+  bottom:1.15rem!important;
+  left:50%!important;
+  transform:translateX(-50%) rotate(1deg)!important;
+  width:min(18rem,calc(100% - 2rem));
+}
+
+@media(max-width:900px){
+  /* Do not replace the cinematic fade with a flat vertical wash on mobile. */
+  .home-art-hero::after,
+  .about-art-hero::after{
+    display:block!important;
+    background:linear-gradient(90deg,
+      rgba(9,11,11,.98) 0%,
+      rgba(9,11,11,.92) 38%,
+      rgba(9,11,11,.62) 68%,
+      rgba(9,11,11,.28) 100%)!important;
+  }
+  .road-art-hero::after{
+    display:block!important;
+    background:linear-gradient(90deg,
+      rgba(9,11,11,.98) 0%,
+      rgba(9,11,11,.91) 42%,
+      rgba(9,11,11,.56) 72%,
+      rgba(9,11,11,.22) 100%)!important;
+  }
+  .page-about .about-art-hero .hero-canvas>.folio{
+    top:auto!important;
+    right:auto!important;
+    bottom:.9rem!important;
+    left:50%!important;
+    transform:translateX(-50%) rotate(1deg)!important;
+    width:min(17rem,calc(100% - 1.5rem));
+  }
+  .page-about .about-art-hero .about-title-block{
+    padding-top:0!important;
+    padding-bottom:6.8rem!important;
+  }
+}
+
+@media(max-width:560px){
+  .home-art-hero::after,
+  .about-art-hero::after,
+  .road-art-hero::after{
+    background:linear-gradient(180deg,
+      rgba(9,11,11,.92) 0%,
+      rgba(9,11,11,.72) 42%,
+      rgba(9,11,11,.42) 68%,
+      rgba(9,11,11,.76) 100%)!important;
+  }
+}
