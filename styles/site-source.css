@@ -234,7 +234,6 @@ p{max-width:68ch}
 .vintage-artifact{position:absolute;z-index:24;text-transform:uppercase;color:var(--amber-bright);font-size:10px;line-height:1.35;pointer-events:none}
 .vintage-artifact span,.vintage-artifact small,.vintage-artifact b{display:block}
 .page-home .display-hero span:last-child{position:relative;display:inline-block;clip-path:polygon(0 0,96% 0,88% 100%,0 100%)}
-.page-home .display-hero span:last-child::after{content:"disappearing.";position:absolute;left:6px;top:4px;color:transparent;-webkit-text-stroke:1px rgba(239,227,207,.11);clip-path:polygon(8% 0,100% 0,92% 100%,0 100%);z-index:-1}
 .page-home .chapter-band .shell span:first-child{font-family:var(--mono)}
 .page-home .home-constellation .portrait-panel:first-of-type{transform:translateY(18px) rotate(-.7deg)}
 .page-home .home-constellation .portrait-panel:last-of-type{transform:translateY(68px) rotate(.8deg)}

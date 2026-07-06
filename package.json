@@ -1,0 +1,8 @@
+{
+  "name": "now-that-im-still-here",
+  "private": true,
+  "description": "Build tooling for the static site (CSS purge/build scripts).",
+  "devDependencies": {
+    "postcss": "^8.5.16"
+  }
+}
