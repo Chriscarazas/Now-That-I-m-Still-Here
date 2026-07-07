@@ -594,6 +594,18 @@ figure.polaroid::after,figure.tipped-photo::after,.archive-panel figure::after,.
   opacity: 0.75;
 }
 
+.price-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.1rem;
+  margin: 0.2rem 0 0.9rem;
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  color: var(--ochre);
+}
+
 .signed-insert {
   grid-column: 1 / -1;
   display: grid;
