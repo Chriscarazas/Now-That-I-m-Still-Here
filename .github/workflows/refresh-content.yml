@@ -1,0 +1,33 @@
+name: Refresh Substack content
+
+on:
+  schedule:
+    # Every 6 hours. Adjust if you want it more or less frequent.
+    - cron: '0 */6 * * *'
+  workflow_dispatch: {}   # adds a manual "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write   # lets this workflow push its own commit back to the repo
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Refresh feed content
+        run: python3 scripts/refresh_feed.py
+
+      - name: Commit and push if index.html changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --staged --quiet || git commit -m "Auto-refresh latest essays and Gazette editions"
+          git push
