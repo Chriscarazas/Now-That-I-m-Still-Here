@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-11-16T06:23:24.784551+00:00",
+  "generatedAt": "2026-11-21T06:13:52.968283+00:00",
   "source": "https://ccarazas.substack.com/feed",
   "posts": [
+    {
+      "title": "The Gospel According to Small Talk",
+      "url": "https://ccarazas.substack.com/p/the-gospel-according-to-small-talk",
+      "excerpt": "A Liturgy for People Who Hear the Words Instead of the Music",
+      "date": "Nov 20, 2026",
+      "image": "https://substack-post-media.s3.amazonaws.com/public/images/88ba9ac7-5895-42cf-868a-0ef2edc112b4_1734x907.png"
+    },
     {
       "title": "The Plymouth Sentinel and Canine Gazette- Sunday Edition Nov. 15, 1886(ish)",
       "url": "https://ccarazas.substack.com/p/plymouth-canine-gazette-water-street-supper",
@@ -36,13 +43,6 @@
       "excerpt": "Miss Shadow’s Victorian newspaper roasts a failed Halloween scare, pickleball pride, seltzer panic, and a horror election decided by five readers.",
       "date": "Nov 1, 2026",
       "image": "https://substack-post-media.s3.amazonaws.com/public/images/63a3331c-c38c-4a50-8ed6-a1a22b614e08_1600x896.jpeg"
-    },
-    {
-      "title": "Just because you say you're okay, doesn't mean you are okay. Live with Neurodivergent, Not Broken ™️",
-      "url": "https://ccarazas.substack.com/p/just-because-you-say-youre-okay-doesnt",
-      "excerpt": "A recording from Christopher Carazas and Neurodivergent, Not Broken ™️'s live video",
-      "date": "Oct 31, 2026",
-      "image": "https://api.substack.com/feed/podcast/222941055/f0e8effab0c4130c34a27de108f97e4c.mp3"
     }
   ]
 }
